@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ * Add a role selector in registiion
+ */
+function dragon_user_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+  $form['account']['role'] = array(
+    '#type' => 'radios',
+    '#title' => t('Roles'),
+    '#required' => TRUE,
+    '#options' => array(
+      user_role_load_by_name('customer')->rid => 'Customer',
+      user_role_load_by_name('supplier')->rid => 'Supplier',
+      user_role_load_by_name('forwarder')->rid => 'Forwarder',
+      user_role_load_by_name('broker')->rid => 'Broker',
+      user_role_load_by_name('employee')->rid => 'Employee',
+    ),
+    '#description' => t('Please select a role for you in this site.'),
+  );
+  //$form['#submit'] = array('dragon_user_register_submit');
+  array_unshift($form['#submit'], 'dragon_user_register_submit');
+}
+
+/**
+ * Submit handler for the user registration form.
+ *
+ * This function is shared by the installation form and the normal registration form,
+ * which is why it can't be in the user.pages.inc file.
+ *
+ * @see user_register_form()
+ */
+function dragon_user_register_submit($form, &$form_state) {
+  $rid = $form_state['values']['role'];
+  $form_state['values']['status'] = TRUE;
+  $form_state['values']['roles'][$rid] = TRUE;
+}

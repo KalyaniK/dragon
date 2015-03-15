@@ -1,0 +1,7 @@
+name = Dragon Customize User
+description = Customize User form like register form and etc.
+package = Dragon
+core = 7.x
+version = 7.x-1.0
+
+dependencies[] = dragon_common

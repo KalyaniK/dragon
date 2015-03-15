@@ -1,0 +1,181 @@
+<?php
+// $Id: qadcommon.install 3736 2015-01-12 02:05:54Z mjz $
+ 
+/**
+* @file
+* Install and uninstall tasks for the qad common module
+* Grant permissions
+*/
+ 
+module_load_include('inc', 'qadcommon', 'qadcommon.basic_install');
+ 
+/**
+* Implement hook_install()
+*/
+function qadcommon_install() {
+ _qadcommon_config_variables();
+ _qadcommon_grant_permissions_to_roles();
+ _qadcommon_config_mail_system();
+}
+ 
+/**
+* Implements hook_install().
+*/
+function qadcommon_uninstall(){
+ _qadcommon_config_variables(FALSE);
+ _qadcommon_revert_mail_system();
+}
+ 
+/**
+* Implement hook_update_N()
+*
+* Grant permission to admin
+*/
+function qadcommon_update_7101() {
+ _qadcommon_grant_permissions_to_roles();
+}
+ 
+/**
+* Implement hook_update_N()
+*
+* Set variables
+*/
+function qadcommon_update_7102() {
+ _qadcommon_config_variables();
+}
+ 
+/**
+* Implement hook_update_N()
+*
+* Grant permission to admin
+*/
+function qadcommon_update_7103() {
+ _qadcommon_grant_permissions_to_roles();
+ _qadcommon_config_variables();
+}
+ 
+/**
+* Implement hook_update_N()
+*
+* Set variables for admin notice email related logic
+*/
+function qadcommon_update_7104() {
+ _qadcommon_config_mail_system();
+ variable_set('qadcommon_admin_notice_recipients','store@qad.com');
+}
+ 
+/**
+ * Implement hook_update_N()
+ *
+ * Redefine the Wysiwyg configuration for filtered_html 
+ */
+function qadcommon_update_7105() {
+  $settings = array ( 
+    'default' => 1, 
+    'user_choose' => 0, 
+    'show_toggle' => 0, 
+    'theme' => 'advanced', 
+    'language' => 'en', 
+    'buttons' => array ( 
+      'default' => array ( 'Bold' => 1, 
+        'Italic' => 1, 
+        'JustifyLeft' => 1, 
+        'JustifyBlock' => 1, 
+        'BidiLtr' => 1, 
+        'BidiRtl' => 1, 
+        'BulletedList' => 1,
+        'NumberedList' => 1 ,
+        'Undo' => 1 ,
+        'Redo' => 1 ,
+        'Link' => 1 ,
+        'Unlink' => 1, 
+        'Blockquote' => 1, 
+        'Source' => 1 ,
+        'Cut' => 1 ,
+        'Copy' => 1 ,
+        'Paste' => 1 ,
+        'SelectAll' => 1, 
+        'Find' => 1 ,
+        'Replace' => 1, 
+        'SpellChecker' => 1, ), 
+      'drupal' => array ( 'linebreaks' => 1,
+      'convert_linebreaks' => 1, ), ), 
+    'toolbar_loc' => 'top', 
+    'toolbar_align' => 'left', 
+    'path_loc' => 'bottom', 
+    'resizing' => 1, 
+    'verify_html' => 1, 
+    'preformatted' => 0, 
+    'convert_fonts_to_spans' => 1, 
+    'remove_linebreaks' => 1, 
+    'apply_source_formatting' => 0, 
+    'paste_auto_cleanup_on_paste' => 0, 
+    'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div', 
+    'css_setting' => 'theme', 
+    'css_path' => '', 
+    'css_classes' => '',);
+    
+  db_update('wysiwyg')
+  ->fields(array('settings' => serialize($settings)))
+  ->condition('format','filtered_html','=')
+  ->execute();
+  
+  wysiwyg_profile_cache_clear();
+}
+
+/**
+* Set or unset variables for this module
+*
+* @param $enable A flag to indicate it's enabling or disabling
+*/
+function _qadcommon_config_variables($enable = TRUE) {
+ $variables = array(
+   'qadcommon_trinity_soap_server' => 'http://trinity-cluster.qad.com:8080/wsa/wsa1/wsdl?targetURI=urn:qad:appstore',
+   'qadcommon_vector_rest_validate_contract_url' => 'http://cont593.qad.com:8080/ws/simple/getContractValidationForIncident?Parameter1=[%enduser_number]&Parameter2=0&token=c3VwcG9ydEBxYWRpbmMtRVlYUkE1OjFhOTg4MWU0LTYyZmEtNGM1YS05ZmFjLThjZjExMWZjYTRkMw==',
+   'qadcommon_ldap_host_name' => 'globalcat.qad.com',
+   'qadcommon_ldap_host_port' => 3268,
+   'qadcommon_ldap_bind_rdn' => 'cn=dominoauth,ou=Global,ou=Services,ou=Accounts,dc=qad,dc=com',
+   'qadcommon_ldap_password' => '!D0m1n0@u7H$$',
+   'qadcommon_admin_notice_recipients' => 'store@qad.com',
+ );
+ qadcommon_config_variables($variables, $enable);
+}
+ 
+/**
+* Created roles and grant permissions
+*/
+function _qadcommon_grant_permissions_to_roles() {
+ $role_permissions = array(
+   'administrator' => array(
+     'administer check env',
+     'qad config trinity vector',
+     'qad config ldap',
+   ),
+ );
+ qadcommon_grant_permissions_to_roles($role_permissions);
+}
+ 
+/**
+* Set the mail system for qadcommon module to the customized mail system
+*/
+function _qadcommon_config_mail_system() {
+ // Set mail handler for qadcommon
+ variable_set('mail_system',
+   array_merge(
+     variable_get('mail_system', array('default-system' => 'DefaultMailSystem')),
+     array(
+       'qadcommon'  => 'QADMailSystem',
+     )
+   )
+ );
+}
+ 
+/**
+* Unset mail Ubercart hander in variable mail_system
+*/
+function _qadcommon_revert_mail_system() {
+ // Unset mail Ubercart hander in variable mail_system
+ $mail_system = variable_get('mail_system', array('default-system' => 'DefaultMailSystem'));
+ unset($mail_system['qadcommon']);
+ variable_set('mail_system', $mail_system);
+}

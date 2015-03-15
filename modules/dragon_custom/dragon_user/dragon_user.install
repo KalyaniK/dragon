@@ -1,0 +1,43 @@
+<?php
+
+module_load_include('inc', 'dragon_common', 'dragon_common.basic_install');
+
+/**
+ * Implements hook_enable().
+ */
+function dragon_user_enable() {
+  _dragon_common_create_roles();
+}
+
+/**
+ * Create roles
+ */
+function _dragon_common_create_roles() {
+  dragon_common_create_role('admin');
+  dragon_common_create_role('employee');
+  dragon_common_create_role('customer');
+  dragon_common_create_role('supplier');
+  dragon_common_create_role('forwarder');
+  dragon_common_create_role('broker');
+}
+
+/**
+ * Create roles and grant permissions
+ */
+function _qad_user_grant_permissions_to_roles() {
+  $role_permissions = array(
+    'administrator' => array(
+      'sync users with ldap',
+    ),
+  );
+  qadcommon_grant_permissions_to_roles($role_permissions);
+}
+
+/**
+ * Implements hook_update_N()
+ *
+ * Grant permissions to administrator
+ */
+function qad_user_update_7001(){
+  _qad_user_grant_permissions_to_roles();
+}

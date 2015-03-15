@@ -1,0 +1,322 @@
+<?php
+// $Id:: qadcommon.module 3783 2015-03-11 06:51:44Z j5w                        $
+
+/**
+ * @file
+ * Keeps a centralized place for common QAD Settings
+ *
+ */
+
+/**
+ * Implements hook_permission()
+ **/
+function qadcommon_permission() {
+  $perms = array(
+    'qad config' => array(
+      'title' => t('Access QAD Configuration Options'),
+      'description' => t('Required to view menu options related to QAD configurations.'),
+    ),
+    'qad config server' => array(
+      'title' => t('Access enviornment sensitvie variables Settings'),
+      'description' => t('Allows to configure enviornment sensitvie variables.'),
+    ),
+    'qad config trinity vector' => array(
+      'title' => t('Access Trintiy/Vector Settings'),
+      'description' => t('Allows to Trintiy/Vector Settings.'),
+    ),
+    'qad config ldap' => array(
+      'title' => t('Access LDAP Settings'),
+      'description' => t('Allows to configure settings for LDAP.'),
+    ),
+    'administer check env' => array(
+      'title' => t('Access the check settings function'),
+      'description' => t('Required to check environment settings'),
+    ),
+  );
+
+  return $perms;
+}
+
+/**
+ * Implements hook_menu()
+ */
+function qadcommon_menu() {
+  $items = array();
+
+  // QAD Common Settings.
+  $items['admin/config/qad'] = array(
+    'title' => 'QAD Common Configuration',
+    'description' => 'Configuration Options common for all QAD Modules.',
+    'position' => 'right',
+    'weight' => 0,
+    'page callback' => 'qadcommon_group_page',
+    'access arguments' => array('qad config'),
+    'file' => 'qadcommon.settings.inc',
+  );
+
+  $items['admin/config/qad/settings'] = array(
+    'title' => 'QAD Settings',
+    'description' => 'Shared settings used by QAD Modules.',
+    'page callback' => 'qadcommon_configuration_page',
+    'access arguments' => array('qad config'),
+    'file' => 'qadcommon.settings.inc',
+  );
+
+  $items['admin/config/qad/trinity-vector-settings'] = array(
+    'title' => 'QAD Trintiy/Vector Settings',
+    'description' => 'QAD Trintiy/Vector server Settings.',
+    'access arguments' => array('qad config trinity vector'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('qadcommon_trinity_vector_form'),
+    'file' => 'qadcommon.settings.inc',
+  );
+
+  $items['admin/config/qad/ldap-settings'] = array(
+    'title' => 'QAD User LDAP Settings',
+    'description' => 'QAD User LDAP Settings.',
+    'access arguments' => array('qad config ldap'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('qadcommon_ldap_form'),
+    'file' => 'qadcommon.settings.inc',
+  );
+
+  $items['admin/config/qad/settings/admin-notice'] = array(
+    'title' => 'QAD Admin Notice Settings',
+    'description' => 'QAD Admin Notice Settings.',
+    'access arguments' => array('qad config'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('qadcommon_admin_notice_settings_form'),
+    'file' => 'qadcommon.settings.inc',
+  );
+
+  $items['admin/config/qad/settings/server'] = array(
+    'title' => 'Server Settings',
+    'description' => 'Trinity\'s API Server settings.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('qadcommon_server_settings'),
+    'access arguments' => array('qad config server'),
+    'file' => 'qadcommon.settings.inc',
+  );
+
+
+  $items['admin/check-env'] = array(
+    'title' => 'Check Settings',
+    'page callback' => 'qadcommon_update_vars',
+    'access arguments' => array('administer check env'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'qadcommon.settings.inc',
+    'weight' => 20,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_hook_info().
+ */
+function qadcommon_hook_info() {
+  $hooks['qad_menu'] = array(
+    'group' => 'qad',
+  );
+  $hooks['qad_menu_alter'] = array(
+    'group' => 'qad',
+  );
+
+  return $hooks;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function qadcommon_theme($existing, $type, $theme, $path) {
+  return array(
+    'qadmenu' => array(
+      'variables' => array(
+        'children' => '',
+      ),
+      'file' => 'qadcommon.qad.inc',
+    ),
+    'qad_menu_item' => array(
+      'variables' => array(
+        'title' => '',
+        'icon_class' => array(),
+        'btn_class' => array(),
+        'attributes' => array(),
+        'popup' => FALSE,
+      ),
+      'file' => 'qadcommon.qad.inc',
+    ),
+    'qad_menu_dropdown_item' => array(
+      'variables' => array(
+        'title' => '',
+        'icon_class' => array(),
+        'btn_class' => array(),
+        'attributes' => array(),
+        'dropdown_items' => array(),
+      ),
+      'file' => 'qadcommon.qad.inc',
+    ),
+  );
+}
+
+/**
+ * Get user language code, if not set return default value
+ *
+ * @param $language The language field of user object
+ */
+function qadcommon_get_user_language($language) {
+  return ( !isset($language) || $language == '')? LANGUAGE_NONE: $language;
+}
+
+/**
+ * Implements hook_mail().
+ */
+function qadcommon_mail($key, &$message, $params) {
+  $langcode = isset($message['language']) ? $message['language']->language : NULL;
+
+  // Assemble an email message from the conditional actions settings.
+  $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
+  $message['headers']['Cc'] = isset($params['cc'])? $params['cc']: '';
+  $message['headers']['Bcc'] = isset($params['bcc'])? $params['bcc']: '';
+
+  $message['from'] = $params['from'];
+
+  // Perform token replacement on the subject and body.
+  if(!isset($params['no_token']) || !$params['no_token']){
+    $subject = token_replace($params['subject'], $params['replacements'], $langcode ? array('language' => $message['language']) : array());
+    $body = token_replace($params['message'], $params['replacements'], $langcode ? array('language' => $message['language']) : array());
+  } else {
+    $subject = $params['subject'];
+    $body = $params['message'];
+  }
+  // Strip newline characters from e-mail subjects.
+  // @todo: Maybe drupal_mail_send() should do this?
+  $message['subject'] = str_replace(array("\r\n", "\r", "\n"), ' ', $subject);
+
+  // Apply an input format to the message body if specified.
+  if (isset($params['format'])) {
+    $message['body'] = explode("\n", check_markup($body, $params['format'], $langcode));
+  }
+  else {
+    $message['body'] = explode("\n", $body);
+  }
+}
+
+/**
+ * Implements hook_watchdog()
+ * @param $log_entry
+ */
+function qadcommon_watchdog(array $log_entry) {
+  $severity_list = array(
+    WATCHDOG_EMERGENCY => t('Emergency'),
+    WATCHDOG_ALERT => t('Alert'),
+    WATCHDOG_CRITICAL => t('Critical'),
+    WATCHDOG_ERROR => t('Error'),
+    WATCHDOG_WARNING => t('Warning'),
+    WATCHDOG_NOTICE => t('Notice'),
+    WATCHDOG_INFO => t('Info'),
+    WATCHDOG_DEBUG => t('Debug'),
+  );
+  // Filter the type with suffix '_qadcommon_notice'
+  if (strpos($log_entry['type'], '_qadcommon_notice') !== FALSE) {
+    global $base_url, $language;
+
+    $to = variable_get('qadcommon_admin_notice_recipients', 'store@qad.com');
+    $params = array();
+    $params['subject'] = t('[@site_name Watchdog] @severity_desc', array(
+      '@site_name' => variable_get('site_name', 'QAD Store'),
+      '@severity_desc' => $severity_list[$log_entry['severity']],
+    ));
+
+    $params['message'] = "\nSite:         @base_url";
+    $params['message'] .= "\nSeverity:     (@severity) @severity_desc";
+    $params['message'] .= "\nTimestamp:    @timestamp";
+    $params['message'] .= "\nType:         @type";
+    $params['message'] .= "\nIP Address:   @ip";
+    $params['message'] .= "\nRequest URI:  @request_uri";
+    $params['message'] .= "\nReferrer URI: @referer_uri";
+    $params['message'] .= "\nUser:         (@uid) @name";
+    $params['message'] .= "\nLink:         @link";
+    $params['message'] .= "\nMessage:      \n@message";
+
+    $params['message'] = t($params['message'], array(
+      '@base_url' => $base_url,
+      '@severity' => $log_entry['severity'],
+      '@severity_desc' => $severity_list[$log_entry['severity']],
+      '@timestamp' => format_date($log_entry['timestamp']),
+      '@type' => $log_entry['type'],
+      '@ip' => $log_entry['ip'],
+      '@request_uri' => $log_entry['request_uri'],
+      '@referer_uri' => $log_entry['referer'],
+      '@uid' => $log_entry['uid'],
+      '@name' => $log_entry['user']->name,
+      '@link' => strip_tags($log_entry['link']),
+      '@message' => strip_tags(t($log_entry['message'], $log_entry['variables'])),
+    ));
+
+    $params['no_token'] = TRUE;
+    $params['format'] = filter_default_format();
+    $message = drupal_mail('qadcommon', 'admin_notice', $to, $language, $params);
+  }
+}
+
+/**
+ * Verify if the Host is store.qad.com
+ *
+ * @return boolean. TRUE for store.qad.com, else FALSE
+ */
+function qadcommon_verify_environment() {
+  return ($_SERVER['HTTP_HOST'] == 'store.qad.com') ?  TRUE :  FALSE;
+}
+
+/**
+ * Get present status of a given module
+ *
+ * @param $module_name: the name of a module
+ *
+ * @return A boolean value
+ */
+function qadcommon_get_module_status($module_name) {
+  $result = db_select('system', 'n')
+    ->fields('n')
+    ->condition('name', $module_name,'=')
+    ->execute()
+    ->fetchAssoc();
+    
+  if (!$result) {
+    return FALSE;
+  }
+
+  return (bool)$result['status'];
+}
+
+/**
+ * Generate a row for a module's status to display
+ *
+ * @param $module_name: the name of object module
+ *
+ * @return $var, status of the module
+ */
+function qadcommon_module_status($module_name){
+  return (qadcommon_get_module_status($module_name) == 1) ? 'Enabled' : 'Disabled';
+}
+
+/**
+ * Implements hook_preprocess_page()
+ * Load 'disable submit button after clicked' to every page
+ */
+function qadcommon_preprocess_page(&$vars, $hook) {
+  drupal_add_js(drupal_get_path('module', 'qadcommon') . '/js/qadcommon_disable_submit.js');
+}
+
+
+/**
+ * Implements hook_preprocess_page()
+ * Load 'disable submit button after clicked' to every page
+ */
+function dragon_common_get_roles($view = 'user') {
+  $roles = array(
+    user_role_load_by_name('')->rid => '',
+  );
+}
+
