@@ -45,8 +45,10 @@ function dragon_user_form_user_profile_form_alter(&$form, &$form_state, $form_id
   $form['#submit'][] = 'dragon_user_profile_submit';
   $account = $form['#user'];
   global $user;
-  if (in_array('administrator', $user) && in_array('administrator', $account->roles)) {
-    $form['field_registered_capital']['und']['#required'] = FALSE;
+  
+  if (in_array('administrator', $user->roles) && in_array('administrator', $account->roles)) {
+    $form['field_registered_capital'][LANGUAGE_NONE][0]['value']['#required'] = FALSE;
+    
     $form['field_years_in_registration']['#access'] = false;
     $form['field_registered_capital']['#access'] = false;
     $form['field_industry']['#access'] = false;
