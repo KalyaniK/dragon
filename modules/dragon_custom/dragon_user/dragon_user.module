@@ -1,23 +1,6 @@
 <?php
 
 /**
- * Implements hook_node_info().
- */
-function dragon_user_node_info() {
-  $items = array(
-    'group' => array(
-      'name' => t('Group'),
-      'base' => 'node_content',
-      'description' => t('The group that will have members and content associated with.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-  );
-  return $items;
-}
-
-/**
  * Implements hook_form_FORM_ID_alter()
  * Add a role selector in registiion
  */
@@ -39,14 +22,8 @@ function dragon_user_form_user_register_form_alter(&$form, &$form_state, $form_i
     );
     array_unshift($form['#submit'], 'dragon_user_register_submit');
   }
-}
-
-/**
- * Implements hook_form_FORM_ID_alter()
- * Add a role selector in registiion
- */
-function dragon_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
-  $form['#submit'][] = 'dragon_user_profile_submit';
+  
+  watchdog('qad_ppaa', '&$form %data ms', array('%data' => print_r($form, TRUE)), WATCHDOG_ERROR);
 }
 
 /**
@@ -58,6 +35,14 @@ function dragon_user_register_submit($form, &$form_state) {
     $form_state['values']['status'] = TRUE;
   }
   $form_state['values']['roles'][$rid] = TRUE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ * Add a role selector in registiion
+ */
+function dragon_user_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+  $form['#submit'][] = 'dragon_user_profile_submit';
 }
 
 /**
