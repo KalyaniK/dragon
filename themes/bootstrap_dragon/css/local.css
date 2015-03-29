@@ -1,14 +1,25 @@
 /* Custom CSS overrides */
 
+/*******************************
+ *       Header               **
+ ******************************/
 #header {
   text-align: start;
+}
+
+#header-top-left .menu {
+  float: right;
+}
+
+#header-inside-left .col-md-1{
+  width: 14.3333%;
+}
+
+#header-inside-left .col-md-11{
+  width: 71.6667%;
 }
 
 .form-item-lang-dropdown-select {
   margin: 0;
   padding: 10px 0;
-}
-
-#header-top-left .menu {
-  float: right;
 }
