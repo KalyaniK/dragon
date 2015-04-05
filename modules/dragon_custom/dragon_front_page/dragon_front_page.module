@@ -25,9 +25,11 @@ function dragon_front_page_menu() {
   $items['admin/dragon'] = array(
     'title' => 'Dragon Configuration',
     'description' => 'Confriguration for Dragon',
+    'position' => 'right',
     'page callback' => 'system_admin_menu_block_page',
     'access arguments' => array('access dragon config'),
-    'type' => MENU_NORMAL_ITEM,
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
   );
 
   $items['admin/dragon/front'] = array(
