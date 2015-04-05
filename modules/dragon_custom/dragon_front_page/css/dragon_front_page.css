@@ -1,0 +1,11 @@
+ul.flex-direction-nav{
+  display: none;
+}
+
+div#main-content{
+  padding: 0px 0px 0px;
+}
+
+#main-content .container{
+  width: auto;
+}

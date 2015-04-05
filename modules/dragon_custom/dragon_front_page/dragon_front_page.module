@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * Implements hook_permission().
+ */
+function dragon_front_page_permission() {
+  $perms = array(
+    'access dragon config' => array(
+      'title' => t('Access the Dragon Configuration'),
+      'description' => t('Access the Dragon Configuration pages'),
+    ),
+  );
+  
+  return $perms;
+}
+/**
+* Implements hook_menu().
+*/
+function dragon_front_page_menu() {
+  $items['home'] = array(
+    'page callback' => 'dragon_front_page_callback',
+    'access callback' => TRUE,
+  );
+  
+  $items['admin/dragon'] = array(
+    'title' => 'Dragon Configuration',
+    'description' => 'Confriguration for Dragon',
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('access dragon config'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['admin/dragon/front'] = array(
+    'title' => 'Dragon Front Page Configuration',
+    'page callback' => 'dragon_front_page_config',
+    'access arguments' => array('access dragon config'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+function dragon_front_page_config() {
+  $front_nid = variable_get('dragon_front_page_nid');
+  $front_node = node_load($front_nid);
+
+  $form_state['build_info']['args'] = array($front_node);
+  form_load_include($form_state, 'inc', 'node', 'node.pages');
+  $form = drupal_build_form('slider_node_form', $form_state);
+  
+  watchdog('qad_ppaa', ' %data ms', array('%data' => print_r(array_keys($form), TRUE)), WATCHDOG_ERROR);
+  $no_access_fields = array(
+    'comment_settings',
+    'author',
+    'title',
+    'additional_settings'
+  );
+  foreach ($no_access_fields as $field) {
+    if(isset($form[$field])){
+      $form[$field]['#access'] = FALSE;
+    }
+  }
+  
+  return $form;
+}
+
+function dragon_front_page_callback() {
+  $front_nid = variable_get('dragon_front_page_nid');
+  $content = node_view(node_load($front_nid));
+  return $content['field_slider_images'];
+}
+
+/*
+ * Implements hook_preprocess_page
+ */
+function dragon_front_page_preprocess_page(&$vars, $hook) {
+  if(arg(0) == 'home') {
+    drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page.css');
+  }
+}

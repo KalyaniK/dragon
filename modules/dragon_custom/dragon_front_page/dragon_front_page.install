@@ -1,0 +1,29 @@
+<?php
+
+module_load_include('inc', 'dragon_common', 'dragon_common.basic_install');
+
+/**
+* Implements hook_menu().
+*/
+function dragon_front_page_enable() {
+  $node = new stdClass();
+  $node->title = 'Dragon Main Page Slider';
+  $node->type = 'slider';
+  $node->language = LANGUAGE_NONE;
+  $node->uid = 1;
+  node_save($node);
+
+  variable_set('dragon_front_page_nid', $node->nid);
+}
+
+/**
+ * Grant permissions to certain roles
+ */
+function _qc_email_grant_permissions_to_roles() {
+  $role_permissions = array(
+    'admin' => array(
+      'access dragon config',
+    ),
+  );
+  dragon_common_grant_permissions_to_roles($role_permissions);
+}
