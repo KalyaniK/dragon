@@ -4,6 +4,7 @@
  *       Header               **
  ******************************/
 #header {
+  display: none;
   text-align: start;
 }
 
@@ -14,4 +15,9 @@
 .form-item-lang-dropdown-select {
   margin: 0;
   padding: 10px 0;
+}
+
+span#site-name a{
+  font-size: 25px;
+  margin: 0px 0px 0px;
 }

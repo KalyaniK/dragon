@@ -52,7 +52,20 @@
         <!-- #header-top-inside -->
         <div id="header-top-inside" class="clearfix">
             <div class="row">
-            
+                    <?php if ($logo): ?>
+                    <a class="col-md-1" href="<?php print check_url($front_page); ?>" title="<?php print t('Home'); ?>"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+                    <?php endif; ?>
+             
+                    <?php if ($site_name || $site_slogan): ?>
+                    <div class="col-md-4">
+                    <?php if ($site_name): ?>
+                    <span id="site-name"><a href="<?php print check_url($front_page); ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></span>
+                    <?php endif; ?>
+                    <?php if ($site_slogan): ?>
+                    <span id="slogan"><?php print $site_slogan; ?></span>
+                    <?php endif; ?>
+                    </div>
+                    <?php endif; ?>
             <?php if ($page['header_top_left']) :?>
             <div class="<?php print $header_top_left_grid_class; ?>">
                 <!-- #header-top-left -->
@@ -89,21 +102,7 @@
     <div id="header-inside" class="col-md-12 clearfix">
     	<!-- #header-inside-left -->
         <div id="header-inside-left" class="col-md-8">
-            
-            <?php if ($logo): ?>
-            <a class="col-md-2" href="<?php print check_url($front_page); ?>" title="<?php print t('Home'); ?>"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-            <?php endif; ?>
-     
-            <?php if ($site_name || $site_slogan): ?>
-            <div class="col-md-10">
-            <?php if ($site_name): ?>
-            <span id="site-name"><a href="<?php print check_url($front_page); ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></span>
-            <?php endif; ?>
-            <?php if ($site_slogan): ?>
-            <span id="slogan"><?php print $site_slogan; ?></span>
-            <?php endif; ?>
-            </div>
-            <?php endif; ?>
+        <!-- Moved -->
             
         </div><!-- EOF: #header-inside-left -->
         
