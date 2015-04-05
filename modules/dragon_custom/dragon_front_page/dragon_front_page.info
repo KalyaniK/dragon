@@ -3,3 +3,7 @@ description = Customize the front page for the whole site.
 package = Dragon
 core = 7.x
 version = 7.x-1.0
+
+dependencies[] = dragon_common
+dependencies[] = content_type_and_fields
+dependencies[] = flexslider
