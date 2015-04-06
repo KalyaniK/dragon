@@ -34,3 +34,19 @@ span#site-name a{
   top: 5px;
   right: 0px;
 }
+
+#main-navigation{
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 130px;
+}
+
+#header-top{
+  width: 100%;
+  position: fixed;
+}
+
+#page{
+  margin: 130px 0px 0px 0px;
+}
