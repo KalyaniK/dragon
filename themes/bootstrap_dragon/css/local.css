@@ -21,3 +21,16 @@ span#site-name a{
   font-size: 25px;
   margin: 5px 0px 0px;
 }
+
+#search-block-form .form-item-search-block-form input{
+  min-height: 0px;
+height: 33px;
+width: 163px;
+padding: 0px 0px 0px 5px;
+margin: 15px;
+}
+
+#search-block-form #edit-actions{    
+	top: 5px;
+    right: -10px;
+}

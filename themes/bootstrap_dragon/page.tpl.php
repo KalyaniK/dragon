@@ -109,8 +109,6 @@
         <!-- #header-inside-right -->    
         <div id="header-inside-right" class="col-md-4">
 
-			<?php print render($page['search_area']); ?>
-
         </div><!-- EOF: #header-inside-right -->
     
     </div><!-- EOF: #header-inside -->
@@ -124,7 +122,7 @@
         <!-- #main-navigation-inside -->
         <div id="main-navigation-inside" class="clearfix">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-10">
                     <nav role="navigation">
                         <?php if ($page['navigation']) :?>
                         <?php print drupal_render($page['navigation']); ?>
@@ -135,12 +133,21 @@
                         <?php endif; ?>
                     </nav>
                 </div>
+                
+                <div id="search-area" class="clearfix">
+                        <div class="col-md-2">
+                     <?php print render($page['search_area']); ?>
+                     </div>
+                </div>
+        
             </div>
         </div>
+        
         <!-- EOF: #main-navigation-inside -->
 
     </div>
 </div>
+
 <!-- EOF: #main-navigation -->
 
 <?php if ($page['banner']) : ?>
