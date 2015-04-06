@@ -24,13 +24,13 @@ span#site-name a{
 
 #search-block-form .form-item-search-block-form input{
   min-height: 0px;
-height: 33px;
-width: 163px;
-padding: 0px 0px 0px 5px;
-margin: 15px;
+  height: 33px;
+  width: 163px;
+  padding: 0px 0px 0px 5px;
+  margin: 15px 0px 0px 0px;
 }
 
 #search-block-form #edit-actions{    
-	top: 5px;
-    right: -10px;
+  top: 5px;
+  right: 0px;
 }
