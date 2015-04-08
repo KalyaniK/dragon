@@ -39,14 +39,19 @@ span#site-name a{
   width: 100%;
   background-color: white;
   position: fixed;
-  top: 130px;
+  top: 70px;
 }
 
 #header-top{
   width: 100%;
   position: fixed;
+  top: 0px;
 }
 
 #page{
   margin: 130px 0px 0px 0px;
+}
+
+.dragon-logo{
+  height: 48px;
 }

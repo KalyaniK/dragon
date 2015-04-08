@@ -53,7 +53,7 @@
         <div id="header-top-inside" class="clearfix">
             <div class="row">
                     <?php if ($logo): ?>
-                    <a class="col-md-1" href="<?php print check_url($front_page); ?>" title="<?php print t('Home'); ?>"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+                    <a class="col-md-1 dragon-logo" href="<?php print check_url($front_page); ?>" title="<?php print t('Home'); ?>"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
                     <?php endif; ?>
              
                     <?php if ($site_name || $site_slogan): ?>

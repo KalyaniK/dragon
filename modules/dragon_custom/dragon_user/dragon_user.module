@@ -61,3 +61,29 @@ function dragon_user_form_user_profile_form_alter(&$form, &$form_state, $form_id
 function dragon_user_profile_submit($form, &$form_state) {
   $form_state['redirect'] = '' ;
 }
+
+/*
+ * Implements hook_preprocess_page
+ */
+function dragon_user_preprocess_page(&$vars, $hook) {
+  if(user_access('access toolbar')) {
+    drupal_add_css(drupal_get_path('module', 'dragon_user') . '/css/dragon_user_admin.css', array('group' => CSS_DEFAULT, 'every_page' => FALSE));
+  }
+  if (arg(0) == 'user') {
+    drupal_add_css(drupal_get_path('module', 'dragon_user') . '/css/dragon_user_login.css', array('group' => CSS_DEFAULT, 'every_page' => FALSE));
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ * Add customized CSS
+ */
+function dragon_user_form_user_login_alter(&$form, &$form_state, $form_id) {
+  $form['#submit'][] = 'dragon_user_form_user_login_submit';
+}
+/**
+ * Customized submit handler for the login form.
+ */
+function dragon_user_form_user_login_submit($form, &$form_state) {
+  $form_state['redirect'] = '';
+}
