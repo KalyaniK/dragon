@@ -53,5 +53,10 @@ span#site-name a{
 }
 
 .dragon-logo{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.dragon-logo img{
   height: 48px;
 }
