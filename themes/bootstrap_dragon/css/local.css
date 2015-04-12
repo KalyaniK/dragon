@@ -27,7 +27,7 @@ span#site-name a{
   height: 33px;
   width: 163px;
   padding: 0px 0px 0px 5px;
-  margin: 15px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
 }
 
 #search-block-form #edit-actions{    
@@ -64,5 +64,12 @@ span#site-name a{
 
 .dragon-site-name{
   width: 27%;
-  margin-right: 13px;
+  margin-right: 1.33333333%;
+}
+
+/*superfish menu arrows*/
+#main-navigation  .block-superfish ul.sf-menu > li > a.menuparent { padding: 10px 20px 10px 10px;  }
+
+.block-superfish ul.sf-menu li a.menuparent:after {
+  top: 10px;
 }
