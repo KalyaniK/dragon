@@ -81,6 +81,7 @@ span#site-name a{
 
 #main-navigation ul.menu li a.sf-depth-1.active {
   color: #fff;
+  font-weight: 700;
 }
 
 .sf-sub-indicator {
