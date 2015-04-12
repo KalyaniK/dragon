@@ -167,7 +167,7 @@ ul.menu li.expanded ul { padding-left: 25px; border-top: 1px dashed #ddd; margin
 #header-top ul.menu li a { font-size: 13px; text-transform: capitalize;  padding: 16px 20px 16px; }
 
 /*main-navigation*/
-#main-navigation ul.menu li a { text-transform: uppercase; font-weight: 700; padding: 20px; }
+#main-navigation ul.menu li a { font-weight: 700; padding: 20px; }
 
 #main-navigation ul.menu ul li a, #header-top ul.menu ul li a  { padding: 15px 20px; text-transform: capitalize; font-weight: 400; font-size: 13px; border: 1px solid #eaeaea; border-top: none; line-height: 150%; }
 
@@ -328,7 +328,7 @@ input[type="radio"], input[type="checkbox"] { margin: 0px 0 3px; }
 
 /*buttons*/
 input[type="submit"], input[type="reset"], input[type="button"] { margin: 5px 5px 10px 0; background-color: #444; border: none; box-shadow: none;
-color: #fff; padding: 15px 24px; text-transform: uppercase; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; color: #ffffff; }
+color: #fff; padding: 15px 24px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; color: #ffffff; }
 
 input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .highlighted-block .btn:hover,.highlighted-block .btn:focus { color: #ffffff; }
 
@@ -384,7 +384,7 @@ color: #000; position: relative; z-index: 1; height: 52px; margin: 0; padding: 1
 /*call-to-action*/
 .call-to-action { text-align: center; }
 
-.call-to-action .lead { font-size: 32px; font-weight: 700; line-height: 100%; margin-bottom: 10px; text-transform: uppercase; }
+.call-to-action .lead { font-size: 32px; font-weight: 700; line-height: 100%; margin-bottom: 10px; }
 
 .call-to-action p { margin: 0 0 30px; }
 
@@ -516,7 +516,7 @@ text-align: center; cursor: pointer; opacity: 0; filter: alpha(opacity=0);
 
 /*slider caption*/
 .carousel .carousel-caption { background-color: rgba(0,0,0,0.5); color: #fff; display: block; width: 100%; padding: 20px; position: absolute; bottom: 0;
-left: 0; text-align: center; text-transform: uppercase; display: block; }
+left: 0; text-align: center; display: block; }
 
 .carousel .carousel-caption h4, .carousel .carousel-caption p { max-width: 1170px; margin: 0 auto; display: block; }
 
