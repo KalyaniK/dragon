@@ -67,6 +67,11 @@ span#site-name a{
   margin-right: 1.33333333%;
 }
 
+#main-navigation ul.menu li a {
+  font-weight: normal;
+  padding: 10px;
+}
+
 /*superfish menu arrows*/
 #main-navigation  .block-superfish ul.sf-menu > li > a.menuparent { padding: 10px 20px 10px 10px;  }
 
