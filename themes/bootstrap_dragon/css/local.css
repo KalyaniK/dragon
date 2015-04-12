@@ -28,6 +28,8 @@ span#site-name a{
   width: 163px;
   padding: 0px 0px 0px 5px;
   margin: 15px 0px 0px 0px;
+  background-color: #e2e2e4;
+  color: #444;
 }
 
 #search-block-form #edit-actions{    
@@ -37,8 +39,9 @@ span#site-name a{
 
 #main-navigation{
   width: 100%;
-  background-color: white;
+  background-color: #db1a3a;
   position: fixed;
+  border: none;
   top: 60px;
 }
 
@@ -46,6 +49,7 @@ span#site-name a{
   width: 100%;
   position: fixed;
   top: 0px;
+  padding-top: 5px;
 }
 
 #page{
@@ -69,4 +73,16 @@ span#site-name a{
 
 #main-navigation ul.menu li a {
   font-weight: normal;
+}
+
+#main-navigation ul.menu li a.sf-depth-1 {
+  color: #e8e8e8;
+}
+
+#main-navigation ul.menu li a.sf-depth-1.active {
+  color: #fff;
+}
+
+.sf-sub-indicator {
+  display: none;
 }
