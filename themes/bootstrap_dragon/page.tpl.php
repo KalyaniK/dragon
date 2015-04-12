@@ -57,7 +57,7 @@
                     <?php endif; ?>
              
                     <?php if ($site_name || $site_slogan): ?>
-                    <div class="col-md-4">
+                    <div class="col-md-4 dragon-site-name">
                     <?php if ($site_name): ?>
                     <span id="site-name"><a href="<?php print check_url($front_page); ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></span>
                     <?php endif; ?>
