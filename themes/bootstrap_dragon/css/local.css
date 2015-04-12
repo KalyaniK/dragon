@@ -39,7 +39,7 @@ span#site-name a{
   width: 100%;
   background-color: white;
   position: fixed;
-  top: 70px;
+  top: 60px;
 }
 
 #header-top{
@@ -55,8 +55,14 @@ span#site-name a{
 .dragon-logo{
   padding-left: 0px;
   padding-right: 0px;
+  width: 5%;
 }
 
 .dragon-logo img{
   height: 48px;
+}
+
+.dragon-site-name{
+  width: 27%;
+  margin-right: 13px;
 }
