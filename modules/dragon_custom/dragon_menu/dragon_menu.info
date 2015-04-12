@@ -1,5 +1,0 @@
-name = Dragon Menu Settings
-description = Dragon Menu generation and settings
-package = Dragon
-core = 7.x
-version = 7.x-1.0
