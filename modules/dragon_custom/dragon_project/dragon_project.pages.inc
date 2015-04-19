@@ -9,44 +9,10 @@ function dragon_project_create_page() {
       '#type' => 'container',
       '#attributes' => array(
         'class' => array('col-md-3'),
+        'id' => array('dragon-quote-navigation'),
       ),
-      'asdf' => dragon_project_create_page_list(),
-      /*
-      array(
-        '#type' => 'markup',
-        '#markup' => '<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
-            <ul class="nav bs-docs-sidenav">
-              
-                <li class="">
-  <a href="#glyphicons">Glyphicons</a>
-  <ul class="nav">
-    <li class=""><a href="#glyphicons-glyphs">Available glyphs</a></li>
-    <li><a href="#glyphicons-how-to-use">How to use</a></li>
-    <li><a href="#glyphicons-examples">Examples</a></li>
-  </ul>
-</li>
-<li>
-  <a href="#dropdowns">Dropdowns</a>
-  <ul class="nav">
-    <li><a href="#dropdowns-example">Example</a></li>
-    <li><a href="#dropdowns-alignment">Alignment</a></li>
-  </ul>
-</li>
-
-              
-            </ul>
-            <a class="back-to-top" href="#top">
-              Back to top
-            </a>
-            
-            <a href="#" class="bs-docs-theme-toggle" role="button">
-              Preview theme
-            </a>
-            
-          </nav>',
-      ),*/
+      'list' => dragon_project_create_page_list(),
     ),
-    
     'form' => drupal_get_form('project' . '_node_form', $node),
   );
   $output['form']['#attributes']['class'][] = 'col-md-9';
@@ -63,13 +29,9 @@ function dragon_project_create_page_list() {
 
   $group_names = array();
   $field_groups = field_group_info_groups('node', 'project');
-  foreach ($field_groups['form'] as $field_name => $info) {
-    $group_names[$field_name] = $info->label;
+  foreach ($field_groups['form'] as $group_name => $info) {
+    $group_names[$group_name] = l($info->label, '#' . $group_name, array('external' => TRUE));
   }
-  
-  $items = array(
-  'asdf',
-     );
   
   return array(
     '#theme' => 'item_list',

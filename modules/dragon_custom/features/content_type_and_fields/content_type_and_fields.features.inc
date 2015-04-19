@@ -14,6 +14,21 @@ function content_type_and_fields_ctools_plugin_api($module = NULL, $api = NULL) 
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function content_type_and_fields_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: dragon_silder_image.
+  $styles['dragon_silder_image'] = array(
+    'label' => 'Dragon Silder Image',
+    'effects' => array(),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function content_type_and_fields_node_info() {

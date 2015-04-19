@@ -56,3 +56,7 @@ function dragon_project_block_view($delta = '') {
   }
   return $block;
 }
+
+function dragon_project_field_group_pre_render_alter(&$element, $group, & $form) {
+  $element['#attributes']['id'] = $group->group_name;
+}

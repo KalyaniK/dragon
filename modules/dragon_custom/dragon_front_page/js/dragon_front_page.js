@@ -8,12 +8,11 @@
       	var images = $('.flexslider img');
         var browser_width = $(window).width(),
             browser_height = $(window).height() - $('#toolbar').height() - $('#header-top').height() - $('#main-navigation').height();
-            
         if( browser_height/1080 >= browser_width/1920) {
           images.height(browser_height).width('auto');
         } 
         else{
-          images.width(browser_width).width('auto');
+          images.width(browser_width).height('auto');
         }
       }
       $(window).bind('resize', function() { resize_images(); });

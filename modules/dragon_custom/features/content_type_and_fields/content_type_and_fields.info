@@ -52,6 +52,7 @@ features[field_instance][] = user-user-field_registered_capital
 features[field_instance][] = user-user-field_years_in_registration
 features[field_instance][] = user-user-og_user_node
 features[flexslider_optionset][] = dragon
+features[image][] = dragon_silder_image
 features[node][] = article
 features[node][] = group
 features[node][] = page

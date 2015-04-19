@@ -41,3 +41,11 @@ fieldset.field-group-fieldset .fieldset-wrapper{
 #edit-field-check-points input[type="submit"]{
   padding: 5px 20px 5px 20px;
 }
+
+#dragon-quote-navigation {
+  position: fixed;
+}
+
+#project-node-form{
+  float: right;
+}
