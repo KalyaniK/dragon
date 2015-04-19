@@ -50,7 +50,6 @@ function dragon_front_page_config() {
   form_load_include($form_state, 'inc', 'node', 'node.pages');
   $form = drupal_build_form('slider_node_form', $form_state);
   
-  watchdog('qad_ppaa', ' %data ms', array('%data' => print_r(array_keys($form), TRUE)), WATCHDOG_ERROR);
   $no_access_fields = array(
     'comment_settings',
     'author',

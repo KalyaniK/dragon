@@ -1,0 +1,18 @@
+#project-node-form fieldset{
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+#project-node-form fieldset.field-group-fieldset>div{
+  margin-left: 20px;
+}
+
+#project-node-form fieldset.field-group-fieldset legend{
+  font-size: 20px;
+}
+
+#edit-field-project-images input[type="submit"],
+#edit-field-check-points input[type="submit"]{
+  padding: 5px 20px 5px 20px;
+}

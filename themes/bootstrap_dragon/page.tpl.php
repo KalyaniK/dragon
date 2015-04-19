@@ -229,10 +229,11 @@
                     
                         <?php if ($breadcrumb && theme_get_setting('breadcrumb_display')):?> 
                         <!-- #breadcrumb -->
+                        <!-- Right now disable the breadcrumb -->
                         <div id="breadcrumb" class="clearfix">
                             <!-- #breadcrumb-inside -->
                             <div id="breadcrumb-inside" class="clearfix">
-                            <?php print $breadcrumb; ?>
+                            <?php //print $breadcrumb; ?>
                             </div>
                             <!-- EOF: #breadcrumb-inside -->
                         </div>
