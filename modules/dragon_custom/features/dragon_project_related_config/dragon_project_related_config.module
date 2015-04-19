@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Dragon Project Related Config feature.
+ */
+
+include_once 'dragon_project_related_config.features.inc';

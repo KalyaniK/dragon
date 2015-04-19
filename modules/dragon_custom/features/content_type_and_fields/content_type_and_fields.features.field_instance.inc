@@ -439,7 +439,8 @@ function content_type_and_fields_field_default_field_instances() {
   $field_instances['node-slider-field_slider_images'] = array(
     'bundle' => 'slider',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please upload pictures with resolution at 1300 x 500  pixels
+',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -471,7 +472,7 @@ function content_type_and_fields_field_default_field_instances() {
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
-      'max_resolution' => '',
+      'max_resolution' => '1300x500',
       'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
@@ -481,7 +482,7 @@ function content_type_and_fields_field_default_field_instances() {
       'module' => 'image',
       'settings' => array(
         'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
+        'progress_indicator' => 'bar',
       ),
       'type' => 'image_image',
       'weight' => 31,
@@ -845,6 +846,8 @@ function content_type_and_fields_field_default_field_instances() {
   t('Industry');
   t('Location');
   t('Name');
+  t('Please upload pictures with resolution at 1300 x 500  pixels
+');
   t('Registered Capital');
   t('Request message');
   t('Tags');

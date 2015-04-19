@@ -1,3 +1,27 @@
+fieldset.field-group-fieldset,
+#edit-field-project-images fieldset {
+    position:relative;
+    padding-top:50px;
+    background-color: #FCFCFC;
+border: 1px solid #EAEAEA;
+padding: 14px 20px;
+margin-bottom: 30px;
+border-radius: 6px;
+}
+
+#edit-field-project-images fieldset{
+	padding-top: 30px;
+}
+fieldset.field-group-fieldset legend,
+#edit-field-project-images fieldset legend {
+    position:absolute;
+    top:10px;
+    left:18px;
+}​
+fieldset.field-group-fieldset .fieldset-wrapper{
+  margin-top: 30px;
+}
+
 #project-node-form fieldset{
   border-left: none;
   border-right: none;
@@ -6,6 +30,7 @@
 
 #project-node-form fieldset.field-group-fieldset>div{
   margin-left: 20px;
+  margin-top: 30px;
 }
 
 #project-node-form fieldset.field-group-fieldset legend{

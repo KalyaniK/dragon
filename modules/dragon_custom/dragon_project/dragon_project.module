@@ -3,7 +3,7 @@
 function dragon_project_menu() {
   $items['quote'] = array(
     'title' => 'Get A QUOTE',
-    'page callback' => 'dragon_project_create',
+    'page callback' => 'dragon_project_create_page_inteface',
     'access callback' => 'node_access',
     'access arguments' => array('create', 'project'),
     'file' => 'node.pages.inc',
@@ -12,12 +12,9 @@ function dragon_project_menu() {
   return $items;
 }
 
-function dragon_project_create() {
-  global $user;
-  $node = (object) array('uid' => $user->uid, 'name' => (isset($user->name) ? $user->name : ''), 'type' => 'project', 'language' => LANGUAGE_NONE);
-  $output = drupal_get_form('project' . '_node_form', $node);
-
-  return $output;
+function dragon_project_create_page_inteface() {
+  module_load_include('inc', 'dragon_project', 'dragon_project.pages');
+  return dragon_project_create_page();
 }
 
 /*
@@ -52,47 +49,10 @@ function dragon_project_block_info() {
 function dragon_project_block_view($delta = '') {
   // The $delta parameter tells us which block is being requested.
   if ($delta == 'dragon_quote') {
+    module_load_include('inc', 'dragon_project', 'dragon_project.pages');
+    
     $block['subject'] = NULL;
     $block['content'] = _dragon_project_quote_block();
-    $block['#attached'] = array(
-      'css' => array(
-        drupal_get_path('module', 'dragon_project') . '/css/dragon_project_quote_block.css',
-      )
-    );
   }
   return $block;
-}
-
-function _dragon_project_quote_block(){
-  drupal_add_css(drupal_get_path('module', 'dragon_project') . '/css/dragon_project_quote_block.css');
-  return array(
-    'text' => array(
-      '#type' => 'container',
-      '#attributes' => array(
-        'class' => array('dragon-quote-text'),
-      ),
-      array(
-        '#type' => 'markup',
-        '#markup' => 'Get a Quote',
-      ),
-    ),
-    'content' => array(
-      '#type' => 'container',
-      '#attributes' => array(
-        'class' => array('dragon-quote-content'),
-      ),
-      array(
-        '#type' => 'markup',
-        '#markup' => 'Some description',
-      ),
-    ),
-    'link' => array(
-      '#type' => 'link',
-      '#attributes' => array(
-        'class' => array('dragon-quote-link'),
-      ),
-      '#title' => 'Start Now',
-      '#href' => 'quote',
-    ),
-  );
 }

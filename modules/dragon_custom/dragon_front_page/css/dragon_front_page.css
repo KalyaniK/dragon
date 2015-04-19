@@ -1,11 +1,35 @@
-ul.flex-direction-nav{
-  display: none;
-}
-
+/*******************************
+ *       General              **
+ ******************************/
 div#main-content{
   padding: 0px 0px 0px;
 }
 
 #main-content .container{
   width: auto;
+}
+
+div#page{
+  margin: 121px 0px 0px;
+}
+
+div#main{
+  padding: 0px 0px 0px;
+}
+
+/*******************************
+ *       Flexsilder           **
+ ******************************/
+ul.flex-direction-nav{
+  display: none;
+}
+
+div.flexslider {
+  margin: 0px;
+  border: none;
+} 
+
+ol.flex-control-nav{
+  bottom: 0px;
+  z-index: 10;
 }

@@ -43,7 +43,7 @@ function content_type_and_fields_node_info() {
       'help' => '',
     ),
     'slider' => array(
-      'name' => t('slider'),
+      'name' => t('Slider'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
