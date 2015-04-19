@@ -76,7 +76,7 @@ thead tr th, thead tr td, tbody tr th, tbody tr td { padding: 8px; line-height: 
 
 #pre-header-inside { display: none; position: relative; z-index: 13; padding: 40px 0 0 0; }
 
-#header-top { background-color: #fcfcfc; border-bottom: 1px dashed #eaeaea; position: relative; z-index: 12; min-height: 50px; } 
+#header-top { background-color: #fcfcfc; border-bottom: 1px dashed #eaeaea; z-index: 12; } 
 
 #header { background-color: #fcfcfc; border-bottom: 1px solid #eaeaea; position: relative; z-index: 5; padding: 40px 0; text-align: center; min-height: 130px; }
 
@@ -197,12 +197,8 @@ border-color: transparent transparent #fff transparent; height: 0px; position: a
 /*superfish menu arrows*/
 #main-navigation  .block-superfish ul.sf-menu > li > a.menuparent { padding: 20px 40px 20px 20px;  }
 
-#header-top .block-superfish ul.sf-menu > li > a.menuparent { padding: 16px 40px 16px 20px;  }
-
 .block-superfish ul.sf-menu li a.menuparent:after { content: "\e114"; font-family: 'Glyphicons Halflings'; -webkit-font-smoothing: antialiased; 
 position: absolute; top: 20px; right: 17px; font-size: 11px; font-weight: 400; }
-
-#header-top .block-superfish ul.sf-menu li a.menuparent:after { top: 17px; } 
 
 .block-superfish ul.sf-menu ul li a.menuparent:after { content: "\e080"; top: 14px; right: 10px; }
 
@@ -357,7 +353,7 @@ ul.links li { margin: 0; }
 #header-top #block-search-form .form-item { margin:0; }
 
 #header-top #block-search-form input.form-text { border: none; padding: 15px 40px 15px 15px; font-size: 13px; width: 180px; 
--webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; -webkit-appearance: none; min-height: 52px; }
+-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; -webkit-appearance: none;}
 
 #header-top #block-search-form input.form-text:focus { width: 240px; background-color: #444; color: #fff;}
 
