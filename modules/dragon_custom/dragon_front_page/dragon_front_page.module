@@ -77,5 +77,6 @@ function dragon_front_page_callback() {
 function dragon_front_page_preprocess_page(&$vars, $hook) {
   if(arg(0) == 'home') {
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page.css');
+    drupal_add_js(drupal_get_path('module', 'dragon_front_page') . '/js/dragon_front_page.js');
   }
 }

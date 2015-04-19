@@ -3,6 +3,7 @@
 function dragon_project_create_page() {
   global $user;
   $node = (object) array('uid' => $user->uid, 'name' => (isset($user->name) ? $user->name : ''), 'type' => 'project', 'language' => LANGUAGE_NONE);
+  
   $output = array(
     'navigation' => array(
       '#type' => 'container',
@@ -53,40 +54,30 @@ function dragon_project_create_page() {
 }
 
 function dragon_project_create_page_list() {
-  $title = t('My custom listing');
   $type = 'ul';
 
   $attributes = array(
     'id' => 'dragon-quote-form-list',
     'class' => 'custom-class another-custom-class',
   );
-  /*
-  $uids = retrieve_uids(); // Replace with your own function
-  
-  $accounts = array();
-  foreach ($uids as $uid) {
-    $accounts[] = user_load($uid);
+
+  $group_names = array();
+  $field_groups = field_group_info_groups('node', 'project');
+  foreach ($field_groups['form'] as $field_name => $info) {
+    $group_names[$field_name] = $info->label;
   }
   
-  $items = array();
-  foreach ($accounts as $account) {
-    $items[] = array(
-      'data' => $account->name,
-      'id' => $account->uid, // be careful not to add another id attribute on the page that might be the same as one of the uids or your page will not validate
-      'class' => array_keys($account->roles), // value for 'class' key MUST be an (indexed) array. Using a string value like '2 3 4' produces an error
-    );
-  }
-  */
   $items = array(
   'asdf',
      );
   
-  return theme_item_list(array(
-    'items' => $items, 
-    'title' => $title, 
-    'type' => $type, 
-    'attributes' => $attributes
-  ));
+  return array(
+    '#theme' => 'item_list',
+    '#items' => $group_names, 
+    '#title' => t('Form Guide'), 
+    '#type' => $type, 
+    '#attributes' => $attributes
+  );
 }
 
 function _dragon_project_quote_block(){
