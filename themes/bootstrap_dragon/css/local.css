@@ -27,7 +27,15 @@
   margin: 0px;
 }
 
-#search-block-form .form-item-search-block-form input{
+div#header-top #block-search-form{
+  float: none;
+}
+
+#search-area>div{
+  padding-left: 6px;
+}
+
+#header-top #search-block-form .form-item-search-block-form input.form-text{
   min-height: 0px;
   height: 33px;
   width: 163px;
@@ -37,9 +45,8 @@
   color: #444;
 }
 
-#search-block-form #edit-actions{    
+#header-top #search-block-form div.form-actions{    
   top: 5px;
-  right: 0px;
 }
 
 #main-navigation{

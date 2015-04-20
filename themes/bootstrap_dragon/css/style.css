@@ -351,10 +351,10 @@ ul.links li { margin: 0; }
 #header-top #block-search-form { margin: 0; float: right;}
 
 #header-top #block-search-form .form-item { margin:0; }
-
+/*
 #header-top #block-search-form input.form-text { border: none; padding: 15px 40px 15px 15px; font-size: 13px; width: 180px; 
 -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; -webkit-appearance: none;}
-
+*/
 #header-top #block-search-form input.form-text:focus { width: 240px; background-color: #444; color: #fff;}
 
 #block-search-form .form-actions, .sidebar-search-block .form-actions { position: absolute; top:0px; right: 20px; color: #999; font-size: 16px;}
