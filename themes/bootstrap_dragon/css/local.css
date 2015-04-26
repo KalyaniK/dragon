@@ -3,6 +3,11 @@
 /*******************************
  *       Header               **
  ******************************/
+#page {
+  padding-top: 70px;
+  position: relative;
+}
+
 #header {
   display: none;
   text-align: start;
@@ -13,18 +18,19 @@
   padding-left: 0px;
 }
 
-#header-top-left .menu {
-  float: right;
+#header-top .block {
+  clear: none;
+  display: inline-block;
+}
+
+#site-name.navbar-brand {
+  font-weight: 700;
+  margin-left: 0;
 }
 
 .form-item-lang-dropdown-select {
   margin: 0;
   padding: 10px 0;
-}
-
-#site-name a{
-  font-size: 20px;
-  margin: 0px;
 }
 
 div#header-top #block-search-form{
@@ -59,38 +65,7 @@ div#header-top #block-search-form{
 }
 
 #header-top{
-  padding-top: 5px;
-}
-
-body {
-  position: relative;
-}
-
-#page {
-  padding-top: 70px;
-}
-
-@media (min-width: 768px) {
-  #page {
-    padding-top: 130px;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav {
-  padding-left: 15px;
-  }
-  
-  .block-superfish select {
-    width: 100%;
-  }
-  
-  #header-top-right {
-    float: right;
-  }
-  #main-navigation {
-    background-color: transparent;
-  }
+  top: auto;
 }
 
 .dragon-logo{
@@ -101,25 +76,54 @@ body {
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
   margin-left: 15px;
   height: 60px;
+  line-height: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-#site-slogan {
-  margin: 0px;
+/*******************************
+ *      Mega Menu             **
+ ******************************/
+.nav-collapse.collapse.always-show {
+  display: block;
 }
 
-#main-navigation ul.menu li a {
-  font-weight: normal;
+.tb-megamenu .nav > li > a {
+  border-right: none;
+  color: #999;
 }
 
-#main-navigation ul.menu li a.sf-depth-1 {
-  color: #e8e8e8;
+.tb-megamenu {
+  background-color: transparent;
 }
 
-#main-navigation ul.menu li a.sf-depth-1.active {
-  color: #fff;
-  font-weight: 700;
+.tb-megamenu .btn-navbar.tb-megamenu-button {
+  color: #000;
 }
 
-.sf-sub-indicator {
-  display: none;
+
+@media (max-width: 960px) {
+  #dragon-navbar-collapse .container {
+    width: auto;
+  }
+  .nav {
+  padding-left: 15px;
+  }
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .navbar-nav.navbar-nav-right {
+    float: right!important;
+  }
+  .block.block-tb-megamenu {
+    min-width: 200px;
+  }
+  #dragon-navbar-collapse {
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 50%;
+  }
 }
+

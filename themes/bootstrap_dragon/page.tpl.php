@@ -43,91 +43,42 @@
 <!-- EOF: #pre-header -->
 <?php endif; ?>
 
-
 <?php if ($page['header_top_left'] || $page['header_top_right']) :?>
 <!-- #header-top -->
-<div id="header-top" class="clearfix navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dragon-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand dragon-logo" href="<?php print $front_page; ?>">
-              <img alt="Brand"  width="40" height="40" src="<?php print $logo; ?>">
-            </a>
-            <div class="navbar-brand"  id="site-name">
-            <a href="<?php print $front_page; ?>"><?php print t($site_name); ?> </a>
-            <?php if ($site_slogan) : ?>
-            <div  id="site-slogan"><?php print t($site_slogan); ?></div>
-            <?php endif; ?>
-            </div>
-          </div>
+<div id="header-top" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand dragon-logo" href="<?php print $front_page; ?>">
+        <img alt="Brand"  width="40" height="40" src="<?php print $logo; ?>">
+      </a>
+      <a  class="navbar-brand"  id="site-name" href="<?php print $front_page; ?>"><?php print t($site_name); ?> </a>
+    </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="dragon-navbar-collapse">
-        <div class="container">
-            <?php if ($page['header_top_left']) :?>
-                  <div class="nav navbar-nav navbar-left <?php print $header_top_left_grid_class; ?>">
-
-                <!-- #header-top-left -->
-                <div id="header-top-left" class="clearfix">
-                    <?php print render($page['header_top_left']); ?>
-                </div>
-                <!-- EOF:#header-top-left -->
-            </div>
-            <?php endif; ?>
-            <?php if ($page['header_top_right']) :?>
-      <div class="nav navbar-nav navbar-right <?php print $header_top_right_grid_class; ?>">
-                <!-- #header-top-right -->
-                <div id="header-top-right" class="clearfix">
-                    <?php print render($page['header_top_right']); ?>
-                </div>
-                <!-- EOF:#header-top-right -->
-            </div>
-            <?php endif; ?>
-  </div>
-
-  <!-- #main-navigation -->
-  <div id="main-navigation" class="nav-container">
-    <div class="container">
-
-        <!-- #main-navigation-inside -->
-        <div id="main-navigation-inside" class="clearfix">
-            <div class="row">
-                <div class="col-md-10">
-                    <nav role="navigation">
-                        <?php if ($page['navigation']) :?>
-                        <?php print drupal_render($page['navigation']); ?>
-                        <?php else : ?>
-
-                        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('main-menu', 'menu'), ), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible'), ), )); ?>
-
-                        <?php endif; ?>
-                    </nav>
-                </div>
-
-                <div id="search-area" class="clearfix">
-                        <div class="col-md-2">
-                     <?php print render($page['search_area']); ?>
-                     </div>
-                </div>
-
-            </div>
+    <div id="dragon-navbar-collapse">
+      <div class="container">
+        <?php if ($page['header_top_left']) :?>
+        <div class="nav navbar-nav">
+          <!-- #header-top-left -->
+          <div id="header-top-left" class="clearfix">
+              <?php print render($page['header_top_left']); ?>
+          </div>
+          <!-- EOF:#header-top-left -->
         </div>
-
-        <!-- EOF: #main-navigation-inside -->
-
+        <?php endif; ?>
+        <?php if ($page['header_top_right']) :?>
+        <div class="nav navbar-nav navbar-right">
+            <!-- #header-top-right -->
+            <div id="header-top-right" class="clearfix">
+                <?php print render($page['header_top_right']); ?>
+            </div>
+            <!-- EOF:#header-top-right -->
+        </div>
+        <?php endif; ?>
       </div>
-  </div>
-  <!-- EOF: #main-navigation -->
-
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </div>
-
 
 <!-- EOF: #header-top -->
 <?php endif; ?>
