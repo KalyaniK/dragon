@@ -52,7 +52,7 @@ function _dragon_project_quote_block(){
       ),
       array(
         '#type' => 'markup',
-        '#markup' => 'Get a Quote',
+        '#markup' => t('Get a Quote'),
       ),
     ),
     'content' => array(
@@ -62,7 +62,7 @@ function _dragon_project_quote_block(){
       ),
       array(
         '#type' => 'markup',
-        '#markup' => 'Some description',
+        '#markup' => t('Some description'),
       ),
     ),
     'link' => array(
