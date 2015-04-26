@@ -80,3 +80,34 @@ function dragon_front_page_preprocess_page(&$vars, $hook) {
     drupal_add_js(drupal_get_path('module', 'dragon_front_page') . '/js/dragon_front_page.js');
   }
 }
+
+/**
+ * Implements hook_block_info().
+ *
+ * This hook declares what blocks are provided by the module.
+ */
+function dragon_front_page_block_info() {
+  $blocks['dragon_icon_menu'] = array(
+    'info' => t('Dragon Icon Menu'),
+    'region' => 'header_top_right',
+    'status' => TRUE
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ *
+ * This hook generates the contents of the blocks themselves.
+ */
+function dragon_front_page_block_view($delta = '') {
+  // The $delta parameter tells us which block is being requested.
+  if ($delta == 'dragon_icon_menu') {
+    module_load_include('inc', 'dragon_front_page', 'dragon_front_page.pages');
+    
+    $block['subject'] = NULL;
+    $block['content'] = _dragon_front_page_icon_menu_block();
+  }
+  return $block;
+}

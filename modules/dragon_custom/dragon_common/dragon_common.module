@@ -320,3 +320,13 @@ function dragon_common_get_roles($view = 'user') {
   );
 }
 
+function dragon_common_gen_icon_link($button_name, $button_link, $icon_class, $button_class, $external_flag = FALSE, $query = NULL, $addtion_attributes = array()){
+  $title = '<span class="glyphicon ' . $icon_class . '" aria-hidden="true"></span>
+            <span class="icon-text">' . t($button_name) . '</span>';
+  return l( $title, $button_link, array(
+    'attributes' => array('class' => array('btn btn-mini ' . $button_class)) + $addtion_attributes,
+    'query' => $query,
+    'html' => TRUE,
+    'external' => $external_flag)
+  );
+}

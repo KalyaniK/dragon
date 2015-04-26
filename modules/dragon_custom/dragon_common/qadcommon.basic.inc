@@ -155,32 +155,6 @@ function qadcommon_gen_confirm_modal($content, $action_name, $action_link, $exec
 }
 
 /**
- * Generate a standard QAD bootstrap button.
- *
- * @param $button_name
- *   Text on the button
- * @param $button_link
- *   The link of the button, if it's 'javascript(0)', remember set the $external_flag to TRUE
- * @param $icon_class
- *   The icon class from Bootstap
- * @param $button_class
- *   The bootstrap button class, e.g. 'btn-warning', and extra classes for this button
- * @param $external_flag
- *   Flag to indicate the link is internal or external
- *
- * @return The HTML of the button
- */
-function qadcommon_gen_button($button_name, $button_link, $icon_class, $button_class, $external_flag = FALSE, $query = NULL, $addtion_attributes = array()){
-  $title = '<i class="icon-white ' . $icon_class . '"></i> ' . t($button_name);
-  return l( $title, $button_link, array(
-    'attributes' => array('class' => array('btn btn-mini ' . $button_class)) + $addtion_attributes,
-    'query' => $query,
-    'html' => TRUE,
-    'external' => $external_flag)
-  );
-}
-
-/**
  * Generate a top right menu with variable actions.
  *
  * It will expose a new hook "hook_qad_menu" that allow other modules to add action items to the list.

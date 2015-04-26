@@ -35,6 +35,10 @@ div#header-top #block-search-form{
   padding-left: 6px;
 }
 
+#header-top div ul.menu li a {
+  padding: 19px 32px;
+}
+
 #header-top #search-block-form .form-item-search-block-form input.form-text{
   min-height: 0px;
   height: 33px;
