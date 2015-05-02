@@ -1,0 +1,6 @@
+name = Dragon Footer Block
+description = Dragon footer block.
+package = Dragon
+core = 7.x
+version = 7.x-1.1
+dependencies[] = block

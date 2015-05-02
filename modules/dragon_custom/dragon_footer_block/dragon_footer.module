@@ -1,0 +1,129 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_block_info().
+ */
+function dragon_footer_block_info() {
+  $blocks = array();
+
+  $blocks['dragon_footer'] = array(
+    'info' => t('Dragon Footer'),
+    'status' => TRUE,
+    'region' => 'footer',
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function dragon_footer_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'dragon_footer':
+      $block['subject'] = t('');
+      $block['content'] = _dragon_footer_html();
+      break;
+  }
+
+  return $block;
+}
+
+/**
+ * Implements _dragon_footer_markup()
+ * Apply the HTML to the markup
+ */
+function _dragon_footer_html() {
+  /*
+  $a = array(
+    'block' => array(
+      '#type' => 'container',
+      '#attributes' => array(
+        'class' => array('dragon-footer'),
+      ),
+      'links' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => array('dragon-footer-links'),
+        ),
+        '#type' => 'markup',
+        '#markup' => dragon_common_gen_icon_link('Search', '', 'glyphicon-search', NULL),
+      ),
+      'user' => array(
+        '#type' => 'markup',
+        '#markup' => dragon_common_gen_icon_link('Log In', '', 'glyphicon-user', NULL),
+      ),
+    ),
+  );
+  */
+  return '
+  <footer class="global-footer">
+      <div class="inap-column left-column">
+      <span class="column-title">About Dragon Asia</span>      <div class="textwidget"><p>xxxxxx.</p>
+</div>
+    <div class="nav footer-nav clearfix"><ul id="menu-footer-about-menu" class="menu"><li class="menu-about-internap">
+    <a href="">About us</a></li>
+<li class="menu-why-internap"><a href="quote">Get a quote</a></li>
+</ul></div>  </div>
+  
+      <div class="inap-column center-column">
+      <span class="column-title">We’re Here to Help</span>
+      <div class="nav footer-help-nav clearfix">
+      <ul id="menu-footer-help" class="menu">
+      <li class="getquote menu-get-a-quote"><a href="quote"></a></li>
+
+</ul></div><div class="social-block"><span class="column-title">Follow Us</span><a href="" class="social-icon icon-linkedin" target="_blank"><!--linkedin--></a><a href="" class="social-icon icon-twitter" target="_blank"><!--twitter--></a>
+<a href="" class="social-icon icon-youtube" target="_blank"><!--youtube--></a>
+<a href="" class="social-icon icon-facebook" target="_blank">
+<!--facebook--></a><a href="" class="social-icon icon-google-plus" target="_blank"><!--google-plus--></a>
+<a href="" class="social-icon icon-rss" target="_blank"><!--rss--></a></div>    </div>
+  
+      <div class="inap-column right-column">
+      <span class="column-title">Recent Tweets</span>
+      
+          </div>
+  
+  <div class="sub-footer">
+    <div class="copyright">© 2015 DragonAsia. All Rights Reserved.</div>
+    <div class="nav footer-sub-nav clearfix"><ul id="menu-page-bottom" class="nav page-bottom-nav clearfix"><li class="menu-terms-of-use">
+    <a href="">Terms of Use</a></li>
+<li class="menu-privacy-policy"><a href="">Privacy Policy</a></li>
+<li class="menu-sitemap"><a href="">Sitemap</a></li>
+</ul></div> </div>
+</footer>
+  ';
+}
+
+/**
+ * Implements _qad_footer_block_add_icon($image_path, $link_path, $tag_a_attr = NULL, $tag_img_attr = NULL)
+ * Wrap html with icon and link in Drupal way, not hard code
+ *
+ * Input $image_path : the icon link, use pictures on the Internet
+ *       $link_path  : the link of the button when clicked,
+ *       $tag_a_attr = NULL : attributes for tag <a>, default value is NULL
+ *       $tag_img_attr = NULL : attributes for tag <img>, default value is NULL
+ * Return wrapped html
+ */
+
+function _qad_footer_block_add_icon($image_path, $link_path, $tag_a_attr = NULL, $tag_img_attr = NULL) {
+  //Build the icon
+  $icon = array(
+    'path' => $image_path,
+    'attributes' => $tag_img_attr,
+  );
+
+  //Wrapped with the image theme
+  $wrapped_icon = theme('image', $icon);
+
+  // Tell Drupal that the text is html
+  $options['html'] = TRUE;
+  $options['attributes'] = $tag_a_attr;
+
+  return l($wrapped_icon, $link_path, $options);
+}
