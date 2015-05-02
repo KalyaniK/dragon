@@ -8,7 +8,7 @@ function dragon_project_create_page() {
     'navigation' => array(
       '#type' => 'container',
       '#attributes' => array(
-        'class' => array('col-md-3'),
+        'class' => array('col-md-2'),
         'id' => array('dragon-quote-navigation'),
       ),
       'list' => dragon_project_create_page_list(),
@@ -19,24 +19,31 @@ function dragon_project_create_page() {
   return $output;
 }
 
+function _dragon_project_sort_by_object_weight($object_a, $object_b){
+  return strcmp($object_a->weight, $object_b->weight);
+}
+
 function dragon_project_create_page_list() {
   $type = 'ul';
 
   $attributes = array(
     'id' => 'dragon-quote-form-list',
-    'class' => 'custom-class another-custom-class',
+    'class' => 'custom-class another-custom-class ajdust-anchor',
   );
 
   $group_names = array();
   $field_groups = field_group_info_groups('node', 'project');
-  foreach ($field_groups['form'] as $group_name => $info) {
-    $group_names[$group_name] = l($info->label, '#' . $group_name, array('external' => TRUE));
+  $field_groups = $field_groups['form'];
+  usort($field_groups, "_dragon_project_sort_by_object_weight");
+  
+  foreach ($field_groups as $info) {
+    $group_names[$info->group_name] = l($info->label, '#' . $info->group_name, array('external' => TRUE));
   }
   
   return array(
     '#theme' => 'item_list',
     '#items' => $group_names, 
-    '#title' => t('Form Guide'), 
+    '#title' => t('Get A Quote'), 
     '#type' => $type, 
     '#attributes' => $attributes
   );
@@ -52,7 +59,7 @@ function _dragon_project_quote_block(){
       ),
       array(
         '#type' => 'markup',
-        '#markup' => t('Get a Quote'),
+        '#markup' => t('Get a quote'),
       ),
     ),
     'content' => array(
@@ -70,7 +77,7 @@ function _dragon_project_quote_block(){
       '#attributes' => array(
         'class' => array('dragon-quote-link'),
       ),
-      '#title' => 'Start Now',
+      '#title' => t('Start Now'),
       '#href' => 'quote',
     ),
   );

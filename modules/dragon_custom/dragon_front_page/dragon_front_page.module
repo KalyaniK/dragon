@@ -92,7 +92,6 @@ function dragon_front_page_block_info() {
     'region' => 'header_top_right',
     'status' => TRUE
   );
-
   return $blocks;
 }
 

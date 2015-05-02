@@ -1,22 +1,26 @@
+.page-title{
+  display: none;
+}
+
 fieldset.field-group-fieldset,
 #edit-field-project-images fieldset {
-    position:relative;
-    padding-top:50px;
-    background-color: #FCFCFC;
-border: 1px solid #EAEAEA;
-padding: 14px 20px;
-margin-bottom: 30px;
-border-radius: 6px;
+  position:relative;
+  padding-top:50px;
+  background-color: #FCFCFC;
+  border: 1px solid #EAEAEA;
+  padding: 14px 20px;
+  margin-bottom: 30px;
+  border-radius: 6px;
 }
 
 #edit-field-project-images fieldset{
-	padding-top: 30px;
+  padding-top: 30px;
 }
 fieldset.field-group-fieldset legend,
 #edit-field-project-images fieldset legend {
-    position:absolute;
-    top:10px;
-    left:18px;
+  position:absolute;
+  top:10px;
+  left:18px;
 }​
 fieldset.field-group-fieldset .fieldset-wrapper{
   margin-top: 30px;
@@ -37,9 +41,13 @@ fieldset.field-group-fieldset .fieldset-wrapper{
   font-size: 20px;
 }
 
-#edit-field-project-images input[type="submit"],
+#edit-field-project-images table input,
 #edit-field-check-points input[type="submit"]{
   padding: 5px 20px 5px 20px;
+}
+
+.image-widget-data input[type="submit"]{
+  padding: 2px 20px 2px 20px;
 }
 
 #dragon-quote-navigation {
@@ -49,3 +57,32 @@ fieldset.field-group-fieldset .fieldset-wrapper{
 #project-node-form{
   float: right;
 }
+
+.image-widget-data{
+  width: 100%
+}
+
+.image-widget-data input.form-file,
+.image-widget-data input.form-submit{
+  display: inline;
+}
+
+
+.form-type-radio{
+  display: inline;
+  padding-right: 20px;
+}
+
+
+
+
+/*
+#project-node-form>div>fieldset:before{
+  content: 'sdfgsdfg';
+  display: block; 
+  position: relative; 
+  top: -250px; 
+  width: 0; height: 5em; margin-top: -5em
+}
+.ajdust-anchor a{
+}*/

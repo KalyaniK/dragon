@@ -2,3 +2,20 @@ form input.form-text{
   width: 400px;
   display: block;
 }
+
+#content-wrapper {
+  background-color: #fcfcfc;
+  border: 1px solid #eaeaea;
+  margin-bottom: 30px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+h1.page-title {
+  padding: 20px 40px 0;
+}
+
+.region-content form{
+  padding: 10px 40px 20px;
+}
