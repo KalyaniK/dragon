@@ -7,10 +7,40 @@
  * Implements hook_block_info().
  */
 function dragon_footer_block_info() {
-  $blocks = array();
+  $blocks['dragon_footer_about'] = array(
+    'info' => t('Dragon Footer - About'),
+    'status' => TRUE,
+    'region' => 'footer_first',
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+  );
 
-  $blocks['dragon_footer'] = array(
-    'info' => t('Dragon Footer'),
+  $blocks['dragon_footer_follow'] = array(
+    'info' => t('Dragon Footer - Follow'),
+    'status' => TRUE,
+    'region' => 'footer_second',
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+  );
+
+  $blocks['dragon_footer_download'] = array(
+    'info' => t('Dragon Footer - Download'),
+    'status' => TRUE,
+    'region' => 'footer_third',
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+  );
+
+  $blocks['dragon_footer_help'] = array(
+    'info' => t('Dragon Footer - Help'),
+    'status' => TRUE,
+    'region' => 'footer_fourth',
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+  );
+
+  $blocks['dragon_footer_bottom'] = array(
+    'info' => t('Dragon Footer - Bottom'),
     'status' => TRUE,
     'region' => 'footer',
     'cache' => DRUPAL_CACHE_PER_ROLE,
@@ -26,9 +56,25 @@ function dragon_footer_block_info() {
 function dragon_footer_block_view($delta = '') {
   $block = array();
   switch ($delta) {
-    case 'dragon_footer':
+    case 'dragon_footer_about':
       $block['subject'] = t('');
-      $block['content'] = _dragon_footer_html();
+      $block['content'] = _dragon_footer_about_html();
+      break;
+    case 'dragon_footer_follow':
+      $block['subject'] = t('');
+      $block['content'] = _dragon_footer_follow_html();
+      break;
+    case 'dragon_footer_download':
+      $block['subject'] = t('');
+      $block['content'] = _dragon_footer_download_html();
+      break;
+    case 'dragon_footer_help':
+      $block['subject'] = t('');
+      $block['content'] = _dragon_footer_help_html();
+      break;
+    case 'dragon_footer_bottom':
+      $block['subject'] = t('');
+      $block['content'] = _dragon_footer_bottom_html();
       break;
   }
 
@@ -37,79 +83,184 @@ function dragon_footer_block_view($delta = '') {
 
 /**
  * Implements _dragon_footer_markup()
- * Apply the HTML to the markup
  */
-function _dragon_footer_html() {
-  /*
-  $a = array(
+function _dragon_footer_about_html() {
+  return array(
     'block' => array(
       '#type' => 'container',
       '#attributes' => array(
-        'class' => array('dragon-footer'),
+        'class' => array('dragon-footer-about'),
+      ),
+      'title' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => array('dragon-footer-title'),
+        ),
+        'html' => array(
+          '#type' => 'markup',
+          '#markup' => t('About Dragon Asia'),
+        ),
+      ),
+      'content' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => array('dragon-footer-content'),
+        ),
+        'html' => array(
+          '#type' => 'markup',
+          '#markup' => t('About Dragon Asia is a company.....
+          About Dragon Asia is a company.....About Dragon Asia is a company.....
+          About Dragon Asia is a company.....'),
+        ),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements _dragon_footer_markup()
+ */
+function _dragon_footer_follow_html() {
+  return array(
+    'block' => array(
+      '#type' => 'container',
+      '#attributes' => array(
+        'class' => array('dragon-footer-follow'),
+      ),
+      'title' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => array('dragon-footer-title'),
+        ),
+        'html' => array(
+          '#type' => 'markup',
+          '#markup' => t('Follow Us'),
+        ),
+      ),
+      'content' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => array('dragon-footer-content'),
+        ),
+        'linkedin' => array(
+          '#type' => 'container',
+          '#attributes' => array(
+            'class' => array('dragon-footer-icon'),
+          ),
+          'html' => array(
+            '#type' => 'markup',
+            '#markup' => t('in'),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements _dragon_footer_markup()
+ */
+function _dragon_footer_download_html() {
+  return array(
+    'block' => array(
+      '#type' => 'container',
+      '#attributes' => array(
+        'class' => array('dragon-footer-about'),
+      ),
+      'title' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => array('dragon-footer-title'),
+        ),
+        'html' => array(
+          '#type' => 'markup',
+          '#markup' => t('Downloads'),
+        ),
+      ),
+      'content' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => array('dragon-footer-content'),
+        ),
+        'list' => array(
+          '#theme' => 'item_list',
+          '#type' => 'ul',
+          '#items' => array(
+            dragon_common_gen_icon_link('File A.pdf', '', 'glyphicon-file', NULL),
+          ), 
+          '#attributes' => array(
+            'class' => array('list-unstyled'),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements _dragon_footer_markup()
+ */
+function _dragon_footer_help_html() {
+  return array(
+    'block' => array(
+      '#type' => 'container',
+      '#attributes' => array(
+        'class' => array('dragon-footer-about'),
+      ),
+      'title' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => array('dragon-footer-title'),
+        ),
+        'html' => array(
+          '#type' => 'markup',
+          '#markup' => t('Help'),
+        ),
+      ),
+      'content' => array(
+        '#type' => 'container',
+        '#attributes' => array(
+          'class' => array('dragon-footer-content'),
+        ),
+        'list' => array(
+          '#theme' => 'item_list',
+          '#type' => 'ul',
+          '#items' => array(
+            dragon_common_gen_icon_link('Get a quote', '', 'glyphicon-pencil', NULL),
+            dragon_common_gen_icon_link('Live Chat', '', 'glyphicon-user', NULL),
+          ), 
+          '#attributes' => array(
+            'class' => array('list-unstyled'),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements _dragon_footer_markup()
+ */
+function _dragon_footer_bottom_html() {
+  return array(
+    'block' => array(
+      '#type' => 'container',
+      '#attributes' => array(
+        'class' => array('dragon-footer-bottom'),
       ),
       'links' => array(
         '#type' => 'container',
         '#attributes' => array(
-          'class' => array('dragon-footer-links'),
+          'class' => array('dragon-footer-links dragon-footer-content'),
         ),
-        '#type' => 'markup',
-        '#markup' => dragon_common_gen_icon_link('Search', '', 'glyphicon-search', NULL),
-      ),
-      'user' => array(
-        '#type' => 'markup',
-        '#markup' => dragon_common_gen_icon_link('Log In', '', 'glyphicon-user', NULL),
+        array(
+          '#type' => 'markup',
+          '#markup' => l('Sitemap', 'sitemap') . ' | ' . l('Disclaimer', 'disclaimer') . ' | ' . t('© 2015 Dragon Asia. All Rights Reserved.'),
+        ),
       ),
     ),
   );
-  */
-  return '
-  <footer class="global-footer">
-      <div class="inap-column left-column">
-      <span class="column-title">About Dragon Asia</span>      <div class="textwidget"><p>xxxxxx.</p>
-</div>
-    <div class="nav footer-nav clearfix"><ul id="menu-footer-about-menu" class="menu"><li class="menu-about-internap">
-    <a href="">About us</a></li>
-<li class="menu-why-internap"><a href="quote">Get a quote</a></li>
-</ul></div>  </div>
-  
-      <div class="inap-column center-column">
-      <span class="column-title">We’re Here to Help</span>
-      <div class="nav footer-help-nav clearfix">
-      <ul id="menu-footer-help" class="menu">
-      <li class="getquote menu-get-a-quote"><a href="quote"></a></li>
-
-</ul></div><div class="social-block"><span class="column-title">Follow Us</span><a href="" class="social-icon icon-linkedin" target="_blank"><!--linkedin--></a><a href="" class="social-icon icon-twitter" target="_blank"><!--twitter--></a>
-<a href="" class="social-icon icon-youtube" target="_blank"><!--youtube--></a>
-<a href="" class="social-icon icon-facebook" target="_blank">
-<!--facebook--></a><a href="" class="social-icon icon-google-plus" target="_blank"><!--google-plus--></a>
-<a href="" class="social-icon icon-rss" target="_blank"><!--rss--></a></div>    </div>
-  
-      <div class="inap-column right-column">
-      <span class="column-title">Recent Tweets</span>
-      
-          </div>
-  
-  <div class="sub-footer">
-    <div class="copyright">© 2015 DragonAsia. All Rights Reserved.</div>
-    <div class="nav footer-sub-nav clearfix"><ul id="menu-page-bottom" class="nav page-bottom-nav clearfix"><li class="menu-terms-of-use">
-    <a href="">Terms of Use</a></li>
-<li class="menu-privacy-policy"><a href="">Privacy Policy</a></li>
-<li class="menu-sitemap"><a href="">Sitemap</a></li>
-</ul></div> </div>
-</footer>
-  ';
 }
-
-/**
- * Implements _qad_footer_block_add_icon($image_path, $link_path, $tag_a_attr = NULL, $tag_img_attr = NULL)
- * Wrap html with icon and link in Drupal way, not hard code
- *
- * Input $image_path : the icon link, use pictures on the Internet
- *       $link_path  : the link of the button when clicked,
- *       $tag_a_attr = NULL : attributes for tag <a>, default value is NULL
- *       $tag_img_attr = NULL : attributes for tag <img>, default value is NULL
- * Return wrapped html
- */
 
 function _qad_footer_block_add_icon($image_path, $link_path, $tag_a_attr = NULL, $tag_img_attr = NULL) {
   //Build the icon
