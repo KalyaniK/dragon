@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Dragon Views feature.
+ */
+
+include_once 'dragon_views.features.inc';
