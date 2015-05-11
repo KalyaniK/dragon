@@ -132,12 +132,6 @@ div#header-top #block-search-form{
 /*******************************
  *      Footer Menu           **
  ******************************/
-#subfooter>div{
-  width: 100%;
-  padding: 0px;
-}
-
-footer#footer,
 footer#subfooter{
   border: none;
   padding: 0px;
@@ -146,7 +140,13 @@ footer#subfooter{
   background-color: #1A2732;
 }
 
-footer .dragon-footer-title{
+#mini-panel-dragon_footer {
+  width: 1170px;
+  margin: 0px auto;
+  text-align: left;
+}
+
+#mini-panel-dragon_footer .pane-title{
   display: block;
   color: #8AB8CB;
   font-size: 2rem;
@@ -155,28 +155,41 @@ footer .dragon-footer-title{
   margin: 0px;
 }
 
-footer .dragon-footer-content{
+#mini-panel-dragon_footer .pane-content p,
+#mini-panel-dragon_footer div.dragon-footer-links{
   color: #FFF;
   opacity: 0.9;
 }
 
-footer .dragon-footer-content a{
+#mini-panel-dragon_footer .pane-content a{
   color: #FFF;
 }
 
-footer .dragon-footer-links{
+#mini-panel-dragon_footer .pane-content span.glyphicon {
+  margin-right: 4px;
+}
+
+#mini-panel-dragon_footer .pane-content ul br{
+  display: none;
+}
+
+#mini-panel-dragon_footer .dragon-footer-links{
   width: 86%;
   text-align: right;
 }
 
-footer .item-list ul li{
+#mini-panel-dragon_footer .item-list ul li{
   list-style: none;
   margin-left: -10px;
   border: none;
   padding: 0px;
 }
 
-.dragon-footer-icon{
+#mini-panel-dragon_footer a{
+  text-decoration: none;
+}
+
+#mini-panel-dragon_footer a.dragon-footer-icon{
   width: 40px;
   height: 40px;
   font-size: 2.4rem;

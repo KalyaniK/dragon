@@ -47,7 +47,7 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Order Information',
-    'weight' => '37',
+    'weight' => '7',
     'children' => array(
       0 => 'field_quantity',
     ),
@@ -100,9 +100,12 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Packaging',
-    'weight' => '39',
+    'weight' => '9',
     'children' => array(
       0 => 'field_packaging',
+      1 => 'field_product_packaging',
+      2 => 'field_inner_box_packaging',
+      3 => 'field_carton_box',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -258,7 +261,7 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Quality Information',
-    'weight' => '38',
+    'weight' => '8',
     'children' => array(
       0 => 'field_check_points',
     ),
@@ -311,9 +314,14 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Technical Details',
-    'weight' => '37',
+    'weight' => '6',
     'children' => array(
       0 => 'field_color',
+      1 => 'field_if_drawing',
+      2 => 'field_international_standard',
+      3 => 'field_measurement',
+      4 => 'field_logo_on',
+      5 => 'field_other_specification',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

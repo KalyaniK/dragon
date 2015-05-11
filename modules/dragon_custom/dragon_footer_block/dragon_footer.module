@@ -149,7 +149,7 @@ function _dragon_footer_follow_html() {
           ),
           'html' => array(
             '#type' => 'markup',
-            '#markup' => t('in'),
+            '#markup' => l('in', 'http://www.linkedin.com/company/dragon-asia-hk-ltd'),
           ),
         ),
       ),
@@ -226,7 +226,7 @@ function _dragon_footer_help_html() {
           '#theme' => 'item_list',
           '#type' => 'ul',
           '#items' => array(
-            dragon_common_gen_icon_link('Get a quote', '', 'glyphicon-pencil', NULL),
+            dragon_common_gen_icon_link('Get a quote', 'quote', 'glyphicon-pencil', NULL),
             dragon_common_gen_icon_link('Live Chat', '', 'glyphicon-user', NULL),
           ), 
           '#attributes' => array(
