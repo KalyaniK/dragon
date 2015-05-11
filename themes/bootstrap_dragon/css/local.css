@@ -141,7 +141,7 @@ footer#subfooter{
 }
 
 #mini-panel-dragon_footer {
-  width: 1170px;
+  width: 970px;
   margin: 0px auto;
   text-align: left;
 }
@@ -166,7 +166,7 @@ footer#subfooter{
 }
 
 #mini-panel-dragon_footer .pane-content span.glyphicon {
-  margin-right: 4px;
+  margin-right: 10px;
 }
 
 #mini-panel-dragon_footer .pane-content ul br{
