@@ -176,5 +176,63 @@ function dragon_panels_default_panels_mini() {
   $mini->display = $display;
   $export['dragon_footer'] = $mini;
 
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'dragon_get_a_quote';
+  $mini->category = '';
+  $mini->admin_title = 'Dragon Get a Quote';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '8a6f9e23-a2a6-49c3-9adb-ceaf0050a5da';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-b8ab83db-c1bc-48cb-bc4d-ec724cfa7499';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Get a Quote',
+      'body' => '<p>Get a Quote.....Get a Quote.....Get a Quote.....Get a Quote.....</p><p>Get a Quote.....Get a Quote.....</p>
+<a href="/dragon-dev/quote" class="dragon-quote-link">Start Now</a>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-mini-panel-middle',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'b8ab83db-c1bc-48cb-bc4d-ec724cfa7499';
+    $display->content['new-b8ab83db-c1bc-48cb-bc4d-ec724cfa7499'] = $pane;
+    $display->panels['middle'][0] = 'new-b8ab83db-c1bc-48cb-bc4d-ec724cfa7499';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-b8ab83db-c1bc-48cb-bc4d-ec724cfa7499';
+  $mini->display = $display;
+  $export['dragon_get_a_quote'] = $mini;
+
   return $export;
 }
