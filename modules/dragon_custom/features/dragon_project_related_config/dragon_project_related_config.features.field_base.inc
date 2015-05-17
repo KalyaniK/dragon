@@ -326,10 +326,8 @@ function dragon_project_related_config_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'raw' => 'Raw material',
-        'semi' => 'Semi finish',
-        'finish' => 'Finish product',
-        'quality' => 'Quality Control and Audit',
+        'sports' => 'Sports',
+        'clothes' => 'Clothes',
       ),
       'allowed_values_function' => '',
     ),

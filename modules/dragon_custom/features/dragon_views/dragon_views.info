@@ -1,10 +1,14 @@
 name = Dragon Views
 core = 7.x
 package = Features
+dependencies[] = homebox
 dependencies[] = views
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
+features[homebox][] = Employee Dashboard
+features[homebox][] = Supplier Dashboard
 features[homebox][] = customer_dashboard
+features[views_view][] = all_projects
 features[views_view][] = customer_dashboard
+features[views_view][] = supplier_projects
 features_exclude[dependencies][ctools] = ctools
-features_exclude[dependencies][homebox] = homebox

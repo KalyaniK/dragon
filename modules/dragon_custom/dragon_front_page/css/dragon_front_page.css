@@ -32,3 +32,32 @@ ol.flex-control-nav{
   bottom: 0px;
   z-index: 10;
 }
+
+/*******************************
+ *       Get a Quote          **
+ ******************************/
+.dragon-mini-panel-middle{
+  text-align: center;
+}
+
+.dragon-quote-link{
+cursor: pointer;
+position: relative;
+display: inline-block;
+color: #FFF;
+font-size: 1.4rem;
+font-weight: 700;
+line-height: normal;
+text-decoration: none;
+text-align: center;
+white-space: nowrap;
+background: none repeat scroll 0% 0% #F47A1F;
+padding: 8px 15px 9px;
+border-radius: 2px;
+padding-top: 8px;
+padding-bottom: 9px;
+width: 100%;
+max-width: 135px;
+padding-right: 0px;
+padding-left: 0px;
+}
