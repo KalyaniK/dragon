@@ -17,7 +17,7 @@ function dragon_views_views_api($module = NULL, $api = NULL) {
 function dragon_views_homebox() {
   $homeboxes = array();
 
-  $homeboxes['Employee Dashboard'] = array(
+  $homeboxes['employee_dashboard'] = array(
     'regions' => 2,
     'cache' => 0,
     'color' => 0,
@@ -57,7 +57,7 @@ function dragon_views_homebox() {
     ),
   );
 
-  $homeboxes['Supplier Dashboard'] = array(
+  $homeboxes['supplier_dashboard'] = array(
     'regions' => 2,
     'cache' => 0,
     'color' => 0,
