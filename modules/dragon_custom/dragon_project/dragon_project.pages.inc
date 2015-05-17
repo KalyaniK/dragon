@@ -82,3 +82,27 @@ function _dragon_project_quote_block(){
     ),
   );
 }
+
+function dragon_project_info_bar() {
+  drupal_add_css(drupal_get_path('module', 'dragon_project') . '/css/dragon_project_quote_block.css');
+  global $user;
+  return array(
+    'text' => array(
+      '#type' => 'container',
+      '#attributes' => array(
+        'class' => array('dragon-user-company-logo'),
+      ),
+      array(
+        '#type' => 'markup',
+        '#markup' => t('Get a quote'),
+      ),
+    ),
+    'content' => array(
+      '#type' => 'container',
+      '#attributes' => array(
+        'class' => array('dragon-user-info'),
+      ),
+      field_view_field('user', $user, 'field_name'),
+    ),
+  );
+}

@@ -210,8 +210,7 @@ function dragon_panels_default_panels_mini() {
     $pane->configuration = array(
       'admin_title' => '',
       'title' => 'Get a Quote',
-      'body' => '<p>Get a Quote.....Get a Quote.....Get a Quote.....Get a Quote.....</p><p>Get a Quote.....Get a Quote.....</p>
-<a href="/dragon-dev/quote" class="dragon-quote-link">Start Now</a>',
+      'body' => '<p>Get a Quote.....Get a Quote.....Get a Quote.....Get a Quote.....</p><p>Get a Quote.....Get a Quote.....</p><p><a class="dragon-quote-link" href="quote">Start Now</a></p>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );

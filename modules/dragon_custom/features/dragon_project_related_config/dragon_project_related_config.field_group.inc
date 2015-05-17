@@ -21,16 +21,21 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Order Information',
-    'weight' => '7',
+    'weight' => '4',
     'children' => array(
       0 => 'field_quantity',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-order-information field-group-fieldset',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
+        'id' => '',
       ),
     ),
   );
@@ -74,16 +79,24 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Packaging',
-    'weight' => '9',
+    'weight' => '6',
     'children' => array(
       0 => 'field_packaging',
+      1 => 'field_product_packaging',
+      2 => 'field_inner_box_packaging',
+      3 => 'field_carton_box',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-packaging field-group-fieldset',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
+        'id' => '',
       ),
     ),
   );
@@ -130,14 +143,21 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Project Pictures',
-    'weight' => '6',
-    'children' => array(),
-    'format_type' => 'fieldset',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_project_images',
+    ),
+    'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-project-pictures field-group-fieldset',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
+        'id' => '',
       ),
     ),
   );
@@ -182,16 +202,21 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Project Type',
-    'weight' => '6',
+    'weight' => '1',
     'children' => array(
       0 => 'field_project_type',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-project-type field-group-fieldset',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
+        'id' => '',
       ),
     ),
   );
@@ -235,16 +260,21 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Quality Information',
-    'weight' => '8',
+    'weight' => '5',
     'children' => array(
       0 => 'field_check_points',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-quality-information field-group-fieldset',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
+        'id' => '',
       ),
     ),
   );
@@ -288,16 +318,26 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Technical Details',
-    'weight' => '7',
+    'weight' => '3',
     'children' => array(
       0 => 'field_color',
+      1 => 'field_if_drawing',
+      2 => 'field_international_standard',
+      3 => 'field_measurement',
+      4 => 'field_logo_on',
+      5 => 'field_other_specification',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => 'group-technical-details field-group-fieldset',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => '',
+        'id' => '',
       ),
     ),
   );
