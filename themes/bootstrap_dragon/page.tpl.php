@@ -257,6 +257,14 @@
     <!-- EOF: #bottom-content -->
     <?php endif; ?>
 
+    <?php if ($page['dragon_blocks']):?>
+    <!-- #bottom-content -->
+    <div id="dragon-blocks" class="clearfix">
+                    <?php print render($page['dragon_blocks']); ?>
+    </div>
+    <!-- EOF: #bottom-content -->
+    <?php endif; ?>
+
 </div>
 <!-- EOF:#page -->
 

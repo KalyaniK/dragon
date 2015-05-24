@@ -202,3 +202,45 @@ footer#subfooter{
   background: none repeat scroll 0% 0% #FFF;
   border-radius: 20px;
 }
+
+/*******************************
+ *      Panels                **
+ ******************************/
+.dragon-mini-panel-block h2{
+  text-align: center;
+}
+.dragon-mini-panel-block .content{
+  width: 1170px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.dragon-mini-panel-block .panel-pane{
+  padding: 15px;
+}
+.dragon-mini-panel-block .panel-pane h2{
+  font-size: 16px;
+}
+
+.dragon-color-grey{
+  background-color: #F2F2F2;
+}
+.dragon-color-dark{
+  background-color: #222;
+  color: #FFF;
+}
+.dragon-color-dark-grey{
+  background-color: #E3E2E2;
+}
+.dragon-color-red{
+  background-color: rgb(204, 24, 48);
+  color: #FFF;
+}
+.dragon-color-dark-red{
+  background-color: rgb(171, 25, 36);
+  color: #FFF;
+}
+
+.dragon-mini-panel-block.dragon-width-slim .content{
+  width: 770px;
+}

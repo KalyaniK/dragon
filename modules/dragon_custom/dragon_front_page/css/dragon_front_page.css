@@ -34,7 +34,7 @@ ol.flex-control-nav{
 }
 
 /*******************************
- *       Get a Quote          **
+ *    Panel   Get a Quote     **
  ******************************/
 .dragon-mini-panel-middle{
   text-align: center;
@@ -61,3 +61,7 @@ max-width: 135px;
 padding-right: 0px;
 padding-left: 0px;
 }
+
+/*******************************
+ *     Panel  News            **
+ ******************************/

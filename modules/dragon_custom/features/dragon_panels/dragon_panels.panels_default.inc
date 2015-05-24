@@ -196,7 +196,7 @@ function dragon_panels_default_panels_mini() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Get a Quote';
   $display->uuid = '8a6f9e23-a2a6-49c3-9adb-ceaf0050a5da';
   $display->content = array();
   $display->panels = array();
@@ -209,7 +209,7 @@ function dragon_panels_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => 'Get a Quote',
+      'title' => '',
       'body' => '<p>Get a Quote.....Get a Quote.....Get a Quote.....Get a Quote.....</p><p>Get a Quote.....Get a Quote.....</p><p><a class="dragon-quote-link" href="quote">Start Now</a></p>',
       'format' => 'full_html',
       'substitute' => TRUE,
@@ -232,6 +232,520 @@ function dragon_panels_default_panels_mini() {
   $display->title_pane = 'new-b8ab83db-c1bc-48cb-bc4d-ec724cfa7499';
   $mini->display = $display;
   $export['dragon_get_a_quote'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'news';
+  $mini->category = '';
+  $mini->admin_title = 'News';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'threecol_33_34_33';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'middle' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Our News';
+  $display->uuid = 'f05df08d-a5fe-46cf-80dd-a05e0ab4d468';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-2ed25d10-c7af-410a-9c01-30fac652e66e';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'Li & Fung reported results against a challenging macroeconomic environment. Despite difficult retail conditions in a number of key markets, the business delivered 1.4% growth in turnover. “2014 was a year of transition and investment to position the Company for future growth,” said Spencer Fung, Group CEO.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2ed25d10-c7af-410a-9c01-30fac652e66e';
+    $display->content['new-2ed25d10-c7af-410a-9c01-30fac652e66e'] = $pane;
+    $display->panels['left'][0] = 'new-2ed25d10-c7af-410a-9c01-30fac652e66e';
+    $pane = new stdClass();
+    $pane->pid = 'new-71c48812-4650-4e5b-badf-48162dc4d180';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'Li & Fung reported results against a challenging macroeconomic environment. Despite difficult retail conditions in a number of key markets, the business delivered 1.4% growth in turnover. “2014 was a year of transition and investment to position the Company for future growth,” said Spencer Fung, Group CEO.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '71c48812-4650-4e5b-badf-48162dc4d180';
+    $display->content['new-71c48812-4650-4e5b-badf-48162dc4d180'] = $pane;
+    $display->panels['middle'][0] = 'new-71c48812-4650-4e5b-badf-48162dc4d180';
+    $pane = new stdClass();
+    $pane->pid = 'new-3277a19e-0ba8-42f5-b84a-ecbc1e22738d';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'Li & Fung reported results against a challenging macroeconomic environment. Despite difficult retail conditions in a number of key markets, the business delivered 1.4% growth in turnover. “2014 was a year of transition and investment to position the Company for future growth,” said Spencer Fung, Group CEO.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '3277a19e-0ba8-42f5-b84a-ecbc1e22738d';
+    $display->content['new-3277a19e-0ba8-42f5-b84a-ecbc1e22738d'] = $pane;
+    $display->panels['right'][0] = 'new-3277a19e-0ba8-42f5-b84a-ecbc1e22738d';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $mini->display = $display;
+  $export['news'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'our_approach';
+  $mini->category = '';
+  $mini->admin_title = 'Our Approach';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'threecol_33_34_33_stacked';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'middle' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Our Approach';
+  $display->uuid = 'd609493c-33bd-4992-b222-18fb14451dad';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-f1b3b775-d374-433c-b485-2e1d676b4770';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Building stronger economic futures for women along supply chains',
+      'body' => 'We are implementing the HERProject at factories in Bangladesh, Cambodia, and Vietnam and India, to help women learn about finance and health.
+',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f1b3b775-d374-433c-b485-2e1d676b4770';
+    $display->content['new-f1b3b775-d374-433c-b485-2e1d676b4770'] = $pane;
+    $display->panels['left'][0] = 'new-f1b3b775-d374-433c-b485-2e1d676b4770';
+    $pane = new stdClass();
+    $pane->pid = 'new-012e5163-76bf-4399-a956-142e984ef735';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'title2',
+      'body' => 'We are implementing the HERProject at factories in Bangladesh, Cambodia, and Vietnam and India, to help women learn about finance and health.
+',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '012e5163-76bf-4399-a956-142e984ef735';
+    $display->content['new-012e5163-76bf-4399-a956-142e984ef735'] = $pane;
+    $display->panels['middle'][0] = 'new-012e5163-76bf-4399-a956-142e984ef735';
+    $pane = new stdClass();
+    $pane->pid = 'new-9c3f4395-f9b7-4bbd-a55f-21d5e62b2f19';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'title3',
+      'body' => 'We are implementing the HERProject at factories in Bangladesh, Cambodia, and Vietnam and India, to help women learn about finance and health.
+',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '9c3f4395-f9b7-4bbd-a55f-21d5e62b2f19';
+    $display->content['new-9c3f4395-f9b7-4bbd-a55f-21d5e62b2f19'] = $pane;
+    $display->panels['right'][0] = 'new-9c3f4395-f9b7-4bbd-a55f-21d5e62b2f19';
+    $pane = new stdClass();
+    $pane->pid = 'new-929be4bd-549c-4532-a4f6-ce4c2aab3332';
+    $pane->panel = 'top';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'We care for the communities in which we operate and live by the company’s strong values. We are a thought leader and innovate and experiment with new ideas every day.
+
+We are so much more than a traditional trading company. We are Li & Fung.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '929be4bd-549c-4532-a4f6-ce4c2aab3332';
+    $display->content['new-929be4bd-549c-4532-a4f6-ce4c2aab3332'] = $pane;
+    $display->panels['top'][0] = 'new-929be4bd-549c-4532-a4f6-ce4c2aab3332';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-929be4bd-549c-4532-a4f6-ce4c2aab3332';
+  $mini->display = $display;
+  $export['our_approach'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'our_business';
+  $mini->category = '';
+  $mini->admin_title = 'Our Business';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'twocol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Our Busniess';
+  $display->uuid = 'a2bbfe81-35e6-4eed-87e9-e00eb68c1266';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-1a00e16d-b74e-49f2-92ef-ad893079fcd5';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Trading',
+      'body' => 'Our trading business is the core of Li & Fung and provides sourcing services across multiple product lines to retailers and brands across the globe.
+
+Expertise, professionalism and integrity have contributed to our reputation as the world’s leading consumer goods sourcing company. ',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-color-dark-red',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '1a00e16d-b74e-49f2-92ef-ad893079fcd5';
+    $display->content['new-1a00e16d-b74e-49f2-92ef-ad893079fcd5'] = $pane;
+    $display->panels['left'][0] = 'new-1a00e16d-b74e-49f2-92ef-ad893079fcd5';
+    $pane = new stdClass();
+    $pane->pid = 'new-8ebad555-d1db-4b52-b081-a7dd4f5aca6c';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Logistics',
+      'body' => 'Our end-to-end logistics solutions span the time the product leaves the factory to the time it reaches the hands of the consumer.
+
+We are focused on moving our customers’ materials and products efficiently through the supply chain.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-color-dark-red',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '8ebad555-d1db-4b52-b081-a7dd4f5aca6c';
+    $display->content['new-8ebad555-d1db-4b52-b081-a7dd4f5aca6c'] = $pane;
+    $display->panels['right'][0] = 'new-8ebad555-d1db-4b52-b081-a7dd4f5aca6c';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-1a00e16d-b74e-49f2-92ef-ad893079fcd5';
+  $mini->display = $display;
+  $export['our_business'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'our_people';
+  $mini->category = '';
+  $mini->admin_title = 'Our People';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'twocol_stacked';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Our People';
+  $display->uuid = '2e22b794-0b30-4503-b828-4baaef61b60e';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<div class="clearfix">
+			  	<a href="/our-people/#people-414" class="hidden-xs visible-sm visible-md visible-lg"><img class="img-responsive" src="http://www.lifung.com/wp-content/uploads/2014/06/Victor.jpg" alt=""></a>
+			  	<a href="/our-people/#people-m-414" class="visible-xs hidden-sm hidden-md hidden-lg"><img class="img-responsive" src="http://www.lifung.com/wp-content/uploads/2014/06/Victor.jpg" alt=""></a>
+			  	<div>
+				  	<p class="name hidden-xs visible-sm visible-md visible-lg"><a href="/our-people/#people-414">Victor Fung</a></p>
+				  	<p class="name visible-xs hidden-sm hidden-md hidden-lg"><a href="/our-people/#people-m-414">Victor Fung</a></p>
+				  	<p class="location">Hong Kong</p>
+			  	</div>
+			  </div>',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
+    $display->content['new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1'] = $pane;
+    $display->panels['left'][0] = 'new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
+    $pane = new stdClass();
+    $pane->pid = 'new-d09398f5-b74b-4ab8-8161-8c66e8126df7';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<div class="clearfix">
+			  	<a href="/our-people/#people-414" class="hidden-xs visible-sm visible-md visible-lg"><img class="img-responsive" src="http://www.lifung.com/wp-content/uploads/2014/06/Victor.jpg" alt=""></a>
+			  	<a href="/our-people/#people-m-414" class="visible-xs hidden-sm hidden-md hidden-lg"><img class="img-responsive" src="http://www.lifung.com/wp-content/uploads/2014/06/Victor.jpg" alt=""></a>
+			  	<div>
+				  	<p class="name hidden-xs visible-sm visible-md visible-lg"><a href="/our-people/#people-414">Victor Fung</a></p>
+				  	<p class="name visible-xs hidden-sm hidden-md hidden-lg"><a href="/our-people/#people-m-414">Victor Fung</a></p>
+				  	<p class="location">Hong Kong</p>
+			  	</div>
+			  </div>',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd09398f5-b74b-4ab8-8161-8c66e8126df7';
+    $display->content['new-d09398f5-b74b-4ab8-8161-8c66e8126df7'] = $pane;
+    $display->panels['right'][0] = 'new-d09398f5-b74b-4ab8-8161-8c66e8126df7';
+    $pane = new stdClass();
+    $pane->pid = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
+    $pane->panel = 'top';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'We are a diverse multinational with Asian roots and a proud entrepreneurial heritage. Our people are the reason for our success and the source of our strength and expertise.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '1b1da9c7-b5b2-4b19-aeac-625275644a7b';
+    $display->content['new-1b1da9c7-b5b2-4b19-aeac-625275644a7b'] = $pane;
+    $display->panels['top'][0] = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
+  $mini->display = $display;
+  $export['our_people'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'what_we_do';
+  $mini->category = '';
+  $mini->admin_title = 'What We Do';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'What we do';
+  $display->uuid = '46c44f96-7c5a-4c61-bfb0-47934baa159d';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-cf45400f-5fe3-4769-b36d-dc15cfecf708';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'Li & Fung designs customized supply chain solutions for the world’s most successful retailers and brands. We source, oversee production and deliver goods in demand from consumers
+around the world.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'cf45400f-5fe3-4769-b36d-dc15cfecf708';
+    $display->content['new-cf45400f-5fe3-4769-b36d-dc15cfecf708'] = $pane;
+    $display->panels['middle'][0] = 'new-cf45400f-5fe3-4769-b36d-dc15cfecf708';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-cf45400f-5fe3-4769-b36d-dc15cfecf708';
+  $mini->display = $display;
+  $export['what_we_do'] = $mini;
 
   return $export;
 }
