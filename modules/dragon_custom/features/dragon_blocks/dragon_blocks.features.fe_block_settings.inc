@@ -12,211 +12,6 @@ function dragon_blocks_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['dragon_footer-dragon_footer_about'] = array(
-    'cache' => 1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 'dragon_footer_about',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'dragon_footer',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'bootstrap_business' => array(
-        'region' => 'footer_first',
-        'status' => 1,
-        'theme' => 'bootstrap_business',
-        'weight' => 0,
-      ),
-      'bootstrap_dragon' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap_dragon',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['dragon_footer-dragon_footer_bottom'] = array(
-    'cache' => 1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 'dragon_footer_bottom',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'dragon_footer',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => 'footer',
-        'status' => 1,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'bootstrap_business' => array(
-        'region' => 'footer',
-        'status' => 1,
-        'theme' => 'bootstrap_business',
-        'weight' => 0,
-      ),
-      'bootstrap_dragon' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap_dragon',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['dragon_footer-dragon_footer_download'] = array(
-    'cache' => 1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 'dragon_footer_download',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'dragon_footer',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'bootstrap_business' => array(
-        'region' => 'footer_third',
-        'status' => 1,
-        'theme' => 'bootstrap_business',
-        'weight' => 0,
-      ),
-      'bootstrap_dragon' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap_dragon',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['dragon_footer-dragon_footer_follow'] = array(
-    'cache' => 1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 'dragon_footer_follow',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'dragon_footer',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'bootstrap_business' => array(
-        'region' => 'footer_second',
-        'status' => 1,
-        'theme' => 'bootstrap_business',
-        'weight' => 0,
-      ),
-      'bootstrap_dragon' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap_dragon',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
-  $export['dragon_footer-dragon_footer_help'] = array(
-    'cache' => 1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 'dragon_footer_help',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'dragon_footer',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'bootstrap_business' => array(
-        'region' => 'footer_fourth',
-        'status' => 1,
-        'theme' => 'bootstrap_business',
-        'weight' => 0,
-      ),
-      'bootstrap_dragon' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap_dragon',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
   $export['dragon_front_page-dragon_icon_menu'] = array(
     'cache' => 1,
     'css_class' => '',
@@ -256,47 +51,6 @@ function dragon_blocks_default_fe_block_settings() {
     ),
     'title' => '',
     'visibility' => 0,
-  );
-
-  $export['dragon_project-dragon_quote'] = array(
-    'cache' => 1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 'dragon_quote',
-    'i18n_block_language' => array(),
-    'i18n_mode' => 1,
-    'module' => 'dragon_project',
-    'node_types' => array(),
-    'pages' => '<front>',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'bootstrap_business' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'bootstrap_business',
-        'weight' => 0,
-      ),
-      'bootstrap_dragon' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap_dragon',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => 'content',
-        'status' => 1,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 1,
   );
 
   $export['homebox-custom'] = array(
@@ -501,7 +255,7 @@ function dragon_blocks_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['panels_mini-our_business'] = array(
@@ -542,7 +296,7 @@ function dragon_blocks_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['panels_mini-our_people'] = array(
@@ -583,7 +337,7 @@ function dragon_blocks_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['panels_mini-what_we_do'] = array(
