@@ -572,6 +572,312 @@ We are focused on moving our customers’ materials and products efficiently thr
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
+  $mini->name = 'our_business_header';
+  $mini->category = '';
+  $mini->admin_title = 'Our Business header';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'c53b7432-4ce2-4bc0-a771-fe4980ab2f2a';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-3d8d8b8c-011e-43c5-821c-9506616dbd4b';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'We connect the supply chain to bring our customers the goods they rely on every day',
+      'body' => '<p><img alt="" src="/dragon-lang/sites/default/files/panel-block/what-we-do-head5.jpg" style="width: 1700px; height: 720px;" /></p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-mini-panel-pane-our-business-header',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '3d8d8b8c-011e-43c5-821c-9506616dbd4b';
+    $display->content['new-3d8d8b8c-011e-43c5-821c-9506616dbd4b'] = $pane;
+    $display->panels['middle'][0] = 'new-3d8d8b8c-011e-43c5-821c-9506616dbd4b';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-3d8d8b8c-011e-43c5-821c-9506616dbd4b';
+  $mini->display = $display;
+  $export['our_business_header'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'our_business_logistics';
+  $mini->category = '';
+  $mini->admin_title = 'Our Business Logistics';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'twocol_stacked';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'eaca7256-4b72-49c3-baf4-cf6da9d15c52';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-65bc858f-6646-424b-b560-c4a403eb7e67';
+    $pane->panel = 'bottom';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Delivering fast, reliable, and cost-effective logistics solutions',
+      'body' => 'LF Logistics is the supply chain partner of choice for companies looking to grow in Asia. Our network, spanning Greater China, ASEAN, Japan, Korea, the Middle East and the Indian subcontinent provides us with a strong "home court advantage" in this culturally diverse and economically active region.
+
+We’re not just about moving things from one place to another. We analyze each customer’s needs, anticipate challenges, design options and set up contingency plans so our customers never have to worry about the journey. Our strength lies in scale. We manage more than 20 million square feet of space and are growing every year. Partnering with more than 400 world-renowned companies, we deliver 100 million units of consumer products every day.
+
+Competition in the fast-changing logistics industry is intense. Our ability to sense and respond effectively to changes in the competitive landscape is essential to a sustainable and profitable operation. Our real competitive strength lies in our people, who work closely with internal and external customers to anticipate their needs and develop solutions to meet or exceed their expectations.
+
+By employing both analytics tools and models based on our deep experience we design optimum solutions for our customers. We develop business continuity and disaster recovery plans to manage anticipated risks. Our best-in-class IT systems provide efficiency and tracking visibility across every aspect of our customers’ supply chains.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-mini-panel-pane-width',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '65bc858f-6646-424b-b560-c4a403eb7e67';
+    $display->content['new-65bc858f-6646-424b-b560-c4a403eb7e67'] = $pane;
+    $display->panels['bottom'][0] = 'new-65bc858f-6646-424b-b560-c4a403eb7e67';
+    $pane = new stdClass();
+    $pane->pid = 'new-7d9974f8-6f9e-4324-bcf2-9cfd64f0b6d2';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'logistics Logistics
+LF Logistics operates an extensive global network. Our end-to-end solution spans the time the product leaves the factory to the time it reaches the hands of the consumer.
+
+We offer a comprehensive menu of logistics solutions, including distribution center management, transport management, freight forwarding, hubbing and consolidation, order management services and other value-added services. We are focused on moving our customers’ products efficiently through the supply chain.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-mini-panel-pane-image-text',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '7d9974f8-6f9e-4324-bcf2-9cfd64f0b6d2';
+    $display->content['new-7d9974f8-6f9e-4324-bcf2-9cfd64f0b6d2'] = $pane;
+    $display->panels['left'][0] = 'new-7d9974f8-6f9e-4324-bcf2-9cfd64f0b6d2';
+    $pane = new stdClass();
+    $pane->pid = 'new-ace85092-b177-401d-ad0c-7db63ab9501a';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Logistics',
+      'body' => '<p><img alt="" src="/dragon-lang/sites/default/files/panel-block/trading.jpg" style="width: 860px; height: 495px;" /></p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-mini-panel-pane-logistics',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'ace85092-b177-401d-ad0c-7db63ab9501a';
+    $display->content['new-ace85092-b177-401d-ad0c-7db63ab9501a'] = $pane;
+    $display->panels['right'][0] = 'new-ace85092-b177-401d-ad0c-7db63ab9501a';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-ace85092-b177-401d-ad0c-7db63ab9501a';
+  $mini->display = $display;
+  $export['our_business_logistics'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'our_business_trading';
+  $mini->category = '';
+  $mini->admin_title = 'Our Business trading';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'twocol_stacked';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'eaca7256-4b72-49c3-baf4-cf6da9d15c52';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-65bc858f-6646-424b-b560-c4a403eb7e67';
+    $pane->panel = 'bottom';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'We collaborate. We innovate. We source. We oversee.',
+      'body' => 'Our trading business is the core of Li & Fung. It operates as a global multi-channel sourcing platform enabling us to create tailored sourcing options to meet customers\' specific requirements. From product design and raw material sourcing to production management and quality control, we collaborate with our customers, and assist them to produce the finished products that their customers demand. 
+
+We create an array of consumer goods across a wide range of product categories. These include everything from designer apparel to home decor and furnishings, children\'s clothing, handbags and accessories, toys, sporting goods and footwear, as well as health and beauty products.
+
+Our comprehensive product design and development capabilities enable us to take an initial design idea all the way through to the finished product in the consumer’s hands. We constantly strive to address each customer’s specific needs in the areas of design, sales and marketing, and distribution as well as responsibly managing the entire supply chain end to end. Our dedicated teams of product specialists focus on each customer segment, leveraging their close ties with suppliers to offer inside knowledge that helps customers make informed buying decisions.
+
+We are delighted that our many customers choose to work with us, including global brands, department stores, hypermarkets, specialty stores, catalogue-led companies, and ecommerce sites.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-mini-panel-pane-width',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '65bc858f-6646-424b-b560-c4a403eb7e67';
+    $display->content['new-65bc858f-6646-424b-b560-c4a403eb7e67'] = $pane;
+    $display->panels['bottom'][0] = 'new-65bc858f-6646-424b-b560-c4a403eb7e67';
+    $pane = new stdClass();
+    $pane->pid = 'new-ace85092-b177-401d-ad0c-7db63ab9501a';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Trading',
+      'body' => '<p><img alt="" src="/dragon-lang/sites/default/files/panel-block/trading.jpg" style="width: 860px; height: 495px;" /></p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-mini-panel-pane-trading',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'ace85092-b177-401d-ad0c-7db63ab9501a';
+    $display->content['new-ace85092-b177-401d-ad0c-7db63ab9501a'] = $pane;
+    $display->panels['left'][0] = 'new-ace85092-b177-401d-ad0c-7db63ab9501a';
+    $pane = new stdClass();
+    $pane->pid = 'new-7d9974f8-6f9e-4324-bcf2-9cfd64f0b6d2';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'Our trading business is the core of Li & Fung and provides sourcing services across multiple product lines to retailers and brands across the globe.  
+
+Through a growing network of over 15,000 suppliers in more than 40 countries, Li & Fung strives to find quality-conscious, sustainable and cost-effective manufacturers to match the production needs of our customers worldwide.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-mini-panel-pane-image-text',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '7d9974f8-6f9e-4324-bcf2-9cfd64f0b6d2';
+    $display->content['new-7d9974f8-6f9e-4324-bcf2-9cfd64f0b6d2'] = $pane;
+    $display->panels['right'][0] = 'new-7d9974f8-6f9e-4324-bcf2-9cfd64f0b6d2';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-ace85092-b177-401d-ad0c-7db63ab9501a';
+  $mini->display = $display;
+  $export['our_business_trading'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
   $mini->name = 'our_people';
   $mini->category = '';
   $mini->admin_title = 'Our People';
@@ -746,6 +1052,91 @@ around the world.',
   $display->title_pane = 'new-cf45400f-5fe3-4769-b36d-dc15cfecf708';
   $mini->display = $display;
   $export['what_we_do'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'what_we_do_steps';
+  $mini->category = '';
+  $mini->admin_title = 'What We Do Steps';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '7aeed2cf-b446-417a-82ee-8b9aebcb65fb';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-a648b709-1e1f-449a-a878-3fce6bef8289';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'We collaborate',
+      'body' => '<p><img alt="" src="/dragon-lang/sites/default/files/panel-block/test.jpg" /></p><p>&nbsp;</p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'what-we-do-steps-title-1',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'a648b709-1e1f-449a-a878-3fce6bef8289';
+    $display->content['new-a648b709-1e1f-449a-a878-3fce6bef8289'] = $pane;
+    $display->panels['middle'][0] = 'new-a648b709-1e1f-449a-a878-3fce6bef8289';
+    $pane = new stdClass();
+    $pane->pid = 'new-66ea93f5-5249-4fbc-8b68-4734a8a7e7af';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'We work closely with our customers to meet their individual needs',
+      'body' => 'Our individual teams of experts work closely with customers, assessing their needs and using market research, retail and fashion trend forecasts, and innovative technology to design the right supply chains to deliver their products.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-mini-panel-pane-width',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '66ea93f5-5249-4fbc-8b68-4734a8a7e7af';
+    $display->content['new-66ea93f5-5249-4fbc-8b68-4734a8a7e7af'] = $pane;
+    $display->panels['middle'][1] = 'new-66ea93f5-5249-4fbc-8b68-4734a8a7e7af';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-a648b709-1e1f-449a-a878-3fce6bef8289';
+  $mini->display = $display;
+  $export['what_we_do_steps'] = $mini;
 
   return $export;
 }

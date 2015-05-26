@@ -209,11 +209,18 @@ footer#subfooter{
 .dragon-mini-panel-block h2{
   text-align: center;
 }
-.dragon-mini-panel-block .content{
+.dragon-mini-panel-block:not(.dragon-mini-panel-full) .content{
   width: 1170px;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.dragon-mini-panel-block .panel-pane.dragon-mini-panel-pane-width{
+  width: 1170px;
+  margin: auto;
+}
+.dragon-mini-panel-block .dragon-mini-panel-pane-image-text{
+  margin: 15px;
 }
 .dragon-mini-panel-block .panel-pane{
   padding: 15px;
@@ -221,7 +228,14 @@ footer#subfooter{
 .dragon-mini-panel-block .panel-pane h2{
   font-size: 16px;
 }
-
+.dragon-mini-panel-block.dragon-panel-page-header .pane-title{
+  position: absolute;
+  left: 500px;
+  font-size: 30px;
+  margin-top: 300px;
+  color: white;
+  width: 700px;
+}
 .dragon-color-grey{
   background-color: #F2F2F2;
 }
