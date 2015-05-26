@@ -308,7 +308,7 @@ function dragon_blocks_default_fe_block_settings() {
     'i18n_mode' => 1,
     'module' => 'panels_mini',
     'node_types' => array(),
-    'pages' => 'content/our-business',
+    'pages' => 'content/our-products',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
@@ -337,7 +337,7 @@ function dragon_blocks_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['panels_mini-our_business_logistics'] = array(
@@ -349,7 +349,7 @@ function dragon_blocks_default_fe_block_settings() {
     'i18n_mode' => 1,
     'module' => 'panels_mini',
     'node_types' => array(),
-    'pages' => 'content/our-business',
+    'pages' => 'content/our-products',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
@@ -378,7 +378,7 @@ function dragon_blocks_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['panels_mini-our_business_trading'] = array(
@@ -390,7 +390,7 @@ function dragon_blocks_default_fe_block_settings() {
     'i18n_mode' => 1,
     'module' => 'panels_mini',
     'node_types' => array(),
-    'pages' => 'content/our-business',
+    'pages' => 'content/our-products',
     'roles' => array(),
     'themes' => array(
       'bartik' => array(
@@ -419,7 +419,7 @@ function dragon_blocks_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['panels_mini-our_people'] = array(
@@ -542,7 +542,7 @@ function dragon_blocks_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['views-all_projects-block'] = array(

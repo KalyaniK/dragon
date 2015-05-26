@@ -75,7 +75,7 @@ function dragon_front_page_callback() {
  * Implements hook_preprocess_page
  */
 function dragon_front_page_preprocess_page(&$vars, $hook) {
-  if(arg(0) == 'home') {
+  if(arg(0) == 'home' || arg(1) == 'who-we-are' || arg(1) == 'our-products') {
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page.css');
     drupal_add_js(drupal_get_path('module', 'dragon_front_page') . '/js/dragon_front_page.js');
   }
