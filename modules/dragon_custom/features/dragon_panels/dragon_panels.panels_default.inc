@@ -194,9 +194,13 @@ function dragon_panels_default_panels_mini() {
       'default' => NULL,
       'middle' => NULL,
     ),
+    'style' => 'default',
+    'middle' => array(
+      'style' => '-1',
+    ),
   );
   $display->cache = array();
-  $display->title = 'Get a Quote';
+  $display->title = '';
   $display->uuid = '8a6f9e23-a2a6-49c3-9adb-ceaf0050a5da';
   $display->content = array();
   $display->panels = array();
@@ -209,8 +213,8 @@ function dragon_panels_default_panels_mini() {
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => '',
-      'body' => '<p>Get a Quote.....Get a Quote.....Get a Quote.....Get a Quote.....</p><p>Get a Quote.....Get a Quote.....</p><p><a class="dragon-quote-link" href="quote">Start Now</a></p>',
+      'title' => 'Get a Quote',
+      'body' => '<p><span style="font-size: 14px;"><strong>YOU HAVE A PROJECT</strong></span></p><p><a class="dragon-quote-link" href="quote">Start Now</a></p>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );
@@ -228,7 +232,7 @@ function dragon_panels_default_panels_mini() {
     $pane->uuid = 'b8ab83db-c1bc-48cb-bc4d-ec724cfa7499';
     $display->content['new-b8ab83db-c1bc-48cb-bc4d-ec724cfa7499'] = $pane;
     $display->panels['middle'][0] = 'new-b8ab83db-c1bc-48cb-bc4d-ec724cfa7499';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-b8ab83db-c1bc-48cb-bc4d-ec724cfa7499';
   $mini->display = $display;
   $export['dragon_get_a_quote'] = $mini;
