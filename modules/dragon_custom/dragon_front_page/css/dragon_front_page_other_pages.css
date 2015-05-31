@@ -31,3 +31,22 @@ div#main-content{
   margin-top: 250px;
   color: white;
 }
+
+#block-panels-mini-navigation-header .panels-flexible-column-dragon_5_columns-1,
+#block-panels-mini-navigation-header .panels-flexible-column-dragon_5_columns-5{
+  width: 12.5%;
+}
+
+#block-panels-mini-navigation-header .panels-flexible-column-dragon_5_columns-2,
+#block-panels-mini-navigation-header .panels-flexible-column-dragon_5_columns-3,
+#block-panels-mini-navigation-header .panels-flexible-column-dragon_5_columns-4{
+  width: 25%;
+}
+
+#mini-panel-navigation_detail_section .panel-col-first{
+  width: 70%;
+}
+
+#mini-panel-navigation_detail_section .panel-col-last{
+  width: 30%;
+}

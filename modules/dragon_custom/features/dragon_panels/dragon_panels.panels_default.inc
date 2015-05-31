@@ -236,6 +236,380 @@ function dragon_panels_default_panels_mini() {
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
+  $mini->name = 'navigation_5_small_actions';
+  $mini->category = '';
+  $mini->admin_title = 'Navigation 5 small actions';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'flexible:dragon_5_columns';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'column_1' => NULL,
+      'column_2' => NULL,
+      'column_3' => NULL,
+      'column_4' => NULL,
+      'column_5' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'b7a55a57-7e1c-4521-bd61-6fb9a28997ad';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-a00b670c-e923-4bf0-90bf-fd72ded36d70';
+    $pane->panel = 'column_1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p><img alt="" src="/dragon-lang/sites/default/files/panel-block/1432137000328.png" style="width: 360px; height: 203px;" /></p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'a00b670c-e923-4bf0-90bf-fd72ded36d70';
+    $display->content['new-a00b670c-e923-4bf0-90bf-fd72ded36d70'] = $pane;
+    $display->panels['column_1'][0] = 'new-a00b670c-e923-4bf0-90bf-fd72ded36d70';
+    $pane = new stdClass();
+    $pane->pid = 'new-2cce6611-eaac-4e38-8bdd-26d4d616fe6a';
+    $pane->panel = 'column_1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Explore the SAP Store',
+      'body' => 'Discover, evaluate, and buy analytics, SAP HANA, and cloud offerings quickly and from any device.',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '2cce6611-eaac-4e38-8bdd-26d4d616fe6a';
+    $display->content['new-2cce6611-eaac-4e38-8bdd-26d4d616fe6a'] = $pane;
+    $display->panels['column_1'][1] = 'new-2cce6611-eaac-4e38-8bdd-26d4d616fe6a';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-a00b670c-e923-4bf0-90bf-fd72ded36d70';
+  $mini->display = $display;
+  $export['navigation_5_small_actions'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'navigation_detail_section';
+  $mini->category = '';
+  $mini->admin_title = 'Navigation detail section';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'twocol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '5f7d5abf-b42d-4fbc-9c2e-47134f73462e';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-96c3672b-bf0c-4bd7-bea6-de96cb410d6e';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p><img alt="" src="/dragon-lang/sites/default/files/panel-block/qqjie_tu_20150531185939.jpg" style="width: 617px; height: 325px;" /></p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '96c3672b-bf0c-4bd7-bea6-de96cb410d6e';
+    $display->content['new-96c3672b-bf0c-4bd7-bea6-de96cb410d6e'] = $pane;
+    $display->panels['left'][0] = 'new-96c3672b-bf0c-4bd7-bea6-de96cb410d6e';
+    $pane = new stdClass();
+    $pane->pid = 'new-09d438c8-f433-432b-835c-4dd197fd2789';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'What can CRM do for you?',
+      'body' => 'What can CRM do for you?
+What can CRM do for you?
+What can CRM do for you?
+What can CRM do for you?',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '09d438c8-f433-432b-835c-4dd197fd2789';
+    $display->content['new-09d438c8-f433-432b-835c-4dd197fd2789'] = $pane;
+    $display->panels['right'][0] = 'new-09d438c8-f433-432b-835c-4dd197fd2789';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-96c3672b-bf0c-4bd7-bea6-de96cb410d6e';
+  $mini->display = $display;
+  $export['navigation_detail_section'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'navigation_header';
+  $mini->category = '';
+  $mini->admin_title = 'Navigation header';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'flexible:dragon_5_columns';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'middle' => NULL,
+      'right' => NULL,
+      'column_1' => NULL,
+      'column_2' => NULL,
+      'column_3' => NULL,
+      'column_4' => NULL,
+      'column_5' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '66667129-54df-4933-82fd-4954ca5cd73b';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-4995f046-8c80-4ad8-8996-4f383ea19443';
+    $pane->panel = 'column_1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p>&nbsp;</p><p>&nbsp;</p><p>INTRANET</p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '4995f046-8c80-4ad8-8996-4f383ea19443';
+    $display->content['new-4995f046-8c80-4ad8-8996-4f383ea19443'] = $pane;
+    $display->panels['column_1'][0] = 'new-4995f046-8c80-4ad8-8996-4f383ea19443';
+    $pane = new stdClass();
+    $pane->pid = 'new-e2defd39-c0d8-4e83-b061-79a91ad879c0';
+    $pane->panel = 'column_2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'DRAGON ASIA HK LTD		
+		
+		
+		
+		
+ADMINISTRATOR DASHBOARD		
+		
+		
+		
+		
+EMPLOYEE DASHBOARD		
+		
+		
+		
+		
+DRAGON ASIA CHINA LTD		
+		',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-color-red',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'e2defd39-c0d8-4e83-b061-79a91ad879c0';
+    $display->content['new-e2defd39-c0d8-4e83-b061-79a91ad879c0'] = $pane;
+    $display->panels['column_2'][0] = 'new-e2defd39-c0d8-4e83-b061-79a91ad879c0';
+    $pane = new stdClass();
+    $pane->pid = 'new-c494afc4-af61-4d91-b637-2675c0bf16ae';
+    $pane->panel = 'column_3';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'COMMUNICATION                   
+DATA ECHANGE                                 
+QUOTE REQUEST                                 
+ORDER FOLLOW UP                     
+PROJECT FOLLOW UP                            
+LOGISTICS FOLLOW UP                           
+ACCOUNTING INVOICE                                 
+FORECASTING                   
+PRODUCTION PLANNING            
+QUALITY CONTROL',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'c494afc4-af61-4d91-b637-2675c0bf16ae';
+    $display->content['new-c494afc4-af61-4d91-b637-2675c0bf16ae'] = $pane;
+    $display->panels['column_3'][0] = 'new-c494afc4-af61-4d91-b637-2675c0bf16ae';
+    $pane = new stdClass();
+    $pane->pid = 'new-1c062944-2d52-41ad-9dda-33e8f6b9845a';
+    $pane->panel = 'column_4';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'DRAGON ASIA INTERNATIONAL		
+		
+		
+		
+		
+CUSTOMER DASHBOARD		
+		
+		
+		
+		
+SUPPLIER DASHBOARD		
+		
+		
+		
+		
+DRAGON ASIA WORLD	',
+      'format' => 'filtered_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'dragon-color-red',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '1c062944-2d52-41ad-9dda-33e8f6b9845a';
+    $display->content['new-1c062944-2d52-41ad-9dda-33e8f6b9845a'] = $pane;
+    $display->panels['column_4'][0] = 'new-1c062944-2d52-41ad-9dda-33e8f6b9845a';
+    $pane = new stdClass();
+    $pane->pid = 'new-1f74f424-dc72-42b3-b2e0-2ea8d41b531f';
+    $pane->panel = 'column_5';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p>&nbsp;</p><p>&nbsp;</p><p>EXTRANET</p>',
+      'format' => 'full_html',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '1f74f424-dc72-42b3-b2e0-2ea8d41b531f';
+    $display->content['new-1f74f424-dc72-42b3-b2e0-2ea8d41b531f'] = $pane;
+    $display->panels['column_5'][0] = 'new-1f74f424-dc72-42b3-b2e0-2ea8d41b531f';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $mini->display = $display;
+  $export['navigation_header'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
   $mini->name = 'news';
   $mini->category = '';
   $mini->admin_title = 'News';

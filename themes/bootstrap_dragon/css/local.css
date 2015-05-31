@@ -222,6 +222,12 @@ footer#subfooter{
 .dragon-mini-panel-block .dragon-mini-panel-pane-image-text{
   margin: 15px;
 }
+.dragon-mini-panel-block.dragon-text-align-center{
+  text-align: center;
+}
+.dragon-mini-panel-block.dragon-text-bold{
+  font-weight: bold;
+}
 .dragon-mini-panel-block .panel-pane{
   padding: 15px;
 }
