@@ -79,7 +79,8 @@ function dragon_front_page_preprocess_page(&$vars, $hook) {
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page.css');
     drupal_add_js(drupal_get_path('module', 'dragon_front_page') . '/js/dragon_front_page.js');
   }
-  if(arg(1) == 'who-we-are' || arg(1) == 'our-products') {
+  
+  if( in_array($vars['node']->nid, array(variable_get('dragon-page-who-we-are', 15), variable_get('dragon-page-our-products', 5)))) {
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page_other_pages.css');
   }
 }

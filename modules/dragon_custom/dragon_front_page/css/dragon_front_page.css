@@ -61,29 +61,3 @@ max-width: 135px;
 padding-right: 0px;
 padding-left: 0px;
 }
-
-/*******************************
- *     Panel in other page    **
- ******************************/
-#mini-panel-what_we_do_steps .what-we-do-steps-title-1 h2{
-  position: absolute;
-  left: 500px;
-  font-size: 30px;
-  margin-top: 250px;
-  color: white;
-}
-#mini-panel-our_business_trading .dragon-mini-panel-pane-trading h2{
-  position: absolute;
-  left: 300px;
-  font-size: 30px;
-  margin-top: 250px;
-  color: white;
-}
-
-#mini-panel-our_business_logistics .dragon-mini-panel-pane-logistics h2{
-  position: absolute;
-  right: 300px;
-  font-size: 30px;
-  margin-top: 250px;
-  color: white;
-}
