@@ -90,9 +90,10 @@ function template_preprocess_tb_megamenu_item(&$vars) {
   $item_config = isset($menu_config[$mlid]['item_config']) ? $menu_config[$mlid]['item_config'] : array();
   tb_megamenu_edit_item_config($item_config);
   $vars['item_config'] = $item_config;
-  if (!empty($menu_config[$mlid]['rows_content']) && 
-      ($vars['section'] == 'backend' || !$item_config['hidesub'])) {
-    
+  if (!empty($menu_config[$mlid]['rows_content']) &&
+    ($vars['section'] == 'backend' || !$item_config['hidesub'])
+  ) {
+
     $vars['submenu'] = theme('tb_megamenu_submenu', array(
       'menu_name' => $vars['menu_name'],
       'parent' => $item,
@@ -136,8 +137,8 @@ function template_preprocess_tb_megamenu_item(&$vars) {
   $vars['item']['link']['#attributes'] = $link_attributes;
   if (!empty($item['link']['localized_options']['attributes'])) {
     if (!(isset($item['link']['localized_options']['attributes']['title']) &&
-            $item['link']['localized_options']['attributes']['title'])) {
-
+      $item['link']['localized_options']['attributes']['title'])
+    ) {
       $item['link']['localized_options']['attributes']['title'] = $item['link']['title'];
     }
     $vars['item']['link']['#attributes'] += $item['link']['localized_options']['attributes'];
@@ -251,7 +252,7 @@ function template_preprocess_tb_megamenu_column(&$vars) {
       $vars['attributes_array']['data-showblocktitle'] = $col_config['showblocktitle'];
 
       if ($vars['section'] !== 'frontend') {
-        $vars['close_button'] = '<span class="close icon-remove" title="' . t("Remove this block") . '">&nbsp;</span>';
+        $vars['close_button'] = '<span class="close fa fa-trash-o" title="' . t("Remove this block") . '">&nbsp;</span>';
       }
     }
   }
@@ -301,18 +302,40 @@ function template_preprocess_tb_megamenu_block(&$vars) {
   if ($block) {
     $module = $block->module;
     $delta = $block->delta;
-    $content = module_invoke($module, 'block_view', $delta);
-    if (isset($vars['showblocktitle']) && $vars['showblocktitle']) {
-      $block->subject = empty($content['subject']) ? $block->title : $content['subject'];
+    $block_content = module_invoke($module, 'block_view', $delta);
+    if (empty($block_content) && $vars['section'] == 'backend') {
+      // Using description to show instead content.
+      $blocks_info = module_invoke($module, 'block_info');
+      $vars['content'] = $blocks_info[$delta]['info'];
     }
-    else {
-      $block->subject = "";
-    }
-    if (empty($content) && $vars['section'] == 'backend') {
-      $vars['content'] = tb_megamenu_get_block_title($vars['block_key']);
-    }
-    elseif ($content) {
-      $vars['content'] = theme("block", array('elements' => array('content' => $content['content'], '#children' => (is_array($content['content']) ? drupal_render($content['content']) : $content['content']), '#block' => $block)));
+    elseif ($block_content) {
+      $block->subject = '';
+      $is_enabled_i18n_block = module_enable(array('i18n_block'));
+      // Translate content in block. And content must be a string.
+      if ($is_enabled_i18n_block && !is_array($block_content['content'])) {
+        $block->content = &$block_content['content'];
+        $block->content = i18n_string_text("blocks:$block->module:$block->delta:body", $block->content);
+      }
+      // Check configuration for show block title;
+      if (isset($vars['showblocktitle']) && $vars['showblocktitle']) {
+        // If i18n_block is not enabled, so we will set title to subject.
+        if (!$is_enabled_i18n_block) {
+          $block->subject = $block->title ? $block->title : $block_content['subject'];
+        }
+        elseif (!empty($block->title) && $block->title != '<none>') {
+          // Check plain here to allow module generated titles to keep any markup.
+          $block->subject = $block->title;
+          $block->subject = i18n_string_plain("blocks:$block->module:$block->delta:title", $block->subject);
+        }
+      }
+
+      $vars['content'] = theme("block", array(
+        'elements' => array(
+          'content' => $block_content['content'],
+          '#children' => (is_array($block_content['content']) ? drupal_render($block_content['content']) : $block_content['content']),
+          '#block' => $block
+        )
+      ));
     }
     else {
       $vars['content'] = NULL;

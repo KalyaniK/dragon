@@ -101,6 +101,7 @@ div#header-top #block-search-form{
 
 .tb-megamenu .btn-navbar.tb-megamenu-button {
   color: #000;
+  float: right;
 }
 
 
@@ -141,7 +142,7 @@ footer#subfooter{
 }
 
 #mini-panel-dragon_footer {
-  width: 970px;
+  width: 100%;
   margin: 0px auto;
   text-align: left;
 }
@@ -210,13 +211,13 @@ footer#subfooter{
   text-align: center;
 }
 .dragon-mini-panel-block:not(.dragon-mini-panel-full) .content{
-  width: 1170px;
+  width: 80%;
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 .dragon-mini-panel-block .panel-pane.dragon-mini-panel-pane-width{
-  width: 1170px;
+  width: 80%;
   margin: auto;
 }
 .dragon-mini-panel-block .dragon-mini-panel-pane-image-text{
@@ -240,7 +241,7 @@ footer#subfooter{
   font-size: 30px;
   margin-top: 300px;
   color: white;
-  width: 700px;
+  width: 70%;
 }
 .dragon-color-grey{
   background-color: #F2F2F2;
@@ -262,5 +263,5 @@ footer#subfooter{
 }
 
 .dragon-mini-panel-block.dragon-width-slim .content{
-  width: 770px;
+  width: 50%;
 }

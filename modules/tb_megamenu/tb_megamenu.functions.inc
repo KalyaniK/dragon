@@ -89,7 +89,6 @@ function tb_megamenu_get_block_title($block_key) {
 }
 
 function tb_megamenu_build_page_trail($page_menu) {
-  $path = current_path();
   $trail = array();
   foreach ($page_menu as $item) {
     if ($item ['link'] ['in_active_trail']) {
@@ -247,14 +246,11 @@ function tb_megamenu_block_content_exists($block_key, $section) {
     $module = $block->module;
     $delta = $block->delta;
     $content = module_invoke($module, 'block_view', $delta);
-    if (empty($content) && $section == 'backend') {
-      return true;
-    }
-    elseif ($content) {
-      return true;
+    if ($content || $section == 'backend') {
+      return TRUE;
     }
   }
-  return false;
+  return FALSE;
 }
 
 function tb_megamenu_sync_config($items, &$item_config, $_mlid, $section) {
@@ -460,7 +456,13 @@ function tb_megamenu_render_block($delta = 0) {
 }
 
 function tb_megamenu_animation_options($block_config) {
-  $animations = array('none' => t('None'), 'fading' => t('Fading'), 'slide' => t('Slide'), 'zoom' => t('Zoom'), 'elastic' => t('Elastic'));
+  $animations = array(
+    'none' => t('None'),
+    'fading' => t('Fading'),
+    'slide' => t('Slide'),
+    'zoom' => t('Zoom'),
+    'elastic' => t('Elastic')
+  );
   $options = array();
   foreach ($animations as $value => $title) {
     if ($value == $block_config['animation']) {
@@ -637,12 +639,30 @@ function tb_megamenu_update_megamenus(&$form, &$form_state) {
       tb_megamenu_sync_order_menus($menu_config);
       
       global $language;
-      $tb_megamenu = db_select('tb_megamenus', 't')->fields('t')->condition('menu_name', $menu_name)->condition('language', $language->language)->execute()->fetchObject();
+      $tb_megamenu = db_select('tb_megamenus', 't')
+        ->fields('t')
+        ->condition('menu_name', $menu_name)
+        ->condition('language', $language->language)
+        ->execute()->fetchObject();
       if($tb_megamenu) {
-        db_update('tb_megamenus')->fields(array('menu_config' => json_encode($menu_config), 'block_config' => json_encode($block_config), 'language' => $language->language))->condition('menu_name', $menu_name)->condition('language', $language->language)->execute();
+        db_update('tb_megamenus')
+          ->fields(array(
+            'menu_config' => json_encode($menu_config),
+            'block_config' => json_encode($block_config),
+            'language' => $language->language
+          ))
+          ->condition('menu_name', $menu_name)
+          ->condition('language', $language->language)
+          ->execute();
       }
       else {
-        db_insert('tb_megamenus')->fields(array('menu_name' => $menu_name, 'block_config' => json_encode($block_config), 'menu_config' => json_encode($menu_config), 'language' => $language->language))->execute();
+        db_insert('tb_megamenus')
+          ->fields(array(
+            'menu_name' => $menu_name,
+            'block_config' => json_encode($block_config),
+            'menu_config' => json_encode($menu_config),
+            'language' => $language->language
+          ))->execute();
       }
     }
   }
