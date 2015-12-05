@@ -265,3 +265,11 @@ footer#subfooter{
 .dragon-mini-panel-block.dragon-width-slim .content{
   width: 50%;
 }
+
+.dragon-right{
+  float: right;
+}
+
+.dragon-half{
+  width: 49%;
+}

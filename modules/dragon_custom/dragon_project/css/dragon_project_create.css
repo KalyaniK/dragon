@@ -54,10 +54,6 @@ fieldset.field-group-fieldset .fieldset-wrapper{
   position: fixed;
 }
 
-#project-node-form{
-  float: right;
-}
-
 .image-widget-data{
   width: 100%
 }
@@ -73,6 +69,12 @@ fieldset.field-group-fieldset .fieldset-wrapper{
   padding-right: 20px;
 }
 
+.quick-anchor{
+	display: block;
+    position: relative;
+    top: -110px;
+    visibility: hidden;
+}
 
 
 

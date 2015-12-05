@@ -23,8 +23,6 @@ function dragon_project_create_page_inteface() {
 function dragon_project_preprocess_page(&$vars, $hook) {
   if(arg(0) == 'quote') {
     drupal_add_css(drupal_get_path('module', 'dragon_project') . '/css/dragon_project_create.css');
-    module_load_include('inc', 'dragon_project', 'dragon_project.pages');
-    $vars['dragon_pre_content'] = dragon_project_info_bar();
   }
 }
 
@@ -61,4 +59,14 @@ function dragon_project_block_view($delta = '') {
 
 function dragon_project_field_group_pre_render_alter(&$element, $group, & $form) {
   $element['#attributes']['id'] = $group->group_name;
+  
+  $element['quick-anchor'] = array(
+    '#title' => '',
+    '#href' => '',
+    '#type' => 'link',
+    '#attributes' => array(
+      'id' => $group->group_name . '-quick-anchor',
+      'class' => array('quick-anchor'),
+    ),
+  );
 }
