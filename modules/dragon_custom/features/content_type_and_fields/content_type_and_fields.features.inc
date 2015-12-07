@@ -19,6 +19,21 @@ function content_type_and_fields_ctools_plugin_api($module = NULL, $api = NULL) 
 function content_type_and_fields_image_default_styles() {
   $styles = array();
 
+  // Exported image style: dragon_medium_slider_image.
+  $styles['dragon_medium_slider_image'] = array(
+    'label' => 'Dragon Medium Slider Image',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_resize',
+        'data' => array(
+          'width' => 640,
+          'height' => 500,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: dragon_silder_image.
   $styles['dragon_silder_image'] = array(
     'label' => 'Dragon Silder Image',
@@ -53,6 +68,14 @@ function content_type_and_fields_node_info() {
       'name' => t('Basic page'),
       'base' => 'node_content',
       'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'slide_page' => array(
+      'name' => t('Slide Page'),
+      'base' => 'node_content',
+      'description' => '',
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

@@ -6,4 +6,3 @@ version = 7.x-1.0
 
 dependencies[] = dragon_common
 dependencies[] = content_type_and_fields
-dependencies[] = flexslider_fields

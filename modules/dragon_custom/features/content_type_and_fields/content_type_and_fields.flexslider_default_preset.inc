@@ -17,7 +17,7 @@ function content_type_and_fields_flexslider_default_presets() {
   $preset->title = 'dragon';
   $preset->theme = 'classic';
   $preset->imagestyle_normal = 'flexslider_full';
-  $preset->imagestyle_thumbnail = 'thumbnail';
+  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',
@@ -52,10 +52,10 @@ function content_type_and_fields_flexslider_default_presets() {
     'pausePlay' => 0,
     'pauseText' => 'Pause',
     'playText' => 'Play',
-    'randomize' => 0,
+    'randomize' => 1,
     'thumbCaptions' => 0,
     'thumbCaptionsBoth' => 0,
-    'animationLoop' => 1,
+    'animationLoop' => 0,
     'pauseOnAction' => 1,
     'pauseOnHover' => 0,
     'manualControls' => '',

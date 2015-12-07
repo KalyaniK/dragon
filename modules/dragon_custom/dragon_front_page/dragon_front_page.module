@@ -66,9 +66,7 @@ function dragon_front_page_config() {
 }
 
 function dragon_front_page_callback() {
-  $front_nid = variable_get('dragon_front_page_nid');
-  $content = node_view(node_load($front_nid));
-  return $content['field_slider_images'];
+  return views_embed_view('frontpage_slider','block_1');
 }
 
 /*
@@ -76,6 +74,12 @@ function dragon_front_page_callback() {
  */
 function dragon_front_page_preprocess_page(&$vars, $hook) {
   if(arg(0) == 'home') {
+    $front_nid = variable_get('dragon_front_page_nid');
+    $front_node = node_load($front_nid);
+    $fid = $front_node->field_slider_images[$front_node->language][0]['fid'];
+    $imgpath = file_load($fid)->uri;
+    $bg_image = file_create_url($imgpath);
+    drupal_add_css("#block-system-main .content { background: url($bg_image) no-repeat fixed center center / 100% 100%; }",$option['type'] = 'inline');
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page.css');
     drupal_add_js(drupal_get_path('module', 'dragon_front_page') . '/js/dragon_front_page.js');
   }
