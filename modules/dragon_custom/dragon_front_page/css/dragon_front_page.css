@@ -48,9 +48,27 @@ padding-left: 0px;
 /*******************************
  *       Silder           **
  ******************************/
-.view.view-id-frontpage_slider {
-  width: 80%;
+.view.view-id-frontpage_slider .view-content {
   margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (min-width: 768px) {
+  .view.view-id-frontpage_slider .view-content {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .view.view-id-frontpage_slider .view-content {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view.view-id-frontpage_slider .view-content {
+    width: 1170px;
+  }
 }
 
 .owl-theme .owl-controls .owl-buttons>div {
@@ -74,14 +92,18 @@ padding-left: 0px;
 
 .owl-carousel .owl-item>div {
     background-color: #f5f5f5;
-    padding: 5%;
-    margin: 5%;
+    padding: 6px;
+    margin: 20px;
     margin-bottom: -100%;
     padding-bottom: 100%;
     overflow: hidden;
 }
 
 .owl-item .views-field-title {
-    margin: 20px 0;
+    margin: 20px 10px;
     font-size: 28px;
+}
+
+.owl-item .views-field-body {
+    margin: 20px 10px;
 }
