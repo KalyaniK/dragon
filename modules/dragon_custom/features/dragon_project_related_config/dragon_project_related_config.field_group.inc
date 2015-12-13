@@ -52,7 +52,7 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Order Information',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_quantity',
     ),
@@ -82,9 +82,9 @@ function dragon_project_related_config_field_group_info() {
     'weight' => '6',
     'children' => array(
       0 => 'field_packaging',
-      1 => 'field_product_packaging',
+      1 => 'field_carton_box',
       2 => 'field_inner_box_packaging',
-      3 => 'field_carton_box',
+      3 => 'field_product_packaging',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -116,9 +116,9 @@ function dragon_project_related_config_field_group_info() {
     'weight' => '9',
     'children' => array(
       0 => 'field_packaging',
-      1 => 'field_product_packaging',
+      1 => 'field_carton_box',
       2 => 'field_inner_box_packaging',
-      3 => 'field_carton_box',
+      3 => 'field_product_packaging',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -174,7 +174,7 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Project Pictures',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_project_images',
     ),
@@ -233,7 +233,7 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Project Type',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_project_type',
     ),
@@ -291,7 +291,7 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Quality Information',
-    'weight' => '8',
+    'weight' => '7',
     'children' => array(
       0 => 'field_check_points',
     ),
@@ -321,11 +321,12 @@ function dragon_project_related_config_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_color',
-      1 => 'field_if_drawing',
-      2 => 'field_international_standard',
+      1 => 'field_international_standard',
+      2 => 'field_logo_on',
       3 => 'field_measurement',
-      4 => 'field_logo_on',
-      5 => 'field_other_specification',
+      4 => 'field_other_specification',
+      5 => 'field_if_drawing_content',
+      6 => 'field_if_drawing',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -354,14 +355,15 @@ function dragon_project_related_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Technical Details',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'field_color',
-      1 => 'field_if_drawing',
-      2 => 'field_international_standard',
+      1 => 'field_international_standard',
+      2 => 'field_logo_on',
       3 => 'field_measurement',
-      4 => 'field_logo_on',
-      5 => 'field_other_specification',
+      4 => 'field_other_specification',
+      5 => 'field_if_drawing_content',
+      6 => 'field_if_drawing',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
