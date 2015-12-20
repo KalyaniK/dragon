@@ -484,7 +484,7 @@ function content_type_and_fields_field_default_field_instances() {
   $field_instances['node-slide_page-field_slide_image'] = array(
     'bundle' => 'slide_page',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please upload image with the 16:9 resolution, e.g. 1280*720, 960*540, 640*360 or 480*270.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',

@@ -26,8 +26,8 @@ function content_type_and_fields_image_default_styles() {
       1 => array(
         'name' => 'image_resize',
         'data' => array(
-          'width' => 640,
-          'height' => 500,
+          'width' => 480,
+          'height' => 270,
         ),
         'weight' => 1,
       ),
