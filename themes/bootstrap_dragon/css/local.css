@@ -75,7 +75,7 @@ div#header-top #block-search-form{
 }
 
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-  margin-left: 15px;
+  margin-left: 0px;
   height: 60px;
   line-height: 40px;
   padding-top: 10px;
@@ -122,7 +122,7 @@ div#header-top #block-search-form{
   .block.block-tb-megamenu {
     min-width: 200px;
   }
-  #dragon-navbar-collapse {
+  #dragon-navbar-collapse .navbar-right {
     position: absolute;
     right: 0;
     top: 0;
@@ -191,17 +191,7 @@ footer#subfooter{
 }
 
 #mini-panel-dragon_footer a.dragon-footer-icon{
-  width: 40px;
-  height: 40px;
-  font-size: 2.4rem;
-  line-height: 40px;
-  margin-top: 8px;
-  margin-right: 5px;
-  display: inline-block;
   color: #1A2732;
-  text-align: center;
-  background: none repeat scroll 0% 0% #FFF;
-  border-radius: 20px;
 }
 
 /*******************************

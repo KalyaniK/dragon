@@ -5,10 +5,6 @@ div#main-content{
   padding: 0px 0px 0px;
 }
 
-#main-content .container{
-  width: auto;
-}
-
 div#main{
   padding: 0px 0px 0px;
 }
@@ -51,24 +47,6 @@ padding-left: 0px;
 .view.view-id-frontpage_slider .view-content {
   margin: 0 auto;
   padding: 0 40px;
-}
-
-@media (min-width: 768px) {
-  .view.view-id-frontpage_slider .view-content {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .view.view-id-frontpage_slider .view-content {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .view.view-id-frontpage_slider .view-content {
-    width: 1170px;
-  }
 }
 
 .owl-theme .owl-controls .owl-buttons>div {

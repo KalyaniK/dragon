@@ -79,7 +79,7 @@ function dragon_front_page_preprocess_page(&$vars, $hook) {
     $fid = $front_node->field_slider_images[$front_node->language][0]['fid'];
     $imgpath = file_load($fid)->uri;
     $bg_image = file_create_url($imgpath);
-    drupal_add_css("#block-system-main .content { background: url($bg_image) no-repeat fixed center center / 100% 100%; }",$option['type'] = 'inline');
+    drupal_add_css("#main-content { background: url($bg_image) no-repeat fixed center center / 100% 100%; }",$option['type'] = 'inline');
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page.css');
     drupal_add_js(drupal_get_path('module', 'dragon_front_page') . '/js/dragon_front_page.js');
   }
