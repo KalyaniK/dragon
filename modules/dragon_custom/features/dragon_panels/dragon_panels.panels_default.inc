@@ -98,7 +98,7 @@ function dragon_panels_default_panels_mini() {
   $pane->configuration = array(
       'admin_title' => '',
       'title' => 'Follow Us',
-      'body' => '<a class="dragon-footer-icon" href="http://www.linkedin.com/company/dragon-asia-hk-ltd" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a> <a class="dragon-footer-icon" href="https://www.facebook.com/groups/90532451133/" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a> <a class="dragon-footer-icon" href="http://www.linkedin.com/company/dragon-asia-hk-ltd" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a>',
+      'body' => '<a class="dragon-footer-icon" href="http://www.linkedin.com/company/dragon-asia-hk-ltd" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a> <a class="dragon-footer-icon" href="https://www.facebook.com/groups/90532451133/" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a> <a class="dragon-footer-icon" href="https://twitter.com/DragonAsiaHK1" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a>',
       'format' => 'full_html',
       'substitute' => TRUE,
   );
