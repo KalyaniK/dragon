@@ -40,12 +40,12 @@ fieldset.field-group-fieldset .fieldset-wrapper{
 #project-node-form fieldset.field-group-fieldset legend{
   font-size: 20px;
 }
-
+/*
 #edit-field-project-images table input,
 #edit-field-check-points input[type="submit"]{
   padding: 5px 20px 5px 20px;
 }
-
+*/
 .image-widget-data input[type="submit"]{
   padding: 2px 20px 2px 20px;
 }
@@ -76,8 +76,17 @@ fieldset.field-group-fieldset .fieldset-wrapper{
     visibility: hidden;
 }
 
+table input.form-text, table textarea.form-textarea, table select{
+    width: auto;
+}
 
+fieldset fieldset legend, table tbody label{
+	display: none;
+}
 
+table tbody div{
+	display: inline;
+}
 /*
 #project-node-form>div>fieldset:before{
   content: 'sdfgsdfg';

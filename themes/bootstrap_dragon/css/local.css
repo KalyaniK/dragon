@@ -4,7 +4,7 @@
  *       Header               **
  ******************************/
 #page {
-  padding-top: 70px;
+  padding-top: 60px;
   position: relative;
 }
 
@@ -272,4 +272,14 @@ footer#subfooter{
 
 .dragon-half{
   width: 49%;
+}
+
+form#user-login .form-item input,
+form#user-register-form .form-item input[type="text"]{
+	width: 50%;
+}
+
+form#user-login label,
+form#user-register-form label:not(.option){
+	display: block;
 }
