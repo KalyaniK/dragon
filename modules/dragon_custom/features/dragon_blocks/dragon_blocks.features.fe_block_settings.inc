@@ -31,14 +31,14 @@ function dragon_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'bootstrap_business' => array(
-        'region' => 'header_top_right',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'bootstrap_business',
         'weight' => 0,
       ),
       'bootstrap_dragon' => array(
-        'region' => 'header_top_right',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'bootstrap_dragon',
         'weight' => 0,
       ),
@@ -447,10 +447,10 @@ function dragon_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'bootstrap_dragon' => array(
-        'region' => 'dragon_blocks',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'bootstrap_dragon',
-        'weight' => -19,
+        'weight' => 0,
       ),
       'seven' => array(
         'region' => '',
@@ -488,10 +488,10 @@ function dragon_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'bootstrap_dragon' => array(
-        'region' => 'dragon_blocks',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'bootstrap_dragon',
-        'weight' => -16,
+        'weight' => 0,
       ),
       'seven' => array(
         'region' => '',
@@ -629,7 +629,7 @@ function dragon_blocks_default_fe_block_settings() {
 
   $export['panels_mini-what_we_do_steps'] = array(
     'cache' => -1,
-    'css_class' => 'dragon-mini-panel-block dragon-mini-panel-full',
+    'css_class' => 'dragon-mini-panel-block',
     'custom' => 0,
     'delta' => 'what_we_do_steps',
     'i18n_block_language' => array(),

@@ -87,6 +87,13 @@ function dragon_front_page_preprocess_page(&$vars, $hook) {
   if( isset($vars['node']) && in_array($vars['node']->nid, (variable_get('dragon-other-pages', array(4, 5, 14))))) {
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page.css');
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page_other_pages.css');
+    // add background image
+    $front_nid = variable_get('dragon_front_page_nid');
+    $front_node = node_load($front_nid);
+    $fid = $front_node->field_slider_images[$front_node->language][0]['fid'];
+    $imgpath = file_load($fid)->uri;
+    $bg_image = file_create_url($imgpath);
+    drupal_add_css("#main-content { background: url($bg_image) no-repeat fixed center center / 100% 100%; }",$option['type'] = 'inline');
   }
 }
 
