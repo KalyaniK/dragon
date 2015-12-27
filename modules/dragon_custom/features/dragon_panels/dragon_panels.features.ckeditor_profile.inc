@@ -100,6 +100,7 @@ function dragon_panels_ckeditor_profile_defaults() {
         ),
       ),
       'input_formats' => array(
+        'filtered_html' => 'Filtered HTML',
         'full_html' => 'Full HTML',
       ),
     ),

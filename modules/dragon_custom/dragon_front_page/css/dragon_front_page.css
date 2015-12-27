@@ -16,6 +16,10 @@ div.block{
 div.text-center img {
   margin: 0 auto;
 }
+
+h2.pane-title a:hover {
+  text-decoration: none;
+}
 /*******************************
  *    Panel   Get a Quote     **
  ******************************/
@@ -81,9 +85,14 @@ padding-left: 0px;
     overflow: hidden;
 }
 
-.owl-item .views-field-title {
+.owl-item .views-field-title-field-et {
+    line-height: 1.2;
     margin: 20px 10px;
     font-size: 28px;
+}
+
+.owl-item .views-field-title-field-et a:hover {
+    text-decoration: none;
 }
 
 .owl-item .views-field-body {

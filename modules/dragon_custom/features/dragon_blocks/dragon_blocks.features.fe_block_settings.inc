@@ -586,6 +586,47 @@ function dragon_blocks_default_fe_block_settings() {
     'visibility' => 1,
   );
 
+  $export['panels_mini-our_services'] = array(
+    'cache' => -1,
+    'css_class' => 'dragon-mini-panel-block container',
+    'custom' => 0,
+    'delta' => 'our_services',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'panels_mini',
+    'node_types' => array(),
+    'pages' => 'content/our-services',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'bootstrap_business' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap_business',
+        'weight' => 0,
+      ),
+      'bootstrap_dragon' => array(
+        'region' => 'dragon_blocks',
+        'status' => 1,
+        'theme' => 'bootstrap_dragon',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 1,
+  );
+
   $export['panels_mini-what_we_do'] = array(
     'cache' => -1,
     'css_class' => 'dragon-mini-panel-block dragon-color-dark-grey dragon-width-slim',
@@ -629,7 +670,7 @@ function dragon_blocks_default_fe_block_settings() {
 
   $export['panels_mini-what_we_do_steps'] = array(
     'cache' => -1,
-    'css_class' => 'dragon-mini-panel-block',
+    'css_class' => 'dragon-mini-panel-block container',
     'custom' => 0,
     'delta' => 'what_we_do_steps',
     'i18n_block_language' => array(),

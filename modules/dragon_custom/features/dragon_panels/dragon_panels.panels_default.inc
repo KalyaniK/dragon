@@ -9,6 +9,7 @@
  */
 function dragon_panels_default_panels_mini() {
   $export = array();
+
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
@@ -23,132 +24,129 @@ function dragon_panels_default_panels_mini() {
   $display->layout = 'flexible:dragon_footer';
   $display->layout_settings = array();
   $display->panel_settings = array(
-      'style_settings' => array(
-          'default' => NULL,
-          'column_1' => NULL,
-          'column_2' => NULL,
-          'column_3' => NULL,
-          'column_4' => NULL,
-          'bottom' => NULL,
-      ),
+    'style_settings' => array(
+      'default' => NULL,
+      'column_1' => NULL,
+      'column_2' => NULL,
+      'column_3' => NULL,
+      'column_4' => NULL,
+      'bottom' => NULL,
+    ),
   );
   $display->cache = array();
   $display->title = '';
   $display->uuid = '8b459147-053c-403e-9fbb-d0b7e076b59e';
   $display->content = array();
   $display->panels = array();
-  $pane = new stdClass();
-  $pane->pid = 'new-3a4bb6c8-73e3-4161-ac01-8280d647eba2';
-  $pane->panel = 'bottom';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    $pane = new stdClass();
+    $pane->pid = 'new-3a4bb6c8-73e3-4161-ac01-8280d647eba2';
+    $pane->panel = 'bottom';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
       'body' => '<div class="dragon-footer-links dragon-footer-content"><a href="/dragon-dev/sitemap">Sitemap</a> | <a href="/dragon-dev/disclaimer">Disclaimer</a> | © 2015 Dragon Asia. All Rights Reserved.</div>',
       'format' => 'full_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '3a4bb6c8-73e3-4161-ac01-8280d647eba2';
-  $display->content['new-3a4bb6c8-73e3-4161-ac01-8280d647eba2'] = $pane;
-  $display->panels['bottom'][0] = 'new-3a4bb6c8-73e3-4161-ac01-8280d647eba2';
-  $pane = new stdClass();
-  $pane->pid = 'new-d708c01e-9beb-47ec-8f5c-cff2b682024a';
-  $pane->panel = 'column_1';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '3a4bb6c8-73e3-4161-ac01-8280d647eba2';
+    $display->content['new-3a4bb6c8-73e3-4161-ac01-8280d647eba2'] = $pane;
+    $display->panels['bottom'][0] = 'new-3a4bb6c8-73e3-4161-ac01-8280d647eba2';
+    $pane = new stdClass();
+    $pane->pid = 'new-d708c01e-9beb-47ec-8f5c-cff2b682024a';
+    $pane->panel = 'column_1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
       'title' => 'About Dragon Asia',
       'body' => 'About Dragon Asia is a company..... About Dragon Asia is a company..
       ...About Dragon Asia is a company..... About Dragon Asia is a company.....',
       'format' => 'filtered_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'd708c01e-9beb-47ec-8f5c-cff2b682024a';
-  $display->content['new-d708c01e-9beb-47ec-8f5c-cff2b682024a'] = $pane;
-  $display->panels['column_1'][0] = 'new-d708c01e-9beb-47ec-8f5c-cff2b682024a';
-  $pane = new stdClass();
-  $pane->pid = 'new-ed5e7540-18f8-46f3-babd-b0819f4757e1';
-  $pane->panel = 'column_2';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd708c01e-9beb-47ec-8f5c-cff2b682024a';
+    $display->content['new-d708c01e-9beb-47ec-8f5c-cff2b682024a'] = $pane;
+    $display->panels['column_1'][0] = 'new-d708c01e-9beb-47ec-8f5c-cff2b682024a';
+    $pane = new stdClass();
+    $pane->pid = 'new-ed5e7540-18f8-46f3-babd-b0819f4757e1';
+    $pane->panel = 'column_2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
       'title' => 'Follow Us',
       'body' => '<a class="dragon-footer-icon" href="http://www.linkedin.com/company/dragon-asia-hk-ltd" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-linkedin fa-stack-1x"></i></span></a> <a class="dragon-footer-icon" href="https://www.facebook.com/groups/90532451133/" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a> <a class="dragon-footer-icon" href="https://twitter.com/DragonAsiaHK1" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a>',
       'format' => 'full_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'ed5e7540-18f8-46f3-babd-b0819f4757e1';
-  $display->content['new-ed5e7540-18f8-46f3-babd-b0819f4757e1'] = $pane;
-  $display->panels['column_2'][0] = 'new-ed5e7540-18f8-46f3-babd-b0819f4757e1';
-  $pane = new stdClass();
-  $pane->pid = 'new-27da14b5-c910-4413-af49-3bef7f4e2611';
-  $pane->panel = 'column_3';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'ed5e7540-18f8-46f3-babd-b0819f4757e1';
+    $display->content['new-ed5e7540-18f8-46f3-babd-b0819f4757e1'] = $pane;
+    $display->panels['column_2'][0] = 'new-ed5e7540-18f8-46f3-babd-b0819f4757e1';
+    $pane = new stdClass();
+    $pane->pid = 'new-27da14b5-c910-4413-af49-3bef7f4e2611';
+    $pane->panel = 'column_3';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
-      'title' => 'Downloads',
-      'body' => '<div class="item-list"><ul class="list-unstyled"><li class="first last"><a href="/dragon-dev/" class="btn btn-mini "><span class="glyphicon glyphicon-file" aria-hidden="true"></span>
-      <span class="icon-text">File A.pdf</span></a></li>
-      </ul></div>
-      ',
+      'title' => 'Download Company Presentation ',
+      'body' => '<div class="item-list"><ul class="list-unstyled"><li class="first last"><a class="btn btn-mini " href="/dragon-dev/"><span class="icon-text">File A.pdf</span></a></li></ul></div>',
       'format' => 'full_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '27da14b5-c910-4413-af49-3bef7f4e2611';
-  $display->content['new-27da14b5-c910-4413-af49-3bef7f4e2611'] = $pane;
-  $display->panels['column_3'][0] = 'new-27da14b5-c910-4413-af49-3bef7f4e2611';
-  $pane = new stdClass();
-  $pane->pid = 'new-f5d86c3c-c369-48b0-9c33-a7983822ac09';
-  $pane->panel = 'column_4';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '27da14b5-c910-4413-af49-3bef7f4e2611';
+    $display->content['new-27da14b5-c910-4413-af49-3bef7f4e2611'] = $pane;
+    $display->panels['column_3'][0] = 'new-27da14b5-c910-4413-af49-3bef7f4e2611';
+    $pane = new stdClass();
+    $pane->pid = 'new-f5d86c3c-c369-48b0-9c33-a7983822ac09';
+    $pane->panel = 'column_4';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
       'title' => 'Help',
       'body' => '<div class="item-list"><ul class="list-unstyled"><li class="first"><a href="/dragon-dev/" class="btn btn-mini "><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
@@ -158,22 +156,21 @@ function dragon_panels_default_panels_mini() {
       </ul></div>',
       'format' => 'full_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'f5d86c3c-c369-48b0-9c33-a7983822ac09';
-  $display->content['new-f5d86c3c-c369-48b0-9c33-a7983822ac09'] = $pane;
-  $display->panels['column_4'][0] = 'new-f5d86c3c-c369-48b0-9c33-a7983822ac09';
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'f5d86c3c-c369-48b0-9c33-a7983822ac09';
+    $display->content['new-f5d86c3c-c369-48b0-9c33-a7983822ac09'] = $pane;
+    $display->panels['column_4'][0] = 'new-f5d86c3c-c369-48b0-9c33-a7983822ac09';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
-
   $export['dragon_footer'] = $mini;
 
   $mini = new stdClass();
@@ -233,7 +230,7 @@ function dragon_panels_default_panels_mini() {
     $display->content['new-b8ab83db-c1bc-48cb-bc4d-ec724cfa7499'] = $pane;
     $display->panels['middle'][0] = 'new-b8ab83db-c1bc-48cb-bc4d-ec724cfa7499';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-b8ab83db-c1bc-48cb-bc4d-ec724cfa7499';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['dragon_get_a_quote'] = $mini;
 
@@ -385,7 +382,7 @@ function dragon_panels_default_panels_mini() {
 What can CRM do for you?
 What can CRM do for you?
 What can CRM do for you?',
-      'format' => 'filtered_html',
+      'format' => 'full_html',
       'substitute' => TRUE,
     );
     $pane->cache = array();
@@ -400,7 +397,7 @@ What can CRM do for you?',
     $display->content['new-09d438c8-f433-432b-835c-4dd197fd2789'] = $pane;
     $display->panels['right'][0] = 'new-09d438c8-f433-432b-835c-4dd197fd2789';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-96c3672b-bf0c-4bd7-bea6-de96cb410d6e';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['navigation_detail_section'] = $mini;
 
@@ -648,9 +645,9 @@ DRAGON ASIA WORLD	',
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => '',
-      'body' => 'Li & Fung reported results against a challenging macroeconomic environment. Despite difficult retail conditions in a number of key markets, the business delivered 1.4% growth in turnover. “2014 was a year of transition and investment to position the Company for future growth,” said Spencer Fung, Group CEO.',
-      'format' => 'filtered_html',
+      'title' => 'Dragon Asia International inc',
+      'body' => '<p class="rteindent1"><strong>Dragon Asia Ltd </strong>is proud to announce that since april 2014 we have a Canada sister Company <strong>Dragon Asia International&nbsp; inc </strong>base in Quebec, Canada. Mr Luc Beaulac Bellemare will manage this new Company. <strong>Dragon Asia International</strong> <strong>Inc </strong>will be the North America sales, logistics &nbsp;and import Company. This new Company will be able to take care of all the import, documentation and delivery&nbsp;process. More over <strong>Dragon Asia International Inc&nbsp;</strong>will have a complete sales and technical support team for our Canada customer so that we can help you in each step of your new project development.</p><p class="rteindent1">&nbsp;</p>',
+      'format' => 'full_html',
       'substitute' => TRUE,
     );
     $pane->cache = array();
@@ -673,8 +670,8 @@ DRAGON ASIA WORLD	',
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => '',
-      'body' => 'Li & Fung reported results against a challenging macroeconomic environment. Despite difficult retail conditions in a number of key markets, the business delivered 1.4% growth in turnover. “2014 was a year of transition and investment to position the Company for future growth,” said Spencer Fung, Group CEO.',
+      'title' => 'New Chinese Company',
+      'body' => 'The CEO of Dragon Asia Hk Ltd Mr. Robert Bellemare announce that we will have a new sister Company in the new Shanghai Free Zone in 2016. Doing so, Dragon Asia Hk Ltd will be in a better position to export goods for China and to support our customer that want to sell in China. The new Company will be a Wholly Own Foreign company ( WFOE ). ',
       'format' => 'filtered_html',
       'substitute' => TRUE,
     );
@@ -698,9 +695,9 @@ DRAGON ASIA WORLD	',
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => '',
-      'body' => 'Li & Fung reported results against a challenging macroeconomic environment. Despite difficult retail conditions in a number of key markets, the business delivered 1.4% growth in turnover. “2014 was a year of transition and investment to position the Company for future growth,” said Spencer Fung, Group CEO.',
-      'format' => 'filtered_html',
+      'title' => 'New Web Portal',
+      'body' => '<p><strong>Dragon Asia Hk Ltd</strong> is proud to announce that they will launch in early 2016 our new Web Portal. This new portal is part of our Business Intelligence Strategy to support in a better way our customer in all there Asia project development.</p>',
+      'format' => 'full_html',
       'substitute' => TRUE,
     );
     $pane->cache = array();
@@ -748,84 +745,6 @@ DRAGON ASIA WORLD	',
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-f1b3b775-d374-433c-b485-2e1d676b4770';
-    $pane->panel = 'left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Building stronger economic futures for women along supply chains',
-      'body' => 'We are implementing the HERProject at factories in Bangladesh, Cambodia, and Vietnam and India, to help women learn about finance and health.
-',
-      'format' => 'filtered_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'f1b3b775-d374-433c-b485-2e1d676b4770';
-    $display->content['new-f1b3b775-d374-433c-b485-2e1d676b4770'] = $pane;
-    $display->panels['left'][0] = 'new-f1b3b775-d374-433c-b485-2e1d676b4770';
-    $pane = new stdClass();
-    $pane->pid = 'new-012e5163-76bf-4399-a956-142e984ef735';
-    $pane->panel = 'middle';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'title2',
-      'body' => 'We are implementing the HERProject at factories in Bangladesh, Cambodia, and Vietnam and India, to help women learn about finance and health.
-',
-      'format' => 'filtered_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '012e5163-76bf-4399-a956-142e984ef735';
-    $display->content['new-012e5163-76bf-4399-a956-142e984ef735'] = $pane;
-    $display->panels['middle'][0] = 'new-012e5163-76bf-4399-a956-142e984ef735';
-    $pane = new stdClass();
-    $pane->pid = 'new-9c3f4395-f9b7-4bbd-a55f-21d5e62b2f19';
-    $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'title3',
-      'body' => 'We are implementing the HERProject at factories in Bangladesh, Cambodia, and Vietnam and India, to help women learn about finance and health.
-',
-      'format' => 'filtered_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '9c3f4395-f9b7-4bbd-a55f-21d5e62b2f19';
-    $display->content['new-9c3f4395-f9b7-4bbd-a55f-21d5e62b2f19'] = $pane;
-    $display->panels['right'][0] = 'new-9c3f4395-f9b7-4bbd-a55f-21d5e62b2f19';
-    $pane = new stdClass();
     $pane->pid = 'new-929be4bd-549c-4532-a4f6-ce4c2aab3332';
     $pane->panel = 'top';
     $pane->type = 'custom';
@@ -835,9 +754,7 @@ DRAGON ASIA WORLD	',
     $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => 'We care for the communities in which we operate and live by the company’s strong values. We are a thought leader and innovate and experiment with new ideas every day.
-
-We are so much more than a traditional trading company. We are Li & Fung.',
+      'body' => 'We care for the communities in which we operate and live by the company’s strong values. We are a thought leader and innovate and experiment with new ideas every day. We are so much more than a traditional trading company. We are <strong>Dragon Asia </strong>...',
       'format' => 'filtered_html',
       'substitute' => TRUE,
     );
@@ -853,7 +770,7 @@ We are so much more than a traditional trading company. We are Li & Fung.',
     $display->content['new-929be4bd-549c-4532-a4f6-ce4c2aab3332'] = $pane;
     $display->panels['top'][0] = 'new-929be4bd-549c-4532-a4f6-ce4c2aab3332';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-929be4bd-549c-4532-a4f6-ce4c2aab3332';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['our_approach'] = $mini;
 
@@ -892,10 +809,8 @@ We are so much more than a traditional trading company. We are Li & Fung.',
     $pane->configuration = array(
       'admin_title' => '',
       'title' => 'Trading',
-      'body' => 'Our trading business is the core of Li & Fung and provides sourcing services across multiple product lines to retailers and brands across the globe.
-
-Expertise, professionalism and integrity have contributed to our reputation as the world’s leading consumer goods sourcing company. ',
-      'format' => 'filtered_html',
+      'body' => '<p>Our trading business is the core of <strong>Dragon Asia Hk Ltd </strong>and provides sourcing services across multiple product lines to manufacturers and distributors across the globe. Expertise, professionalism and integrity have contributed to our reputation as the world’s leading consumer goods sourcing company.</p>',
+      'format' => 'full_html',
       'substitute' => TRUE,
     );
     $pane->cache = array();
@@ -922,10 +837,8 @@ Expertise, professionalism and integrity have contributed to our reputation as t
     $pane->configuration = array(
       'admin_title' => '',
       'title' => 'Logistics',
-      'body' => 'Our end-to-end logistics solutions span the time the product leaves the factory to the time it reaches the hands of the consumer.
-
-We are focused on moving our customers’ materials and products efficiently through the supply chain.',
-      'format' => 'filtered_html',
+      'body' => '<p><strong>Dragon Asia Hk Ltd</strong> end-to-end logistics solutions span the time the product leaves the factory to the time it reaches the hands of the consumer. We are focused on moving our customers’ materials and products efficiently through the supply chain.</p>',
+      'format' => 'full_html',
       'substitute' => TRUE,
     );
     $pane->cache = array();
@@ -943,7 +856,7 @@ We are focused on moving our customers’ materials and products efficiently thr
     $display->content['new-8ebad555-d1db-4b52-b081-a7dd4f5aca6c'] = $pane;
     $display->panels['right'][0] = 'new-8ebad555-d1db-4b52-b081-a7dd4f5aca6c';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1a00e16d-b74e-49f2-92ef-ad893079fcd5';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['our_business'] = $mini;
 
@@ -1267,103 +1180,169 @@ Through a growing network of over 15,000 suppliers in more than 40 countries, Li
   $display->layout = 'twocol_stacked';
   $display->layout_settings = array();
   $display->panel_settings = array(
-      'style_settings' => array(
-          'default' => NULL,
-          'top' => NULL,
-          'left' => NULL,
-          'right' => NULL,
-          'bottom' => NULL,
-      ),
+    'style_settings' => array(
+      'default' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
+    ),
   );
   $display->cache = array();
   $display->title = 'Our People';
   $display->uuid = '2e22b794-0b30-4503-b828-4baaef61b60e';
   $display->content = array();
   $display->panels = array();
-  $pane = new stdClass();
-  $pane->pid = 'new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
-  $pane->panel = 'left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    $pane = new stdClass();
+    $pane->pid = 'new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
       'body' => '<div class="text-center clearfix"><img alt="" src="/dragon-dev/sites/default/files/u2/2011-12-20_09.46.51.jpg" style="width: 250px; height: 333px;" /><div><p>Robert Bellemare<br />
       Shanghai</p></div></div>',
       'format' => 'full_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
-  $display->content['new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1'] = $pane;
-  $display->panels['left'][0] = 'new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
-  $pane = new stdClass();
-  $pane->pid = 'new-d09398f5-b74b-4ab8-8161-8c66e8126df7';
-  $pane->panel = 'right';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
+    $display->content['new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1'] = $pane;
+    $display->panels['left'][0] = 'new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
+    $pane = new stdClass();
+    $pane->pid = 'new-d09398f5-b74b-4ab8-8161-8c66e8126df7';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
       'body' => '<div class="text-center clearfix"><img alt="" src="/dragon-dev/sites/default/files/u2/luc_0.jpg" style="width: 299px; height: 333px;" /><div><p>Luc Beaulac Bellemare<br />
       Canada</p></div></div>',
       'format' => 'full_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'd09398f5-b74b-4ab8-8161-8c66e8126df7';
-  $display->content['new-d09398f5-b74b-4ab8-8161-8c66e8126df7'] = $pane;
-  $display->panels['right'][0] = 'new-d09398f5-b74b-4ab8-8161-8c66e8126df7';
-  $pane = new stdClass();
-  $pane->pid = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
-  $pane->panel = 'top';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'd09398f5-b74b-4ab8-8161-8c66e8126df7';
+    $display->content['new-d09398f5-b74b-4ab8-8161-8c66e8126df7'] = $pane;
+    $display->panels['right'][0] = 'new-d09398f5-b74b-4ab8-8161-8c66e8126df7';
+    $pane = new stdClass();
+    $pane->pid = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
+    $pane->panel = 'top';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
       'body' => 'We are a diverse multinational with Asian roots and a proud entrepreneurial heritage. Our people are the reason for our success and the source of our strength and expertise.',
       'format' => 'filtered_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array(
+    );
+    $pane->css = array(
       'css_id' => '',
       'css_class' => 'text-center',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '1b1da9c7-b5b2-4b19-aeac-625275644a7b';
-  $display->content['new-1b1da9c7-b5b2-4b19-aeac-625275644a7b'] = $pane;
-  $display->panels['top'][0] = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '1b1da9c7-b5b2-4b19-aeac-625275644a7b';
+    $display->content['new-1b1da9c7-b5b2-4b19-aeac-625275644a7b'] = $pane;
+    $display->panels['top'][0] = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
   $mini->display = $display;
   $export['our_people'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'our_services';
+  $mini->category = '';
+  $mini->admin_title = 'Our Services';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Our Services';
+  $display->uuid = 'e79c11a0-1bb3-4aee-8511-2bfc9f467474';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-6b9a3ad9-330d-4f88-9d5d-0f455c512ece';
+    $pane->panel = 'middle';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Our Service',
+      'body' => '<?php
+$menuItems = menu_tree_page_data(\'user-menu\'); 
+
+foreach($menuItems as $key => $m) {
+      //check current active menu
+   if ($m[\'link\'][\'in_active_trail\'] && $menuItems [$key][\'below\']) {
+       $menu = menu_tree_output($menuItems [$key][\'below\']);
+   }  
+}
+
+//print the menu
+print render($menu);',
+      'format' => 'php_code',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '6b9a3ad9-330d-4f88-9d5d-0f455c512ece';
+    $display->content['new-6b9a3ad9-330d-4f88-9d5d-0f455c512ece'] = $pane;
+    $display->panels['middle'][0] = 'new-6b9a3ad9-330d-4f88-9d5d-0f455c512ece';
+  $display->hide_title = PANELS_TITLE_PANE;
+  $display->title_pane = 'new-6b9a3ad9-330d-4f88-9d5d-0f455c512ece';
+  $mini->display = $display;
+  $export['our_services'] = $mini;
 
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
@@ -1383,6 +1362,9 @@ Through a growing network of over 15,000 suppliers in more than 40 countries, Li
       'default' => NULL,
       'middle' => NULL,
     ),
+    'middle' => array(
+      'style' => '-1',
+    ),
   );
   $display->cache = array();
   $display->title = 'What we do';
@@ -1399,9 +1381,8 @@ Through a growing network of over 15,000 suppliers in more than 40 countries, Li
     $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => 'Li & Fung designs customized supply chain solutions for the world’s most successful retailers and brands. We source, oversee production and deliver goods in demand from consumers
-around the world.',
-      'format' => 'filtered_html',
+      'body' => '<p><strong>Dragon Asia Hk Ltd</strong> designs customized supply chain solutions for the world’s most successful distributors and manufacturer in Canada, USA and UK. We source, raw material, semi finish and retail ready products oversee and deliver goods in demand from consumers around the world.</p>',
+      'format' => 'full_html',
       'substitute' => TRUE,
     );
     $pane->cache = array();
@@ -1416,7 +1397,7 @@ around the world.',
     $display->content['new-cf45400f-5fe3-4769-b36d-dc15cfecf708'] = $pane;
     $display->panels['middle'][0] = 'new-cf45400f-5fe3-4769-b36d-dc15cfecf708';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-cf45400f-5fe3-4769-b36d-dc15cfecf708';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['what_we_do'] = $mini;
 
@@ -1434,71 +1415,207 @@ around the world.',
   $display->layout = 'twocol';
   $display->layout_settings = array();
   $display->panel_settings = array(
-      'style_settings' => array(
-          'default' => NULL,
-          'left' => NULL,
-          'right' => NULL,
-      ),
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
   );
   $display->cache = array();
   $display->title = '';
   $display->uuid = '95b109c5-f7a4-4794-abfa-2ea81f798c0d';
   $display->content = array();
   $display->panels = array();
-  $pane = new stdClass();
-  $pane->pid = 'new-1cd83765-463f-4e28-8bf2-d7d2bbcfe882';
-  $pane->panel = 'left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    $pane = new stdClass();
+    $pane->pid = 'new-1cd83765-463f-4e28-8bf2-d7d2bbcfe882';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
       'body' => '<div class="dragon-panel-left text-center"><img width="300" height="180" src="http://go.sap.com/dam/application/imagelibrary/pictograms/273000/273919.png.adapt.360_203.false.png" class="img" alt="Generic placeholder image"><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p><p><a class="btn btn-default" href="#" role="button">View details »</a></p></div>',
       'format' => 'full_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '1cd83765-463f-4e28-8bf2-d7d2bbcfe882';
-  $display->content['new-1cd83765-463f-4e28-8bf2-d7d2bbcfe882'] = $pane;
-  $display->panels['left'][0] = 'new-1cd83765-463f-4e28-8bf2-d7d2bbcfe882';
-  $pane = new stdClass();
-  $pane->pid = 'new-4cdbc62e-b803-44fa-a984-f727761ecfaa';
-  $pane->panel = 'right';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '1cd83765-463f-4e28-8bf2-d7d2bbcfe882';
+    $display->content['new-1cd83765-463f-4e28-8bf2-d7d2bbcfe882'] = $pane;
+    $display->panels['left'][0] = 'new-1cd83765-463f-4e28-8bf2-d7d2bbcfe882';
+    $pane = new stdClass();
+    $pane->pid = 'new-4cdbc62e-b803-44fa-a984-f727761ecfaa';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
       'body' => '<div class="dragon-panel-left text-center"><img alt="Generic placeholder image" class="img" height="180" src="http://go.sap.com/dam/application/imagelibrary/pictograms/272000/272570.png.adapt.360_203.false.png" width="300" /><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p><p><a class="btn btn-default" href="#" role="button">View details »</a></p></div>',
       'format' => 'full_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '4cdbc62e-b803-44fa-a984-f727761ecfaa';
-  $display->content['new-4cdbc62e-b803-44fa-a984-f727761ecfaa'] = $pane;
-  $display->panels['right'][0] = 'new-4cdbc62e-b803-44fa-a984-f727761ecfaa';
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '4cdbc62e-b803-44fa-a984-f727761ecfaa';
+    $display->content['new-4cdbc62e-b803-44fa-a984-f727761ecfaa'] = $pane;
+    $display->panels['right'][0] = 'new-4cdbc62e-b803-44fa-a984-f727761ecfaa';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1cd83765-463f-4e28-8bf2-d7d2bbcfe882';
   $mini->display = $display;
   $export['what_we_do_features'] = $mini;
+
+  $mini = new stdClass();
+  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
+  $mini->api_version = 1;
+  $mini->name = 'what_we_do_steps';
+  $mini->category = '';
+  $mini->admin_title = 'What We Do Steps';
+  $mini->admin_description = '';
+  $mini->requiredcontexts = array();
+  $mini->contexts = array();
+  $mini->relationships = array();
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+      'bottom' => NULL,
+      'top' => NULL,
+      'left_above' => NULL,
+      'right_above' => NULL,
+      'left_below' => NULL,
+      'right_below' => NULL,
+    ),
+    'bottom' => array(
+      'style' => '-1',
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '7aeed2cf-b446-417a-82ee-8b9aebcb65fb';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-350d3d59-05f5-4a1b-833a-b229fd964e09';
+    $pane->panel = 'middle';
+    $pane->type = 'node';
+    $pane->subtype = 'node';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'nid' => '15',
+      'links' => 0,
+      'leave_node_title' => 0,
+      'identifier' => '',
+      'build_mode' => 'teaser',
+      'link_node_title' => 1,
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '350d3d59-05f5-4a1b-833a-b229fd964e09';
+    $display->content['new-350d3d59-05f5-4a1b-833a-b229fd964e09'] = $pane;
+    $display->panels['middle'][0] = 'new-350d3d59-05f5-4a1b-833a-b229fd964e09';
+    $pane = new stdClass();
+    $pane->pid = 'new-06b1a6c1-1620-4c70-b77b-2a05a6692092';
+    $pane->panel = 'middle';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'what_we_do_features';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '06b1a6c1-1620-4c70-b77b-2a05a6692092';
+    $display->content['new-06b1a6c1-1620-4c70-b77b-2a05a6692092'] = $pane;
+    $display->panels['middle'][1] = 'new-06b1a6c1-1620-4c70-b77b-2a05a6692092';
+    $pane = new stdClass();
+    $pane->pid = 'new-0ebb1eda-af56-4f71-9fc4-093c55acaa58';
+    $pane->panel = 'middle';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'our_people';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '0ebb1eda-af56-4f71-9fc4-093c55acaa58';
+    $display->content['new-0ebb1eda-af56-4f71-9fc4-093c55acaa58'] = $pane;
+    $display->panels['middle'][2] = 'new-0ebb1eda-af56-4f71-9fc4-093c55acaa58';
+    $pane = new stdClass();
+    $pane->pid = 'new-98bddcd4-5b23-45db-9a51-d5f928f5e13c';
+    $pane->panel = 'middle';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'working_with_customers';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '98bddcd4-5b23-45db-9a51-d5f928f5e13c';
+    $display->content['new-98bddcd4-5b23-45db-9a51-d5f928f5e13c'] = $pane;
+    $display->panels['middle'][3] = 'new-98bddcd4-5b23-45db-9a51-d5f928f5e13c';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $mini->display = $display;
+  $export['what_we_do_steps'] = $mini;
 
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
@@ -1514,206 +1631,71 @@ around the world.',
   $display->layout = 'twocol';
   $display->layout_settings = array();
   $display->panel_settings = array(
-      'style_settings' => array(
-          'default' => NULL,
-          'left' => NULL,
-          'right' => NULL,
-      ),
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
   );
   $display->cache = array();
   $display->title = '';
   $display->uuid = '0694a348-34e8-42f6-8298-79b80cd7dc92';
   $display->content = array();
   $display->panels = array();
-  $pane = new stdClass();
-  $pane->pid = 'new-efbb100b-b070-45af-8a6c-7bb3767208af';
-  $pane->panel = 'left';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    $pane = new stdClass();
+    $pane->pid = 'new-efbb100b-b070-45af-8a6c-7bb3767208af';
+    $pane->panel = 'left';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
       'body' => '<img alt="" src="http://go.sap.com/dam/application/imagelibrary/photos/275000/275318.jpg.adapt.843_474.false.jpg" style="width: 842px; height: 474px;" />',
       'format' => 'full_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'efbb100b-b070-45af-8a6c-7bb3767208af';
-  $display->content['new-efbb100b-b070-45af-8a6c-7bb3767208af'] = $pane;
-  $display->panels['left'][0] = 'new-efbb100b-b070-45af-8a6c-7bb3767208af';
-  $pane = new stdClass();
-  $pane->pid = 'new-43e72db6-66fa-48bc-bcb0-ff3899df40e2';
-  $pane->panel = 'right';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'efbb100b-b070-45af-8a6c-7bb3767208af';
+    $display->content['new-efbb100b-b070-45af-8a6c-7bb3767208af'] = $pane;
+    $display->panels['left'][0] = 'new-efbb100b-b070-45af-8a6c-7bb3767208af';
+    $pane = new stdClass();
+    $pane->pid = 'new-43e72db6-66fa-48bc-bcb0-ff3899df40e2';
+    $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
       'admin_title' => '',
       'title' => 'We work closely with our customers',
       'body' => 'Our individual teams of experts work closely with customers, assessing their needs and using market research, retail and fashion trend forecasts, and innovative technology to design the right supply chains to deliver their products.',
       'format' => 'full_html',
       'substitute' => TRUE,
-  );
-  $pane->cache = array();
-  $pane->style = array(
+    );
+    $pane->cache = array();
+    $pane->style = array(
       'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '43e72db6-66fa-48bc-bcb0-ff3899df40e2';
-  $display->content['new-43e72db6-66fa-48bc-bcb0-ff3899df40e2'] = $pane;
-  $display->panels['right'][0] = 'new-43e72db6-66fa-48bc-bcb0-ff3899df40e2';
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '43e72db6-66fa-48bc-bcb0-ff3899df40e2';
+    $display->content['new-43e72db6-66fa-48bc-bcb0-ff3899df40e2'] = $pane;
+    $display->panels['right'][0] = 'new-43e72db6-66fa-48bc-bcb0-ff3899df40e2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-efbb100b-b070-45af-8a6c-7bb3767208af';
   $mini->display = $display;
   $export['working_with_customers'] = $mini;
-  $mini = new stdClass();
-  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
-  $mini->api_version = 1;
-  $mini->name = 'what_we_do_steps';
-  $mini->category = '';
-  $mini->admin_title = 'What We Do Steps';
-  $mini->admin_description = '';
-  $mini->requiredcontexts = array();
-  $mini->contexts = array();
-  $mini->relationships = array();
-  $display = new panels_display();
-  $display->layout = 'onecol';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-      'style_settings' => array(
-          'default' => NULL,
-          'middle' => NULL,
-          'bottom' => NULL,
-          'top' => NULL,
-          'left_above' => NULL,
-          'right_above' => NULL,
-          'left_below' => NULL,
-          'right_below' => NULL,
-      ),
-      'bottom' => array(
-          'style' => '-1',
-      ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->uuid = '7aeed2cf-b446-417a-82ee-8b9aebcb65fb';
-  $display->content = array();
-  $display->panels = array();
-  $pane = new stdClass();
-  $pane->pid = 'new-350d3d59-05f5-4a1b-833a-b229fd964e09';
-  $pane->panel = 'middle';
-  $pane->type = 'node';
-  $pane->subtype = 'node';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-      'nid' => '15',
-      'links' => 0,
-      'leave_node_title' => 0,
-      'identifier' => '',
-      'build_mode' => 'teaser',
-      'link_node_title' => 1,
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-      'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '350d3d59-05f5-4a1b-833a-b229fd964e09';
-  $display->content['new-350d3d59-05f5-4a1b-833a-b229fd964e09'] = $pane;
-  $display->panels['middle'][0] = 'new-350d3d59-05f5-4a1b-833a-b229fd964e09';
-  $pane = new stdClass();
-  $pane->pid = 'new-06b1a6c1-1620-4c70-b77b-2a05a6692092';
-  $pane->panel = 'middle';
-  $pane->type = 'panels_mini';
-  $pane->subtype = 'what_we_do_features';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-      'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '06b1a6c1-1620-4c70-b77b-2a05a6692092';
-  $display->content['new-06b1a6c1-1620-4c70-b77b-2a05a6692092'] = $pane;
-  $display->panels['middle'][1] = 'new-06b1a6c1-1620-4c70-b77b-2a05a6692092';
-  $pane = new stdClass();
-  $pane->pid = 'new-0ebb1eda-af56-4f71-9fc4-093c55acaa58';
-  $pane->panel = 'middle';
-  $pane->type = 'panels_mini';
-  $pane->subtype = 'our_people';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-      'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 2;
-  $pane->locks = array();
-  $pane->uuid = '0ebb1eda-af56-4f71-9fc4-093c55acaa58';
-  $display->content['new-0ebb1eda-af56-4f71-9fc4-093c55acaa58'] = $pane;
-  $display->panels['middle'][2] = 'new-0ebb1eda-af56-4f71-9fc4-093c55acaa58';
-  $pane = new stdClass();
-  $pane->pid = 'new-98bddcd4-5b23-45db-9a51-d5f928f5e13c';
-  $pane->panel = 'middle';
-  $pane->type = 'panels_mini';
-  $pane->subtype = 'working_with_customers';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-      'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 3;
-  $pane->locks = array();
-  $pane->uuid = '98bddcd4-5b23-45db-9a51-d5f928f5e13c';
-  $display->content['new-98bddcd4-5b23-45db-9a51-d5f928f5e13c'] = $pane;
-  $display->panels['middle'][3] = 'new-98bddcd4-5b23-45db-9a51-d5f928f5e13c';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $mini->display = $display;
-  $export['what_we_do_steps'] = $mini;
 
   return $export;
 }
