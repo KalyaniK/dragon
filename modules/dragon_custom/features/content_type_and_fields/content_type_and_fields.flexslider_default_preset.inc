@@ -16,6 +16,8 @@ function content_type_and_fields_flexslider_default_presets() {
   $preset->name = 'dragon';
   $preset->title = 'dragon';
   $preset->theme = 'classic';
+  $preset->imagestyle_normal = 'flexslider_full';
+  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',

@@ -629,7 +629,7 @@ function dragon_blocks_default_fe_block_settings() {
 
   $export['panels_mini-what_we_do_steps'] = array(
     'cache' => -1,
-    'css_class' => 'dragon-mini-panel-block',
+    'css_class' => 'dragon-mini-panel-block container',
     'custom' => 0,
     'delta' => 'what_we_do_steps',
     'i18n_block_language' => array(),
