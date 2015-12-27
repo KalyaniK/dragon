@@ -2,36 +2,22 @@
  *       General              **
  ******************************/
 div#main-content{
-  padding: 0px 0px 0px;
-  display: none;
+  padding: 50px 0px 10px;
 }
 
+div#main-content #content-wrapper {
+  width: 40%;
+  min-width: 500px;
+  background: rgba(255, 255, 255, 0.90) none repeat scroll 0 0;
+}
+
+.node-article header,
+.node-article .form-item {
+  display: none;
+}
 /*******************************
  *     Panel in other page    **
  ******************************/
-#mini-panel-what_we_do_steps .what-we-do-steps-title-1 h2{
-  position: absolute;
-  left: 500px;
-  font-size: 30px;
-  margin-top: 250px;
-  color: white;
-}
-#mini-panel-our_business_trading .dragon-mini-panel-pane-trading h2{
-  position: absolute;
-  left: 300px;
-  font-size: 30px;
-  margin-top: 250px;
-  color: white;
-}
-
-#mini-panel-our_business_logistics .dragon-mini-panel-pane-logistics h2{
-  position: absolute;
-  right: 300px;
-  font-size: 30px;
-  margin-top: 250px;
-  color: white;
-}
-
 #block-panels-mini-navigation-header .panels-flexible-column{
   width: 25%;
 }
@@ -41,10 +27,25 @@ div#main-content{
   width: 12.5%;
 }
 
+#mini-panel-working_with_customers .panel-col-first,
 #mini-panel-navigation_detail_section .panel-col-first{
   width: 70%;
 }
 
+#mini-panel-working_with_customers .panel-col-last,
 #mini-panel-navigation_detail_section .panel-col-last{
   width: 30%;
+}
+
+#block-panels-mini-what-we-do-steps .text-center img {
+  margin: 0 auto;
+}
+
+#block-panels-mini-what-we-do-steps .pane-node .pane-title {
+  border-bottom: 5px solid #e74c3c;
+  margin-bottom: 0;
+}
+
+#block-panels-mini-what-we-do-steps .pane-node .pane-content .content {
+  margin-top: 0;
 }
