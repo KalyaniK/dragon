@@ -12,6 +12,10 @@ div#main{
 div.block{
   padding: 0px 0px 0px;
 }
+
+div.text-center img {
+  margin: 0 auto;
+}
 /*******************************
  *    Panel   Get a Quote     **
  ******************************/

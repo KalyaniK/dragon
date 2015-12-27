@@ -1267,110 +1267,99 @@ Through a growing network of over 15,000 suppliers in more than 40 countries, Li
   $display->layout = 'twocol_stacked';
   $display->layout_settings = array();
   $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'top' => NULL,
-      'left' => NULL,
-      'right' => NULL,
-      'bottom' => NULL,
-    ),
+      'style_settings' => array(
+          'default' => NULL,
+          'top' => NULL,
+          'left' => NULL,
+          'right' => NULL,
+          'bottom' => NULL,
+      ),
   );
   $display->cache = array();
   $display->title = 'Our People';
   $display->uuid = '2e22b794-0b30-4503-b828-4baaef61b60e';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
-    $pane->panel = 'left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
+  $pane = new stdClass();
+  $pane->pid = 'new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
+  $pane->panel = 'left';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => '<div class="clearfix">
-			  	<a href="/our-people/#people-414" class="hidden-xs visible-sm visible-md visible-lg"><img class="img-responsive" src="http://www.lifung.com/wp-content/uploads/2014/06/Victor.jpg" alt=""></a>
-			  	<a href="/our-people/#people-m-414" class="visible-xs hidden-sm hidden-md hidden-lg"><img class="img-responsive" src="http://www.lifung.com/wp-content/uploads/2014/06/Victor.jpg" alt=""></a>
-			  	<div>
-				  	<p class="name hidden-xs visible-sm visible-md visible-lg"><a href="/our-people/#people-414">Victor Fung</a></p>
-				  	<p class="name visible-xs hidden-sm hidden-md hidden-lg"><a href="/our-people/#people-m-414">Victor Fung</a></p>
-				  	<p class="location">Hong Kong</p>
-			  	</div>
-			  </div>',
-      'format' => 'filtered_html',
+      'body' => '<div class="text-center clearfix"><img alt="" src="/dragon-dev/sites/default/files/u2/2011-12-20_09.46.51.jpg" style="width: 250px; height: 333px;" /><div><p>Robert Bellemare<br />
+      Shanghai</p></div></div>',
+      'format' => 'full_html',
       'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
+  );
+  $pane->cache = array();
+  $pane->style = array(
       'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
-    $display->content['new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1'] = $pane;
-    $display->panels['left'][0] = 'new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
-    $pane = new stdClass();
-    $pane->pid = 'new-d09398f5-b74b-4ab8-8161-8c66e8126df7';
-    $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
+  $display->content['new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1'] = $pane;
+  $display->panels['left'][0] = 'new-6a97b61c-3c97-4c4e-8dd6-4d7af460d7c1';
+  $pane = new stdClass();
+  $pane->pid = 'new-d09398f5-b74b-4ab8-8161-8c66e8126df7';
+  $pane->panel = 'right';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => '<div class="clearfix">
-			  	<a href="/our-people/#people-414" class="hidden-xs visible-sm visible-md visible-lg"><img class="img-responsive" src="http://www.lifung.com/wp-content/uploads/2014/06/Victor.jpg" alt=""></a>
-			  	<a href="/our-people/#people-m-414" class="visible-xs hidden-sm hidden-md hidden-lg"><img class="img-responsive" src="http://www.lifung.com/wp-content/uploads/2014/06/Victor.jpg" alt=""></a>
-			  	<div>
-				  	<p class="name hidden-xs visible-sm visible-md visible-lg"><a href="/our-people/#people-414">Victor Fung</a></p>
-				  	<p class="name visible-xs hidden-sm hidden-md hidden-lg"><a href="/our-people/#people-m-414">Victor Fung</a></p>
-				  	<p class="location">Hong Kong</p>
-			  	</div>
-			  </div>',
-      'format' => 'filtered_html',
+      'body' => '<div class="text-center clearfix"><img alt="" src="/dragon-dev/sites/default/files/u2/luc_0.jpg" style="width: 299px; height: 333px;" /><div><p>Luc Beaulac Bellemare<br />
+      Canada</p></div></div>',
+      'format' => 'full_html',
       'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
+  );
+  $pane->cache = array();
+  $pane->style = array(
       'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = 'd09398f5-b74b-4ab8-8161-8c66e8126df7';
-    $display->content['new-d09398f5-b74b-4ab8-8161-8c66e8126df7'] = $pane;
-    $display->panels['right'][0] = 'new-d09398f5-b74b-4ab8-8161-8c66e8126df7';
-    $pane = new stdClass();
-    $pane->pid = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
-    $pane->panel = 'top';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'd09398f5-b74b-4ab8-8161-8c66e8126df7';
+  $display->content['new-d09398f5-b74b-4ab8-8161-8c66e8126df7'] = $pane;
+  $display->panels['right'][0] = 'new-d09398f5-b74b-4ab8-8161-8c66e8126df7';
+  $pane = new stdClass();
+  $pane->pid = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
+  $pane->panel = 'top';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
       'body' => 'We are a diverse multinational with Asian roots and a proud entrepreneurial heritage. Our people are the reason for our success and the source of our strength and expertise.',
       'format' => 'filtered_html',
       'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
+  );
+  $pane->cache = array();
+  $pane->style = array(
       'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '1b1da9c7-b5b2-4b19-aeac-625275644a7b';
-    $display->content['new-1b1da9c7-b5b2-4b19-aeac-625275644a7b'] = $pane;
-    $display->panels['top'][0] = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
+  );
+  $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'text-center',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '1b1da9c7-b5b2-4b19-aeac-625275644a7b';
+  $display->content['new-1b1da9c7-b5b2-4b19-aeac-625275644a7b'] = $pane;
+  $display->panels['top'][0] = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1b1da9c7-b5b2-4b19-aeac-625275644a7b';
   $mini->display = $display;
