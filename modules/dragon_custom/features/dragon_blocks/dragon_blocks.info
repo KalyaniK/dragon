@@ -23,6 +23,7 @@ features[fe_block_settings][] = panels_mini-our_business_header
 features[fe_block_settings][] = panels_mini-our_business_logistics
 features[fe_block_settings][] = panels_mini-our_business_trading
 features[fe_block_settings][] = panels_mini-our_people
+features[fe_block_settings][] = panels_mini-our_services
 features[fe_block_settings][] = panels_mini-what_we_do
 features[fe_block_settings][] = panels_mini-what_we_do_steps
 features[fe_block_settings][] = views-all_projects-block
