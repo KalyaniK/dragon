@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the User Related Config feature.
+ */
+
+include_once 'user_related_config.features.inc';

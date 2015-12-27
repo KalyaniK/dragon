@@ -1,0 +1,10 @@
+.region-content h2{
+	font-size: 24px;
+    border-bottom: #CC1100 1px dotted;
+}
+
+.content table{
+	border-left: none;
+    border-right: none;
+    border-top: none;
+}

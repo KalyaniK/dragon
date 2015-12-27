@@ -1,5 +1,5 @@
 <?php
-// $Id: qadcommon.basic.inc 3783 2015-03-11 06:51:44Z j5w $
+// $Id: dragon_common.basic.inc 3783 2015-03-11 06:51:44Z j5w $
 
 /**
 * @file
@@ -22,7 +22,7 @@ define('QAD_MENU_POPUP_ITEM', 3);
  * @param $classes The HTML classes for the whole modal section.
  * @param $note The extra note for the modal.
  */
-function qadcommon_gen_modal($title, $content, $buttons, $note = NULL, $id = NULL, $classes = NULL){
+function dragon_common_gen_modal($title, $content, $buttons, $note = NULL, $id = NULL, $classes = NULL){
   $modal = array(
     '#type' => 'container',
     '#attributes' => array(
@@ -32,10 +32,10 @@ function qadcommon_gen_modal($title, $content, $buttons, $note = NULL, $id = NUL
       'js' => array(
         libraries_get_path('bootstrap')  . '/assets/jquery-migrate-1.2.1.min.js',
         libraries_get_path('bootstrap')  . '/js/bootstrap.min.js',
-        drupal_get_path('module', 'qadcommon') . '/js/qadcommon_modal_popup.js',
+        drupal_get_path('module', 'dragon_common') . '/js/dragon_common_modal_popup.js',
       ),
       'css' => array(
-        drupal_get_path('module', 'qadcommon') . '/css/modal.css',
+        drupal_get_path('module', 'dragon_common') . '/css/modal.css',
       ),
     ),
     'modal' => array(
@@ -110,7 +110,7 @@ function qadcommon_gen_modal($title, $content, $buttons, $note = NULL, $id = NUL
  * @param $action_link The path when modal get confirmed. If it's null, the modal will dismiss after click OK
  * @param $executable A flag to indicate this modal is a confirm modal or notice modal, if TRUE, we'll provide 'OK' button
  */
-function qadcommon_gen_confirm_modal($content, $action_name, $action_link, $executable){
+function dragon_common_gen_confirm_modal($content, $action_name, $action_link, $executable){
   $title = $executable ? t('Confirm Action') . ': ' . $action_name : t('Cannot Execute Action') . ': ' . $action_name;
   $content = array(
     '#type' => 'markup',
@@ -149,7 +149,7 @@ function qadcommon_gen_confirm_modal($content, $action_name, $action_link, $exec
     ),
   );
 
-  $modal = qadcommon_gen_modal($title, $content, $buttons);
+  $modal = dragon_common_gen_modal($title, $content, $buttons);
 
   return $modal;
 }
@@ -193,10 +193,12 @@ function qadcommon_gen_confirm_modal($content, $action_name, $action_link, $exec
  * @return
  *   A renderable array representing a qad menu.
  */
-function qadcommon_get_qad_menu($menu_id, $tokens = array()) {
+function dragon_common_get_dragon_menu($menu_id, $tokens = array()) {
   // First get all the menu items from all the modules
-  $items = module_invoke_all('qad_menu', $menu_id, $tokens);
-  drupal_alter('qad_menu', $items, $menu_id, $tokens);
+  $items = module_invoke_all('dragon_menu', $menu_id, $tokens);
+  
+watchdog('qad_test', '$items %data ms', array('%data' => print_r($items, TRUE)), WATCHDOG_ERROR);
+  drupal_alter('dragon_menu', $items, $menu_id, $tokens);
 
   $default_values = array(
     '#item_type' => QAD_MENU_NORMAL_ITEM,
@@ -208,7 +210,7 @@ function qadcommon_get_qad_menu($menu_id, $tokens = array()) {
     '#url' => '',
   );
 
-  $menu['#theme_wrappers'][] = 'qadmenu';
+  $menu['#theme_wrappers'][] = 'dragon_menu';
 
   // Give theme functions to each item
   foreach ($items as $item) {
@@ -219,7 +221,7 @@ function qadcommon_get_qad_menu($menu_id, $tokens = array()) {
 
     switch ($item['#item_type']) {
       case QAD_MENU_NORMAL_ITEM:
-        $item['#theme'] = 'qad_menu_item';
+        $item['#theme'] = 'dragon_menu_item';
 
         // Replace the url tokens
         if (!empty($item['#url']) && !empty($tokens)) {
@@ -229,13 +231,13 @@ function qadcommon_get_qad_menu($menu_id, $tokens = array()) {
         break;
 
       case QAD_MENU_POPUP_ITEM:
-        $item['#theme'] = 'qad_menu_item';
+        $item['#theme'] = 'dragon_menu_item';
         $item['#attributes']['href'] = 'javascript:void(0);';
         $item['#popup'] = TRUE;
         break;
 
       case QAD_MENU_DROPDOWN_ITEM:
-        $item['#theme'] = 'qad_menu_dropdown_item';
+        $item['#theme'] = 'dragon_menu_dropdown_item';
         $item['#attributes']['href'] = 'javascript:void(0);';
         $item['#attributes']['data-toggle'] = 'dropdown';
         $item['#btn_class'][] = 'btn btn-mini dropdown-toggle';
@@ -269,7 +271,7 @@ function qadcommon_get_qad_menu($menu_id, $tokens = array()) {
  * Useful when implementing hook_preprocess_views_view_table().
  * Add bootstrap table classes and remove the 'views-table' class
  */
-function qadcommon_update_views_table_classes($views_list, &$vars) {
+function dragon_common_update_views_table_classes($views_list, &$vars) {
   if (!is_array($views_list)) {
     $views_list = array($views_list);
   }
@@ -287,7 +289,7 @@ function qadcommon_update_views_table_classes($views_list, &$vars) {
  *        $record: array(), the record to update or insert
  *        $primary_key: variable,primary key of the table
  */
-function qadcommon_merge_record_in_db($table, $record, $primary_key) {
+function dragon_common_merge_record_in_db($table, $record, $primary_key) {
   db_merge($table)
     -> key(array($primary_key => $record[$primary_key]))
     -> fields($record)
@@ -297,11 +299,21 @@ function qadcommon_merge_record_in_db($table, $record, $primary_key) {
 /**
  * Add no cache header to force page reload
  */
-function qadcommon_add_no_cache_header() {
+function dragon_common_add_no_cache_header() {
   if (!empty($_SERVER['HTTP_USER_AGENT']) && preg_match('/msie/i', $_SERVER['HTTP_USER_AGENT'])) {
     drupal_add_http_header('Cache-Control', 'no-cache'); // works for IE6+
   }
   else {
     drupal_add_http_header('Cache-Control', 'no-store'); // works for Firefox and other browsers
   }
+}
+
+function dragon_common_gen_button($button_name, $button_link, $icon_class, $button_class, $external_flag = FALSE, $query = NULL, $addtion_attributes = array()){
+  $title = '<i class="glyphicon ' . $icon_class . '"></i> ' . t($button_name);
+  return l( $title, $button_link, array(
+    'attributes' => array('class' => array('btn btn-mini ' . $button_class)) + $addtion_attributes,
+    'query' => $query,
+    'html' => TRUE,
+    'external' => $external_flag)
+  );
 }

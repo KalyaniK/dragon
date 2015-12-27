@@ -185,22 +185,24 @@
 
                         <!-- EOF:#content-wrapper -->
                         <div id="content-wrapper">
-
+<div class="title">
                             <?php print render($title_prefix); ?>
                             <?php if ($title):?>
                             <h1 class="page-title"><?php print t($title); ?></h1>
+                            
+                  <?php if(isset($button_group)): ?>
+                      <div class='button-group'>
+                          <?php if(isset($button_group)) {print render($button_group);} ?>
+                          <?php if(isset($dropdown_tasks)) {print render($dropdown_tasks);} ?>
+                      </div>
+                  <?php endif; ?>
+                  
                             <?php endif; ?>
                             <?php print render($title_suffix); ?>
-
+</div>
                             <?php print render($page['help']); ?>
 
-                            <!-- #tabs -->
-                            <?php if ($tabs):?>
-                                <div class="tabs">
-                                <?php print render($tabs); ?>
-                                </div>
-                            <?php endif; ?>
-                            <!-- EOF: #tabs -->
+
 
                             <!-- #action links -->
                             <?php if ($action_links):?>

@@ -19,7 +19,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -54,7 +54,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -206,7 +206,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -215,7 +215,7 @@ function dragon_project_related_config_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 28,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -259,10 +259,9 @@ function dragon_project_related_config_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 25,
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -299,11 +298,11 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 27,
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -341,17 +340,13 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'field_collection',
         'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
           'view_mode' => 'full',
         ),
-        'type' => 'field_collection_view',
-        'weight' => 13,
+        'type' => 'field_collection_fields',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -425,11 +420,11 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 31,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -473,10 +468,9 @@ function dragon_project_related_config_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 5,
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -512,11 +506,11 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'file',
         'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 32,
+        'type' => 'file_url_plain',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -563,10 +557,9 @@ function dragon_project_related_config_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 24,
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -603,11 +596,11 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 26,
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -650,10 +643,9 @@ function dragon_project_related_config_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 19,
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -690,11 +682,11 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 20,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -771,17 +763,13 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'field_collection',
         'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
           'view_mode' => 'full',
         ),
-        'type' => 'field_collection_view',
-        'weight' => 22,
+        'type' => 'field_collection_fields',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -821,10 +809,9 @@ function dragon_project_related_config_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 21,
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -861,7 +848,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -870,7 +857,7 @@ function dragon_project_related_config_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_decimal',
-        'weight' => 29,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -956,7 +943,7 @@ function dragon_project_related_config_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 38,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1000,10 +987,9 @@ function dragon_project_related_config_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 23,
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1040,11 +1026,11 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 30,
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1095,10 +1081,11 @@ function dragon_project_related_config_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'display_label' => '',
     'entity_type' => 'node',
     'exclude_cv' => 0,
     'field_name' => 'field_project_description',
-    'label' => 'Project Description',
+    'label' => 'Description',
     'required' => 0,
     'settings' => array(
       'exclude_cv' => FALSE,
@@ -1123,11 +1110,11 @@ function dragon_project_related_config_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
+          'image_link' => 'file',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 2,
@@ -1217,6 +1204,7 @@ function dragon_project_related_config_field_default_field_instances() {
   t('Check Points Contect');
   t('Color');
   t('Color Other');
+  t('Description');
   t('If Drawing');
   t('If Drawing Details');
   t('Inner Box Packaging');
@@ -1234,7 +1222,6 @@ function dragon_project_related_config_field_default_field_instances() {
   t('Packaging');
   t('Product packaging');
   t('Product packaging Details');
-  t('Project Description');
   t('Project Type');
   t('Project images');
 

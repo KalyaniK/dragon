@@ -1,5 +1,5 @@
 form input.form-text{
-  width: 400px;
+  width: 50%;
   display: block;
 }
 
@@ -19,3 +19,14 @@ h1.page-title {
 .region-content form{
   padding: 10px 40px 20px;
 }
+/*
+form#user-login .form-item input,
+form#user-register-form .form-item input[type="text"]{
+	width: 50%;
+}
+
+form#user-login label,
+form#user-register-form label:not(.option){
+	display: block;
+}
+*/

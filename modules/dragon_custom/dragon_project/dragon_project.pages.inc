@@ -1,9 +1,12 @@
 <?php
 
-function dragon_project_create_page() {
+function dragon_project_create_page($node) {
+  module_load_include('inc', 'dragon_user', 'dragon_user.pages');
   global $user;
-  $node = (object) array('uid' => $user->uid, 'name' => (isset($user->name) ? $user->name : ''), 'type' => 'project', 'language' => LANGUAGE_NONE);
-
+  if ($node == null) {
+      $node = (object) array('uid' => $user->uid, 'name' => (isset($user->name) ? $user->name : ''), 'type' => 'project', 'language' => LANGUAGE_NONE);
+  }
+  
   $output = array(
     'navigation' => array(
       '#type' => 'container',
@@ -18,7 +21,7 @@ function dragon_project_create_page() {
       '#attributes' => array(
         'class' => array('col-md-9 dragon-right'),
       ),
-      'user-info' => dragon_project_info_bar($user),
+      'user-info' => dragon_user_info_bar($user),
       'form' => drupal_get_form('project' . '_node_form', $node),
     )
   );
@@ -85,32 +88,6 @@ function _dragon_project_quote_block(){
       ),
       '#title' => t('Start Now'),
       '#href' => 'quote',
-    ),
-  );
-}
-
-function dragon_project_info_bar($user = NULL) {
-  drupal_add_css(drupal_get_path('module', 'dragon_project') . '/css/dragon_project_quote_block.css');
-  if(is_null($user)){
-    global $user;
-  }
-  
-  $account = user_load($user->uid);
-  return array(
-    'logo' => array(
-      '#type' => 'container',
-      '#attributes' => array(
-        'class' => array('dragon-user-company-logo dragon-half'),
-      ),
-      field_view_field('user', $account, 'field_image', array('label' => 'hidden', 'settings' => array('image_style' => 'medium'))),
-    ),
-    'info' => array(
-      '#type' => 'container',
-      '#attributes' => array(
-        'class' => array('dragon-user-info dragon-half'),
-      ),
-      //field_view_field('user', $account, 'field_name', array('label' => 'inline')),
-      //field_view_field('user', $account, 'field_company', array('label' => 'inline')),
     ),
   );
 }

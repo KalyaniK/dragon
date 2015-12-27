@@ -9,12 +9,21 @@ function dragon_project_menu() {
     'file' => 'node.pages.inc',
     'file path' => drupal_get_path('module', 'node'),
   );
+  $items['project/%node/edit'] = array(
+    'title' => 'Edit Project',
+    'page callback' => 'dragon_project_create_page_inteface',
+    'page arguments' => array(1),
+    'access callback' => 'node_access',
+    'access arguments' => array('update', 1),
+    'file' => 'node.pages.inc',
+    'file path' => drupal_get_path('module', 'node'),
+  );
   return $items;
 }
 
-function dragon_project_create_page_inteface() {
+function dragon_project_create_page_inteface($node = NULL) {
   module_load_include('inc', 'dragon_project', 'dragon_project.pages');
-  return dragon_project_create_page();
+  return dragon_project_create_page($node);
 }
 
 /*
@@ -23,6 +32,14 @@ function dragon_project_create_page_inteface() {
 function dragon_project_preprocess_page(&$vars, $hook) {
   if(arg(0) == 'quote') {
     drupal_add_css(drupal_get_path('module', 'dragon_project') . '/css/dragon_project_create.css');
+  }
+  
+  if(isset($vars['node']) && arg(2) != 'edit') {  
+    $node = $vars['node'];
+    if ($node->type == 'project') {     
+      module_load_include('inc', 'dragon_common', 'dragon_common.basic');
+      $vars['button_group'] = dragon_common_get_dragon_menu('project', array('@product_id' => $node->nid));
+    }
   }
 }
 
