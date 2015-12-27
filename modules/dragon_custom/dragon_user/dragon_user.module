@@ -88,5 +88,5 @@ function dragon_user_form_user_login_alter(&$form, &$form_state, $form_id) {
  * Customized submit handler for the login form.
  */
 function dragon_user_form_user_login_submit($form, &$form_state) {
-  $form_state['redirect'] = '';
+  $form_state['redirect'] = 'dashboard';
 }
