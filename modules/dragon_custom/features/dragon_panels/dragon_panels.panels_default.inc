@@ -1323,7 +1323,7 @@ Through a growing network of over 15,000 suppliers in more than 40 countries, Li
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => 'Our Service',
+      'title' => 'Our Services',
       'body' => '<?php
 $menuItems = menu_tree_page_data(\'user-menu\'); 
 
@@ -1350,7 +1350,7 @@ print render($menu);',
     $pane->uuid = '6b9a3ad9-330d-4f88-9d5d-0f455c512ece';
     $display->content['new-6b9a3ad9-330d-4f88-9d5d-0f455c512ece'] = $pane;
     $display->panels['middle'][0] = 'new-6b9a3ad9-330d-4f88-9d5d-0f455c512ece';
-  $display->hide_title = PANELS_TITLE_PANE;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-6b9a3ad9-330d-4f88-9d5d-0f455c512ece';
   $mini->display = $display;
   $export['our_services'] = $mini;

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Dragon Panel Pages feature.
+ */
+
+include_once 'dragon_panel_pages.features.inc';

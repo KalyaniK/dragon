@@ -529,8 +529,8 @@ function dragon_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'bootstrap_dragon' => array(
-        'region' => 'dragon_blocks',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'bootstrap_dragon',
         'weight' => -17,
       ),
@@ -611,8 +611,8 @@ function dragon_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'bootstrap_dragon' => array(
-        'region' => 'dragon_blocks',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'bootstrap_dragon',
         'weight' => 0,
       ),
@@ -693,8 +693,8 @@ function dragon_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
       'bootstrap_dragon' => array(
-        'region' => 'dragon_blocks',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'bootstrap_dragon',
         'weight' => -18,
       ),
