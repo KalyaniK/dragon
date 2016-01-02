@@ -377,7 +377,7 @@ function dragon_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => 'Our Approach',
     'visibility' => 1,
   );
 
@@ -582,7 +582,7 @@ function dragon_blocks_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => 'Our Team',
     'visibility' => 1,
   );
 

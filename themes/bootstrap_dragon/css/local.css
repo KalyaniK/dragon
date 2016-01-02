@@ -315,3 +315,17 @@ font-size: 18px;
 .title{
 	    border-bottom: 1px solid #EAEAEA;
 }
+
+.pane-content .node-teaser{
+	 background-color: inherit;
+     border: none; 
+     margin: 0px 0px 0px 0px; 
+}
+
+.pane-content .node-teaser header{
+	 display: none;
+}
+
+.pane-content .node-teaser .content{
+     padding: 0px 0px 0px 0px; 
+}

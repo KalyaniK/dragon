@@ -56,7 +56,7 @@ function dragon_panels_ckeditor_profile_defaults() {
         'language_direction' => 'default',
         'allowed_content' => 'f',
         'extraAllowedContent' => '',
-        'enter_mode' => 'p',
+        'enter_mode' => 'br',
         'shift_enter_mode' => 'br',
         'font_format' => 'p;div;pre;address;h1;h2;h3;h4;h5;h6',
         'custom_formatting' => 't',

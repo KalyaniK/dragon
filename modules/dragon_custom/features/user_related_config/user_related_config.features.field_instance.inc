@@ -31,6 +31,7 @@ function user_related_config_field_default_field_instances() {
     'label' => 'Request message',
     'required' => FALSE,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -66,6 +67,7 @@ function user_related_config_field_default_field_instances() {
     'label' => 'Company',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 1,
@@ -105,6 +107,7 @@ function user_related_config_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -146,6 +149,7 @@ function user_related_config_field_default_field_instances() {
     'label' => 'Industry',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => 1,
     ),
@@ -179,6 +183,7 @@ function user_related_config_field_default_field_instances() {
     'label' => 'Location',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => 0,
     ),
@@ -225,6 +230,7 @@ function user_related_config_field_default_field_instances() {
       'component_layout' => 'default',
       'components' => array(),
       'credentials_inline' => 0,
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'field_type' => array(
         'credentials' => 'text',
@@ -304,6 +310,7 @@ function user_related_config_field_default_field_instances() {
     'label' => 'Registered Capital',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 1,
@@ -340,6 +347,7 @@ function user_related_config_field_default_field_instances() {
     'label' => 'Years in Registration',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 1,
@@ -386,6 +394,7 @@ function user_related_config_field_default_field_instances() {
           'status' => TRUE,
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),

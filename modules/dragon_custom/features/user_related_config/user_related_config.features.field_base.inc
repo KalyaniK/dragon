@@ -25,6 +25,7 @@ function user_related_config_field_default_field_bases() {
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -47,6 +48,9 @@ function user_related_config_field_default_field_bases() {
     'module' => 'image',
     'settings' => array(
       'default_image' => FALSE,
+      'entity_translation_sync' => array(
+        0 => 'fid',
+      ),
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
@@ -75,6 +79,7 @@ function user_related_config_field_default_field_bases() {
         3 => 'Others',
       ),
       'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'list_text',
@@ -95,6 +100,7 @@ function user_related_config_field_default_field_bases() {
     'locked' => 0,
     'module' => 'location_cck',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'gmap_macro' => '[gmap ]',
       'gmap_marker' => 'drupal',
       'location_settings' => array(
@@ -211,6 +217,7 @@ function user_related_config_field_default_field_bases() {
         'middle' => 0,
         'title' => 0,
       ),
+      'entity_translation_sync' => FALSE,
       'generational_options' => '-- --
 Jr.
 Sr.
@@ -279,6 +286,7 @@ Prof.',
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -300,6 +308,7 @@ Prof.',
     'locked' => 0,
     'module' => 'text',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max_length' => 255,
     ),
     'translatable' => 0,
@@ -326,6 +335,7 @@ Prof.',
         1 => 'Group',
       ),
       'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'list_boolean',
@@ -346,6 +356,7 @@ Prof.',
     'locked' => 0,
     'module' => 'entityreference',
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'handler' => 'og',
       'handler_settings' => array(
         'behaviors' => array(

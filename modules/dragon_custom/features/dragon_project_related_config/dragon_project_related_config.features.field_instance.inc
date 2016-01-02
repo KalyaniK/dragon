@@ -33,6 +33,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Check Point Severity',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -67,6 +68,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Check Points Contect',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -105,6 +107,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Measurement name',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -147,6 +150,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Measurement Quantity',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'max' => '',
       'min' => '',
@@ -186,6 +190,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Measurement Unit',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -230,6 +235,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Annual Quantity',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'max' => '',
       'min' => '',
@@ -276,6 +282,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Carton Box',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -317,6 +324,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Carton Box Details',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -361,6 +369,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Check Points',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -400,6 +409,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Color',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -440,6 +450,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Color Other',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -485,6 +496,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'If Drawing',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -527,6 +539,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'txt pdf jpg png',
@@ -574,6 +587,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Inner Box Packaging',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -615,6 +629,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Inner Box Packaging Details',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -660,6 +675,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'International Standard',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -701,6 +717,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'International Standard Details',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -743,6 +760,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Logo On',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -784,6 +802,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Measuremen Details',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -826,6 +845,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Measurement',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -873,6 +893,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Order Quantity',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'max' => '',
       'min' => '',
@@ -916,6 +937,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Other Specification',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -959,6 +981,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Packaging',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1004,6 +1027,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Product packaging',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -1045,6 +1069,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Product packaging Details',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1088,6 +1113,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -1134,6 +1160,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
@@ -1182,6 +1209,7 @@ function dragon_project_related_config_field_default_field_instances() {
     'label' => 'Project Type',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'exclude_cv' => FALSE,
       'user_register_form' => FALSE,
     ),

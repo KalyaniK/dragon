@@ -112,7 +112,20 @@ function user_related_config_default_page_manager_pages() {
     $pane->type = 'views';
     $pane->subtype = 'customer_dashboard';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 6,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'override_pager_settings' => 0,
       'use_pager' => 1,
