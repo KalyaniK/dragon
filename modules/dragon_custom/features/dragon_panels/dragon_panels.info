@@ -28,5 +28,4 @@ features[panels_mini][] = our_people
 features[panels_mini][] = our_services
 features[panels_mini][] = what_we_do
 features[panels_mini][] = what_we_do_features
-features[panels_mini][] = what_we_do_steps
 features[panels_mini][] = working_with_customers
