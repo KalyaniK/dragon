@@ -1,0 +1,44 @@
+<?php
+/**
+ * @file Integration with Moxtra JS SDK
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function dragon_moxtra_menu() {
+  $items['chat'] = array(
+    'page callback' => 'dragon_moxtra_chat_page',
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements page callback for chat
+ */
+function dragon_moxtra_chat_page() {
+  module_load_include('inc', 'dragon_moxtra', 'dragon_moxtra.config');
+  module_load_include('inc', 'dragon_moxtra', 'dragon_moxtra.functions');
+  drupal_add_js('https://www.moxtra.com/api/js/moxtra-latest.js', 'external');
+
+  global $CLIENT_ID, $REST_API_END_POINT;
+  global $user;
+  $access_token = dragon_moxtra_get_access_token($user);
+  $site_mail = variable_get('site_mail');
+  drupal_add_js(
+    array(
+      'dragon_moxtra' =>
+        array(
+          'client_id' => $CLIENT_ID,
+          'access_token' => $access_token,
+          'rest_api_end_point' => $REST_API_END_POINT,
+          'default_contact' => variable_get('dragon_moxtra_default_contact_mail', $site_mail),
+      ),
+    ),
+    'setting'
+  );
+  drupal_add_js(drupal_get_path('module', 'dragon_moxtra') . '/js/dragon_moxtra.js');
+  return '<div id="timeline_container"></div>';
+}
