@@ -328,4 +328,9 @@ font-size: 18px;
 
 .pane-content .node-teaser .content{
      padding: 0px 0px 0px 0px; 
+         margin: 0px 0px 0px 0px;
 }
+.dragon-mini-panel-block:not(.dragon-mini-panel-full) article .content{
+width: 100%;
+}
+
