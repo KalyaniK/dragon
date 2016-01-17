@@ -65,6 +65,7 @@
                   "member_invite": false,
                   "share": false
               } },
+              video: true, // turn on camera
               start_timeline: function(event) {
                   console.log("Timeline started session Id: " + event.session_id + " binder id: " + event.binder_id);
               },
