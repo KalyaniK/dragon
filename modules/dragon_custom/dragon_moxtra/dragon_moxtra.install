@@ -1,0 +1,21 @@
+<?php
+
+module_load_include('inc', 'dragon_common', 'dragon_common.basic_install');
+module_load_include('inc', 'dragon_moxtra', 'dragon_moxtra.functions');
+
+/**
+ * Implements hook_enable().
+ */
+function dragon_moxtra_enable() {
+  $query = db_select('users', 'u')->extend('PagerDefault');
+  $uids = $query
+    ->fields('u', array('uid'))
+    ->condition('u.uid', 0, '>')
+    ->condition('u.status', 0, '>')
+    ->execute()
+    ->fetchCol();
+  $all_users = user_load_multiple($uids);
+  foreach ($all_users as $account) {
+    dragon_moxtra_get_access_token($account);
+  }
+}

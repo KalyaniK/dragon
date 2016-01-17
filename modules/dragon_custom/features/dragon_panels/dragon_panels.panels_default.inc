@@ -1323,7 +1323,7 @@ Through a growing network of over 15,000 suppliers in more than 40 countries, Li
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => '',
-      'title' => 'Our Service',
+      'title' => 'Our Services',
       'body' => '<?php
 $menuItems = menu_tree_page_data(\'user-menu\'); 
 
@@ -1350,7 +1350,7 @@ print render($menu);',
     $pane->uuid = '6b9a3ad9-330d-4f88-9d5d-0f455c512ece';
     $display->content['new-6b9a3ad9-330d-4f88-9d5d-0f455c512ece'] = $pane;
     $display->panels['middle'][0] = 'new-6b9a3ad9-330d-4f88-9d5d-0f455c512ece';
-  $display->hide_title = PANELS_TITLE_PANE;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-6b9a3ad9-330d-4f88-9d5d-0f455c512ece';
   $mini->display = $display;
   $export['our_services'] = $mini;
@@ -1438,108 +1438,20 @@ print render($menu);',
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1cd83765-463f-4e28-8bf2-d7d2bbcfe882';
+    $pane->pid = 'new-2263c409-3cf3-4640-8e47-4b011ebdb609';
     $pane->panel = 'left';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '<div class="dragon-panel-left text-center"><img width="300" height="180" src="http://go.sap.com/dam/application/imagelibrary/pictograms/273000/273919.png.adapt.360_203.false.png" class="img" alt="Generic placeholder image"><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p><p><a class="btn btn-default" href="#" role="button">View details »</a></p></div>',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '1cd83765-463f-4e28-8bf2-d7d2bbcfe882';
-    $display->content['new-1cd83765-463f-4e28-8bf2-d7d2bbcfe882'] = $pane;
-    $display->panels['left'][0] = 'new-1cd83765-463f-4e28-8bf2-d7d2bbcfe882';
-    $pane = new stdClass();
-    $pane->pid = 'new-4cdbc62e-b803-44fa-a984-f727761ecfaa';
-    $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '<div class="dragon-panel-left text-center"><img alt="Generic placeholder image" class="img" height="180" src="http://go.sap.com/dam/application/imagelibrary/pictograms/272000/272570.png.adapt.360_203.false.png" width="300" /><h2>Heading</h2><p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p><p><a class="btn btn-default" href="#" role="button">View details »</a></p></div>',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '4cdbc62e-b803-44fa-a984-f727761ecfaa';
-    $display->content['new-4cdbc62e-b803-44fa-a984-f727761ecfaa'] = $pane;
-    $display->panels['right'][0] = 'new-4cdbc62e-b803-44fa-a984-f727761ecfaa';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1cd83765-463f-4e28-8bf2-d7d2bbcfe882';
-  $mini->display = $display;
-  $export['what_we_do_features'] = $mini;
-
-  $mini = new stdClass();
-  $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
-  $mini->api_version = 1;
-  $mini->name = 'what_we_do_steps';
-  $mini->category = '';
-  $mini->admin_title = 'What We Do Steps';
-  $mini->admin_description = '';
-  $mini->requiredcontexts = array();
-  $mini->contexts = array();
-  $mini->relationships = array();
-  $display = new panels_display();
-  $display->layout = 'onecol';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-      'bottom' => NULL,
-      'top' => NULL,
-      'left_above' => NULL,
-      'right_above' => NULL,
-      'left_below' => NULL,
-      'right_below' => NULL,
-    ),
-    'bottom' => array(
-      'style' => '-1',
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->uuid = '7aeed2cf-b446-417a-82ee-8b9aebcb65fb';
-  $display->content = array();
-  $display->panels = array();
-    $pane = new stdClass();
-    $pane->pid = 'new-350d3d59-05f5-4a1b-833a-b229fd964e09';
-    $pane->panel = 'middle';
     $pane->type = 'node';
     $pane->subtype = 'node';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'nid' => '15',
+      'nid' => '68',
       'links' => 0,
       'leave_node_title' => 0,
       'identifier' => '',
       'build_mode' => 'teaser',
-      'link_node_title' => 1,
-      'override_title' => 0,
+      'link_node_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
@@ -1551,18 +1463,24 @@ print render($menu);',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '350d3d59-05f5-4a1b-833a-b229fd964e09';
-    $display->content['new-350d3d59-05f5-4a1b-833a-b229fd964e09'] = $pane;
-    $display->panels['middle'][0] = 'new-350d3d59-05f5-4a1b-833a-b229fd964e09';
+    $pane->uuid = '2263c409-3cf3-4640-8e47-4b011ebdb609';
+    $display->content['new-2263c409-3cf3-4640-8e47-4b011ebdb609'] = $pane;
+    $display->panels['left'][0] = 'new-2263c409-3cf3-4640-8e47-4b011ebdb609';
     $pane = new stdClass();
-    $pane->pid = 'new-06b1a6c1-1620-4c70-b77b-2a05a6692092';
-    $pane->panel = 'middle';
-    $pane->type = 'panels_mini';
-    $pane->subtype = 'what_we_do_features';
+    $pane->pid = 'new-4b3640ce-5e3d-4650-9365-3fcf909a9084';
+    $pane->panel = 'right';
+    $pane->type = 'node';
+    $pane->subtype = 'node';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
+      'nid' => '69',
+      'links' => 0,
+      'leave_node_title' => 0,
+      'identifier' => '',
+      'build_mode' => 'teaser',
+      'link_node_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
@@ -1572,61 +1490,15 @@ print render($menu);',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '06b1a6c1-1620-4c70-b77b-2a05a6692092';
-    $display->content['new-06b1a6c1-1620-4c70-b77b-2a05a6692092'] = $pane;
-    $display->panels['middle'][1] = 'new-06b1a6c1-1620-4c70-b77b-2a05a6692092';
-    $pane = new stdClass();
-    $pane->pid = 'new-0ebb1eda-af56-4f71-9fc4-093c55acaa58';
-    $pane->panel = 'middle';
-    $pane->type = 'panels_mini';
-    $pane->subtype = 'our_people';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '0ebb1eda-af56-4f71-9fc4-093c55acaa58';
-    $display->content['new-0ebb1eda-af56-4f71-9fc4-093c55acaa58'] = $pane;
-    $display->panels['middle'][2] = 'new-0ebb1eda-af56-4f71-9fc4-093c55acaa58';
-    $pane = new stdClass();
-    $pane->pid = 'new-98bddcd4-5b23-45db-9a51-d5f928f5e13c';
-    $pane->panel = 'middle';
-    $pane->type = 'panels_mini';
-    $pane->subtype = 'working_with_customers';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $pane->uuid = '98bddcd4-5b23-45db-9a51-d5f928f5e13c';
-    $display->content['new-98bddcd4-5b23-45db-9a51-d5f928f5e13c'] = $pane;
-    $display->panels['middle'][3] = 'new-98bddcd4-5b23-45db-9a51-d5f928f5e13c';
-  $display->hide_title = PANELS_TITLE_FIXED;
+    $pane->uuid = '4b3640ce-5e3d-4650-9365-3fcf909a9084';
+    $display->content['new-4b3640ce-5e3d-4650-9365-3fcf909a9084'] = $pane;
+    $display->panels['right'][0] = 'new-4b3640ce-5e3d-4650-9365-3fcf909a9084';
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $mini->display = $display;
-  $export['what_we_do_steps'] = $mini;
+  $export['what_we_do_features'] = $mini;
 
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
@@ -1679,18 +1551,22 @@ print render($menu);',
     $display->content['new-efbb100b-b070-45af-8a6c-7bb3767208af'] = $pane;
     $display->panels['left'][0] = 'new-efbb100b-b070-45af-8a6c-7bb3767208af';
     $pane = new stdClass();
-    $pane->pid = 'new-43e72db6-66fa-48bc-bcb0-ff3899df40e2';
+    $pane->pid = 'new-e064d463-0429-442d-b4f7-7441d16832a7';
     $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'node';
+    $pane->subtype = 'node';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'We work closely with our customers',
-      'body' => 'Our individual teams of experts work closely with customers, assessing their needs and using market research, retail and fashion trend forecasts, and innovative technology to design the right supply chains to deliver their products.',
-      'format' => 'full_html',
-      'substitute' => TRUE,
+      'nid' => '70',
+      'links' => 0,
+      'leave_node_title' => 0,
+      'identifier' => '',
+      'build_mode' => 'teaser',
+      'link_node_title' => 0,
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -1700,10 +1576,10 @@ print render($menu);',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '43e72db6-66fa-48bc-bcb0-ff3899df40e2';
-    $display->content['new-43e72db6-66fa-48bc-bcb0-ff3899df40e2'] = $pane;
-    $display->panels['right'][0] = 'new-43e72db6-66fa-48bc-bcb0-ff3899df40e2';
-  $display->hide_title = PANELS_TITLE_FIXED;
+    $pane->uuid = 'e064d463-0429-442d-b4f7-7441d16832a7';
+    $display->content['new-e064d463-0429-442d-b4f7-7441d16832a7'] = $pane;
+    $display->panels['right'][0] = 'new-e064d463-0429-442d-b4f7-7441d16832a7';
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-efbb100b-b070-45af-8a6c-7bb3767208af';
   $mini->display = $display;
   $export['working_with_customers'] = $mini;
