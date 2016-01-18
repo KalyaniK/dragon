@@ -84,9 +84,9 @@ function dragon_user_preprocess_page(&$vars, $hook) {
 function dragon_user_form_user_login_alter(&$form, &$form_state, $form_id) {
   $form['#submit'][] = 'dragon_user_form_user_login_submit';
   $form['actions']['register'] = array(
-      '#type'   => 'link',
-      '#title'  => 'Register',
-      '#href' => 'user/register'
+    '#type'   => 'link',
+    '#title'  => 'Register',
+    '#href' => 'user/register'
   );
 }
 /**
