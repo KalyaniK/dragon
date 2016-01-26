@@ -9,7 +9,7 @@
 function dragon_moxtra_menu() {
   $items['chat'] = array(
     'page callback' => 'dragon_moxtra_chat_page',
-    'access callback' => TRUE,
+    'access callback' => "user_is_logged_in",
   );
 
   return $items;
