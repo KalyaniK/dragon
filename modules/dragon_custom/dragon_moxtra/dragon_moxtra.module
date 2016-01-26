@@ -19,6 +19,11 @@ function dragon_moxtra_menu() {
  * Implements page callback for chat
  */
 function dragon_moxtra_chat_page() {
+  if (!user_is_logged_in()) {
+    drupal_set_message(t('To get online live support, please login or register first.'), 'warning');
+    drupal_goto("user");
+  }
+  
   module_load_include('inc', 'dragon_moxtra', 'dragon_moxtra.config');
   module_load_include('inc', 'dragon_moxtra', 'dragon_moxtra.functions');
   drupal_add_js('https://www.moxtra.com/api/js/moxtra-latest.js', 'external');
