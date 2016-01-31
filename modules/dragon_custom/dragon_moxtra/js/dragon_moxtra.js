@@ -15,7 +15,7 @@
       function start_chat (contact_id) {
           $.ajax( Drupal.settings.dragon_moxtra.rest_api_end_point + "/me/binders?access_token=" + options.access_token, {
               type: 'POST',
-              data: JSON.stringify({name: 'Dragon Asia', conversation: true}),
+              data: JSON.stringify({name: Drupal.settings.dragon_moxtra.binder_name, conversation: false}),
               processData: false,
               contentType: 'application/json',
               crossDomain: true,
@@ -57,7 +57,7 @@
               iframe: true,
               tagid4iframe: "timeline_container",
               iframewidth: "100%",
-              iframeheight: "600px",                
+              iframeheight: "800px",                
               autostart_meet: true,
               autostart_note: true,
               extension: { "show_dialogs": {
@@ -72,8 +72,14 @@
               view_binder: function(event) {
                   console.log("Binder switched session Id: " + event.session_id + " binder id: " + event.binder_id);
               },
-              create_binder: function(event) {
+              request_create_binder: function(event) {
                   console.log("Create binder with session Id: " + event.session_id);
+                  if (Drupal.settings.dragon_moxtra.create_access) {
+                    window.location = 'chat/add';
+                  }
+                  else {
+                    alert('Sorry, only admin users can create new chat. Please contact admin if needed.');
+                  }
               },
               invite_member: function(event) {
                   console.log("Invite member into binder Id: " + event.binder_id);

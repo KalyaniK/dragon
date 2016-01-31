@@ -12,7 +12,21 @@ function dragon_moxtra_menu() {
     'access callback' => "user_is_logged_in",
   );
 
+  $items['chat/add'] = array(
+    'title' => 'Create New Binder',
+    'page callback' => 'dragon_moxtra_binder_add_page',
+    'access arguments' => array("create moxtra binder"),
+  );
   return $items;
+}
+
+function dragon_moxtra_permission() {
+  return array(
+    'create moxtra binder' => array(
+      'title' => t('Create moxtra binder'),
+      'description' => t('Create moxtra binder'),
+    ),
+  );
 }
 
 /**
@@ -30,8 +44,13 @@ function dragon_moxtra_chat_page() {
 
   global $CLIENT_ID, $REST_API_END_POINT;
   global $user;
-  $access_token = dragon_moxtra_get_access_token($user);
+  $user = user_load($user->uid);
+  $access_token = dragon_moxtra_get_access_token();
   $site_mail = variable_get('site_mail');
+  $lang = field_language('user', $user, 'field_company');
+  $binder_name = !empty($user->field_company[$lang][0]['value']) ? 
+    $user->field_company[$lang][0]['value'] : '';
+  $binder_name = empty($binder_name) ? $user->name : $binder_name;
   drupal_add_js(
     array(
       'dragon_moxtra' =>
@@ -40,6 +59,8 @@ function dragon_moxtra_chat_page() {
           'access_token' => $access_token,
           'rest_api_end_point' => $REST_API_END_POINT,
           'default_contact' => variable_get('dragon_moxtra_default_contact_mail', $site_mail),
+          'binder_name' => $binder_name,
+          'create_access' => user_access('create moxtra binder'),
       ),
     ),
     'setting'
@@ -47,3 +68,68 @@ function dragon_moxtra_chat_page() {
   drupal_add_js(drupal_get_path('module', 'dragon_moxtra') . '/js/dragon_moxtra.js');
   return '<div id="timeline_container"></div>';
 }
+
+function dragon_moxtra_binder_add_page() {
+  $form = drupal_get_form('dragon_moxtra_binder_create_form');
+  return $form;
+}
+
+function dragon_moxtra_binder_create_form($form, &$form_state) {
+  global $user;
+
+  $form['name'] = array(
+    '#title' => t('Binder Name'),
+    '#type' => 'textfield',
+    '#required' => TRUE,
+  );
+
+  $accounts = entity_load('user');
+  foreach ($accounts as $account) {
+    if ($account->status == TRUE && $account->uid != $user->uid) {
+      $user_options[$account->mail] = $account->name . ' <' . $account->mail . '>';
+    }
+  }
+  $form['accounts'] = array(
+    '#title' => t('Users'),
+    '#type' => 'select',
+    '#required' => TRUE,
+    '#multiple' => 'multiple',
+    '#options' => $user_options,
+    '#size' => min(10, count($user_options)),
+    '#description' => t('Select the users to join the binder. You will be included in the binder by default.'),
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Submit',
+  );
+
+  $form['#attached']['css'] = array(
+    drupal_get_path('module', 'dragon_moxtra') . '/css/bootstrap-multiselect.css',
+    drupal_get_path('module', 'dragon_moxtra') . '/css/dragon_moxtra_multiselect.css',
+  );
+  $form['#attached']['js'] = array(
+    drupal_get_path('module', 'dragon_moxtra') . '/js/bootstrap-multiselect.js',
+    drupal_get_path('module', 'dragon_moxtra') . '/js/dragon_moxtra_multiselect.js',
+  );
+
+  return $form;
+}
+
+function dragon_moxtra_binder_create_form_submit($form, &$form_state) {
+  module_load_include('inc', 'dragon_moxtra', 'dragon_moxtra.config');
+  module_load_include('inc', 'dragon_moxtra', 'dragon_moxtra.functions');
+  $name = $form_state['values']['name'];
+  $accounts = $form_state['values']['accounts'];
+  $members = array();
+  foreach ($accounts as $account) {
+    $members[] = array(
+      'user' => array(
+        'unique_id' => $account,
+      ),
+    );
+  }
+  $response = dragon_moxtra_create_binder($name, $members);
+
+  $form_state['redirect'] = 'chat';
+}
+

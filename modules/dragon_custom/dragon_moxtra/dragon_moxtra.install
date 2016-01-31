@@ -18,4 +18,23 @@ function dragon_moxtra_enable() {
   foreach ($all_users as $account) {
     dragon_moxtra_get_access_token($account);
   }
+
+  dragon_moxtra_grant_permissions();
 }
+
+/**
+ * Grant permissions for moxtra
+ */
+function dragon_moxtra_update_7001() {
+  dragon_moxtra_grant_permissions();
+}
+
+function dragon_moxtra_grant_permissions() {
+  $role_permissions = array(
+    'administrator' => array(
+      'create moxtra binder',
+    ),
+  );
+  dragon_common_grant_permissions_to_roles($role_permissions);
+}
+
