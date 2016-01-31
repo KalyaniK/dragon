@@ -10,38 +10,18 @@
 function general_settings_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: management_user-menu:admin/structure/menu/manage/user-menu.
-  $menu_links['management_user-menu:admin/structure/menu/manage/user-menu'] = array(
-    'menu_name' => 'management',
-    'link_path' => 'admin/structure/menu/manage/user-menu',
-    'router_path' => 'admin/structure/menu/manage/%',
-    'link_title' => 'User menu',
-    'options' => array(
-      'identifier' => 'management_user-menu:admin/structure/menu/manage/user-menu',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
-    'language' => 'und',
-    'menu_links_customized' => 0,
-    'parent_identifier' => 'management_menus:admin/structure/menu',
-  );
-  // Exported menu link: user-menu_about-us:node/4.
-  $menu_links['user-menu_about-us:node/4'] = array(
+  // Exported menu link: user-menu_about-us:about-us.
+  $menu_links['user-menu_about-us:about-us'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/4',
-    'router_path' => 'node/%',
+    'link_path' => 'about-us',
+    'router_path' => 'about-us',
     'link_title' => 'About Us',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'user-menu_about-us:node/4',
+      'identifier' => 'user-menu_about-us:about-us',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -53,77 +33,29 @@ function general_settings_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: user-menu_apparel-and-textile:node/18.
-  $menu_links['user-menu_apparel-and-textile:node/18'] = array(
+  // Exported menu link: user-menu_business-intelligence:node/43.
+  $menu_links['user-menu_business-intelligence:node/43'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/18',
+    'link_path' => 'node/43',
     'router_path' => 'node/%',
-    'link_title' => 'Apparel and Textile',
+    'link_title' => 'Business Intelligence',
     'options' => array(
-      'alter' => TRUE,
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'user-menu_apparel-and-textile:node/18',
+      'alter' => TRUE,
+      'identifier' => 'user-menu_business-intelligence:node/43',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
+    'has_children' => 1,
+    'expanded' => 1,
+    'weight' => -20,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_our-business:node/5',
-  );
-  // Exported menu link: user-menu_bed-sheet:node/32.
-  $menu_links['user-menu_bed-sheet:node/32'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/32',
-    'router_path' => 'node/%',
-    'link_title' => 'Bed Sheet',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_bed-sheet:node/32',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -5,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
-  );
-  // Exported menu link: user-menu_bed-skirt:node/34.
-  $menu_links['user-menu_bed-skirt:node/34'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/34',
-    'router_path' => 'node/%',
-    'link_title' => 'Bed Skirt',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_bed-skirt:node/34',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -4,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
+    'parent_identifier' => 'user-menu_our-services:our-services',
   );
   // Exported menu link: user-menu_careers:node/1.
   $menu_links['user-menu_careers:node/1'] = array(
@@ -147,67 +79,68 @@ function general_settings_menu_default_menu_links() {
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_contact-us:node/3',
+    'parent_identifier' => 'user-menu_contact-us:contact',
   );
-  // Exported menu link: user-menu_chat:chat.
-  $menu_links['user-menu_chat:chat'] = array(
+  // Exported menu link: user-menu_cargo-shipment:node/54.
+  $menu_links['user-menu_cargo-shipment:node/54'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'chat',
-    'router_path' => 'chat',
-    'link_title' => 'Chat',
+    'link_path' => 'node/54',
+    'router_path' => 'node/%',
+    'link_title' => 'Cargo shipment',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'user-menu_chat:chat',
+      'identifier' => 'user-menu_cargo-shipment:node/54',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => 2,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_global-logistics:node/39',
   );
-  // Exported menu link: user-menu_comforter:node/27.
-  $menu_links['user-menu_comforter:node/27'] = array(
+  // Exported menu link: user-menu_consolidation:node/55.
+  $menu_links['user-menu_consolidation:node/55'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/27',
+    'link_path' => 'node/55',
     'router_path' => 'node/%',
-    'link_title' => 'Comforter',
+    'link_title' => 'Consolidation',
     'options' => array(
-      'alter' => TRUE,
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'user-menu_comforter:node/27',
+      'alter' => TRUE,
+      'identifier' => 'user-menu_consolidation:node/55',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -3,
+    'weight' => 0,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
+    'parent_identifier' => 'user-menu_global-logistics:node/39',
   );
-  // Exported menu link: user-menu_contact-us:node/3.
-  $menu_links['user-menu_contact-us:node/3'] = array(
+  // Exported menu link: user-menu_contact-us:contact.
+  $menu_links['user-menu_contact-us:contact'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/3',
-    'router_path' => 'node/%',
+    'link_path' => 'contact',
+    'router_path' => 'contact',
     'link_title' => 'Contact us',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'user-menu_contact-us:node/3',
+      'identifier' => 'user-menu_contact-us:contact',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -219,53 +152,125 @@ function general_settings_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: user-menu_down-conforter:node/31.
-  $menu_links['user-menu_down-conforter:node/31'] = array(
+  // Exported menu link: user-menu_custom-broker-area:node/47.
+  $menu_links['user-menu_custom-broker-area:node/47'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/31',
+    'link_path' => 'node/47',
     'router_path' => 'node/%',
-    'link_title' => 'Down Conforter',
+    'link_title' => 'Custom broker area',
     'options' => array(
-      'alter' => TRUE,
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'user-menu_down-conforter:node/31',
+      'alter' => TRUE,
+      'identifier' => 'user-menu_custom-broker-area:node/47',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -2,
+    'weight' => 2,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
+    'parent_identifier' => 'user-menu_extranet:node/10',
   );
-  // Exported menu link: user-menu_duvets:node/28.
-  $menu_links['user-menu_duvets:node/28'] = array(
+  // Exported menu link: user-menu_custom-clearance-and-documentation:node/40.
+  $menu_links['user-menu_custom-clearance-and-documentation:node/40'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/28',
+    'link_path' => 'node/40',
     'router_path' => 'node/%',
-    'link_title' => 'Duvets',
+    'link_title' => 'Custom Clearance and Documentation',
     'options' => array(
-      'alter' => TRUE,
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'user-menu_duvets:node/28',
+      'alter' => TRUE,
+      'identifier' => 'user-menu_custom-clearance-and-documentation:node/40',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 1,
+    'expanded' => 1,
+    'weight' => 10,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_our-services:our-services',
+  );
+  // Exported menu link: user-menu_customer-area:node/46.
+  $menu_links['user-menu_customer-area:node/46'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/46',
+    'router_path' => 'node/%',
+    'link_title' => 'Customer area',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'user-menu_customer-area:node/46',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -1,
+    'weight' => -5,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
+    'parent_identifier' => 'user-menu_extranet:node/10',
+  );
+  // Exported menu link: user-menu_export-documentation:node/34.
+  $menu_links['user-menu_export-documentation:node/34'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/34',
+    'router_path' => 'node/%',
+    'link_title' => 'Export Documentation',
+    'options' => array(
+      'alter' => TRUE,
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'user-menu_export-documentation:node/34',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -4,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_custom-clearance-and-documentation:node/40',
+  );
+  // Exported menu link: user-menu_express-shipping:node/53.
+  $menu_links['user-menu_express-shipping:node/53'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/53',
+    'router_path' => 'node/%',
+    'link_title' => 'Express shipping',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'user-menu_express-shipping:node/53',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -5,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_global-logistics:node/39',
   );
   // Exported menu link: user-menu_extranet:node/10.
   $menu_links['user-menu_extranet:node/10'] = array(
@@ -283,26 +288,50 @@ function general_settings_menu_default_menu_links() {
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
+    'has_children' => 1,
+    'expanded' => 1,
+    'weight' => -48,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
     'parent_identifier' => 'user-menu_navigation:node/14',
   );
-  // Exported menu link: user-menu_fashion-accessories:node/17.
-  $menu_links['user-menu_fashion-accessories:node/17'] = array(
+  // Exported menu link: user-menu_freight-forwarder-area:node/48.
+  $menu_links['user-menu_freight-forwarder-area:node/48'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/17',
+    'link_path' => 'node/48',
     'router_path' => 'node/%',
-    'link_title' => 'Fashion Accessories',
+    'link_title' => 'Freight forwarder area',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'user-menu_freight-forwarder-area:node/48',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_extranet:node/10',
+  );
+  // Exported menu link: user-menu_global-logistics:node/39.
+  $menu_links['user-menu_global-logistics:node/39'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/39',
+    'router_path' => 'node/%',
+    'link_title' => 'Global Logistics',
     'options' => array(
       'alter' => TRUE,
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'user-menu_fashion-accessories:node/17',
+      'identifier' => 'user-menu_global-logistics:node/39',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -313,195 +342,75 @@ function general_settings_menu_default_menu_links() {
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_our-business:node/5',
+    'parent_identifier' => 'user-menu_our-services:our-services',
   );
-  // Exported menu link: user-menu_furniture:node/36.
-  $menu_links['user-menu_furniture:node/36'] = array(
+  // Exported menu link: user-menu_global-sourcing:node/38.
+  $menu_links['user-menu_global-sourcing:node/38'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/36',
+    'link_path' => 'node/38',
     'router_path' => 'node/%',
-    'link_title' => 'Furniture',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_furniture:node/36',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_our-business:node/5',
-  );
-  // Exported menu link: user-menu_hand-bag-hardware:node/20.
-  $menu_links['user-menu_hand-bag-hardware:node/20'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/20',
-    'router_path' => 'node/%',
-    'link_title' => 'Hand Bag Hardware',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_hand-bag-hardware:node/20',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_fashion-accessories:node/17',
-  );
-  // Exported menu link: user-menu_hand-bag-material-and-fabrics:node/18.
-  $menu_links['user-menu_hand-bag-material-and-fabrics:node/18'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/18',
-    'router_path' => 'node/%',
-    'link_title' => 'Hand Bag Material and Fabrics',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_hand-bag-material-and-fabrics:node/18',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 1,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_fashion-accessories:node/17',
-  );
-  // Exported menu link: user-menu_hand-bag-oem:node/19.
-  $menu_links['user-menu_hand-bag-oem:node/19'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/19',
-    'router_path' => 'node/%',
-    'link_title' => 'Hand Bag OEM',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_hand-bag-oem:node/19',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -1,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_fashion-accessories:node/17',
-  );
-  // Exported menu link: user-menu_hockey-accessories:node/22.
-  $menu_links['user-menu_hockey-accessories:node/22'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/22',
-    'router_path' => 'node/%',
-    'link_title' => 'Hockey Accessories',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_hockey-accessories:node/22',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_sport-accessories:node/6',
-  );
-  // Exported menu link: user-menu_home-textile-fabrics:node/23.
-  $menu_links['user-menu_home-textile-fabrics:node/23'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/23',
-    'router_path' => 'node/%',
-    'link_title' => 'Home Textile Fabrics',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_home-textile-fabrics:node/23',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -6,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
-  );
-  // Exported menu link: user-menu_home-textile-products:node/7.
-  $menu_links['user-menu_home-textile-products:node/7'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/7',
-    'router_path' => 'node/%',
-    'link_title' => 'Home Textile Products',
+    'link_title' => 'Global sourcing',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'user-menu_home-textile-products:node/7',
+      'identifier' => 'user-menu_global-sourcing:node/38',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
-    'weight' => 0,
+    'weight' => -10,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_our-business:node/5',
+    'parent_identifier' => 'user-menu_our-services:our-services',
   );
-  // Exported menu link: user-menu_intranet:node/11.
-  $menu_links['user-menu_intranet:node/11'] = array(
+  // Exported menu link: user-menu_import-documentation-and-clearance:node/32.
+  $menu_links['user-menu_import-documentation-and-clearance:node/32'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/32',
+    'router_path' => 'node/%',
+    'link_title' => 'Import Documentation and Clearance',
+    'options' => array(
+      'alter' => TRUE,
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'user-menu_import-documentation-and-clearance:node/32',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 5,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_custom-clearance-and-documentation:node/40',
+  );
+  // Exported menu link: user-menu_intranet-dragon-team-area:node/11.
+  $menu_links['user-menu_intranet-dragon-team-area:node/11'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'node/11',
     'router_path' => 'node/%',
-    'link_title' => 'Intranet',
+    'link_title' => 'Intranet Dragon team area',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'user-menu_intranet:node/11',
+      'identifier' => 'user-menu_intranet-dragon-team-area:node/11',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 40,
+    'weight' => -47,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
@@ -525,7 +434,7 @@ function general_settings_menu_default_menu_links() {
     'customized' => 0,
     'language' => 'und',
     'menu_links_customized' => 0,
-    'parent_identifier' => 'user-menu_user-account:user',
+    'parent_identifier' => 'user-menu_my-account:user',
   );
   // Exported menu link: user-menu_log-out:user/logout.
   $menu_links['user-menu_log-out:user/logout'] = array(
@@ -541,110 +450,38 @@ function general_settings_menu_default_menu_links() {
       'identifier' => 'user-menu_log-out:user/logout',
     ),
     'module' => 'system',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -43,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-  );
-  // Exported menu link: user-menu_mattress-components:node/35.
-  $menu_links['user-menu_mattress-components:node/35'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/35',
-    'router_path' => 'node/%',
-    'link_title' => 'Mattress Components',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_mattress-components:node/35',
-    ),
-    'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
-    'expanded' => 1,
-    'weight' => 0,
+    'expanded' => 0,
+    'weight' => -44,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_our-business:node/5',
   );
-  // Exported menu link: user-menu_mattress-pad:node/29.
-  $menu_links['user-menu_mattress-pad:node/29'] = array(
+  // Exported menu link: user-menu_material-sourcing:node/19.
+  $menu_links['user-menu_material-sourcing:node/19'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/29',
+    'link_path' => 'node/19',
     'router_path' => 'node/%',
-    'link_title' => 'Mattress Pad',
+    'link_title' => 'Material sourcing',
     'options' => array(
       'alter' => TRUE,
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'user-menu_mattress-pad:node/29',
+      'identifier' => 'user-menu_material-sourcing:node/19',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -5,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
-  );
-  // Exported menu link: user-menu_mattress-protector:node/33.
-  $menu_links['user-menu_mattress-protector:node/33'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/33',
-    'router_path' => 'node/%',
-    'link_title' => 'Mattress Protector',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_mattress-protector:node/33',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 1,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
-  );
-  // Exported menu link: user-menu_mattress-toppers:node/25.
-  $menu_links['user-menu_mattress-toppers:node/25'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/25',
-    'router_path' => 'node/%',
-    'link_title' => 'Mattress Toppers',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_mattress-toppers:node/25',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 2,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
+    'parent_identifier' => 'user-menu_global-sourcing:node/38',
   );
   // Exported menu link: user-menu_navigation:node/14.
   $menu_links['user-menu_navigation:node/14'] = array(
@@ -669,18 +506,66 @@ function general_settings_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: user-menu_our-business:node/5.
-  $menu_links['user-menu_our-business:node/5'] = array(
+  // Exported menu link: user-menu_new-product-development:node/41.
+  $menu_links['user-menu_new-product-development:node/41'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/5',
+    'link_path' => 'node/41',
     'router_path' => 'node/%',
-    'link_title' => 'Our Business',
+    'link_title' => 'New product development',
+    'options' => array(
+      'alter' => TRUE,
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'user-menu_new-product-development:node/41',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -15,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_our-services:our-services',
+  );
+  // Exported menu link: user-menu_our-intranet-extranet-portal:node/22.
+  $menu_links['user-menu_our-intranet-extranet-portal:node/22'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/22',
+    'router_path' => 'node/%',
+    'link_title' => 'Our Intranet Extranet Portal',
+    'options' => array(
+      'alter' => TRUE,
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'user-menu_our-intranet-extranet-portal:node/22',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_business-intelligence:node/43',
+  );
+  // Exported menu link: user-menu_our-services:our-services.
+  $menu_links['user-menu_our-services:our-services'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'our-services',
+    'router_path' => 'our-services',
+    'link_title' => 'Our Services',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'user-menu_our-business:node/5',
+      'identifier' => 'user-menu_our-services:our-services',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -692,18 +577,18 @@ function general_settings_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: user-menu_our-people:node/9.
-  $menu_links['user-menu_our-people:node/9'] = array(
+  // Exported menu link: user-menu_our-team:node/9.
+  $menu_links['user-menu_our-team:node/9'] = array(
     'menu_name' => 'user-menu',
     'link_path' => 'node/9',
     'router_path' => 'node/%',
-    'link_title' => 'Our People',
+    'link_title' => 'Our Team',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'user-menu_our-people:node/9',
+      'identifier' => 'user-menu_our-team:node/9',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -714,20 +599,44 @@ function general_settings_menu_default_menu_links() {
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_about-us:node/4',
+    'parent_identifier' => 'user-menu_about-us:about-us',
   );
-  // Exported menu link: user-menu_our-services:node/16.
-  $menu_links['user-menu_our-services:node/16'] = array(
+  // Exported menu link: user-menu_packaging-and-design-solution:node/42.
+  $menu_links['user-menu_packaging-and-design-solution:node/42'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/16',
+    'link_path' => 'node/42',
     'router_path' => 'node/%',
-    'link_title' => 'Our Services',
+    'link_title' => 'Packaging and design solution',
+    'options' => array(
+      'alter' => TRUE,
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'user-menu_packaging-and-design-solution:node/42',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -3,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_our-services:our-services',
+  );
+  // Exported menu link: user-menu_production-monitoring:node/51.
+  $menu_links['user-menu_production-monitoring:node/51'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/51',
+    'router_path' => 'node/%',
+    'link_title' => 'Production monitoring',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'user-menu_our-services:node/16',
+      'identifier' => 'user-menu_production-monitoring:node/51',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -738,20 +647,20 @@ function general_settings_menu_default_menu_links() {
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_about-us:node/4',
+    'parent_identifier' => 'user-menu_global-sourcing:node/38',
   );
-  // Exported menu link: user-menu_pillow-:node/24.
-  $menu_links['user-menu_pillow-:node/24'] = array(
+  // Exported menu link: user-menu_quality-control:node/20.
+  $menu_links['user-menu_quality-control:node/20'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/24',
+    'link_path' => 'node/20',
     'router_path' => 'node/%',
-    'link_title' => 'Pillow ',
+    'link_title' => 'Quality control',
     'options' => array(
       'alter' => TRUE,
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'user-menu_pillow-:node/24',
+      'identifier' => 'user-menu_quality-control:node/20',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -762,55 +671,31 @@ function general_settings_menu_default_menu_links() {
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
+    'parent_identifier' => 'user-menu_global-sourcing:node/38',
   );
-  // Exported menu link: user-menu_pillow-cover:node/26.
-  $menu_links['user-menu_pillow-cover:node/26'] = array(
+  // Exported menu link: user-menu_sample-creation:node/50.
+  $menu_links['user-menu_sample-creation:node/50'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/26',
+    'link_path' => 'node/50',
     'router_path' => 'node/%',
-    'link_title' => 'Pillow Cover',
+    'link_title' => 'Sample creation',
     'options' => array(
-      'alter' => TRUE,
       'attributes' => array(
         'title' => '',
       ),
-      'identifier' => 'user-menu_pillow-cover:node/26',
+      'alter' => TRUE,
+      'identifier' => 'user-menu_sample-creation:node/50',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 4,
+    'weight' => -10,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
-  );
-  // Exported menu link: user-menu_quilt:node/30.
-  $menu_links['user-menu_quilt:node/30'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'node/30',
-    'router_path' => 'node/%',
-    'link_title' => 'Quilt',
-    'options' => array(
-      'alter' => TRUE,
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'user-menu_quilt:node/30',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 5,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_home-textile-products:node/7',
+    'parent_identifier' => 'user-menu_global-sourcing:node/38',
   );
   // Exported menu link: user-menu_search:search.
   $menu_links['user-menu_search:search'] = array(
@@ -822,7 +707,6 @@ function general_settings_menu_default_menu_links() {
       'attributes' => array(
         'title' => '',
       ),
-      'alter' => TRUE,
       'identifier' => 'user-menu_search:search',
     ),
     'module' => 'menu',
@@ -830,34 +714,58 @@ function general_settings_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -42,
+    'weight' => -46,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: user-menu_sport-accessories:node/6.
-  $menu_links['user-menu_sport-accessories:node/6'] = array(
+  // Exported menu link: user-menu_supplier-area:node/45.
+  $menu_links['user-menu_supplier-area:node/45'] = array(
     'menu_name' => 'user-menu',
-    'link_path' => 'node/6',
+    'link_path' => 'node/45',
     'router_path' => 'node/%',
-    'link_title' => 'Sport Accessories',
+    'link_title' => 'Supplier area',
     'options' => array(
       'attributes' => array(
         'title' => '',
       ),
       'alter' => TRUE,
-      'identifier' => 'user-menu_sport-accessories:node/6',
+      'identifier' => 'user-menu_supplier-area:node/45',
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
-    'has_children' => 1,
-    'expanded' => 1,
-    'weight' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -3,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_our-business:node/5',
+    'parent_identifier' => 'user-menu_extranet:node/10',
+  );
+  // Exported menu link: user-menu_supplier-compliance:node/52.
+  $menu_links['user-menu_supplier-compliance:node/52'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/52',
+    'router_path' => 'node/%',
+    'link_title' => 'Supplier compliance',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'user-menu_supplier-compliance:node/52',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -2,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_global-sourcing:node/38',
   );
   // Exported menu link: user-menu_support:node/2.
   $menu_links['user-menu_support:node/2'] = array(
@@ -881,7 +789,55 @@ function general_settings_menu_default_menu_links() {
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_contact-us:node/3',
+    'parent_identifier' => 'user-menu_contact-us:contact',
+  );
+  // Exported menu link: user-menu_team-collaboration-and-communication:node/56.
+  $menu_links['user-menu_team-collaboration-and-communication:node/56'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/56',
+    'router_path' => 'node/%',
+    'link_title' => 'Team collaboration and communication',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'user-menu_team-collaboration-and-communication:node/56',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -5,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_business-intelligence:node/43',
+  );
+  // Exported menu link: user-menu_user-account:dashboard.
+  $menu_links['user-menu_user-account:dashboard'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'dashboard',
+    'router_path' => 'dashboard',
+    'link_title' => 'User Account',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'user-menu_user-account:dashboard',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_navigation:node/14',
   );
   // Exported menu link: user-menu_user-account:user.
   $menu_links['user-menu_user-account:user'] = array(
@@ -894,11 +850,11 @@ function general_settings_menu_default_menu_links() {
       'identifier' => 'user-menu_user-account:user',
     ),
     'module' => 'system',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => -10,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
@@ -925,49 +881,47 @@ function general_settings_menu_default_menu_links() {
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_about-us:node/4',
+    'parent_identifier' => 'user-menu_about-us:about-us',
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('About Us');
-  t('Apparel and Textile');
-  t('Bed Sheet');
-  t('Bed Skirt');
+  t('Business Intelligence');
   t('Careers');
-  t('Chat');
-  t('Comforter');
+  t('Cargo shipment');
+  t('Consolidation');
   t('Contact us');
-  t('Down Conforter');
-  t('Duvets');
+  t('Custom Clearance and Documentation');
+  t('Custom broker area');
+  t('Customer area');
+  t('Export Documentation');
+  t('Express shipping');
   t('Extranet');
-  t('Fashion Accessories');
-  t('Furniture');
-  t('Hand Bag Hardware');
-  t('Hand Bag Material and Fabrics');
-  t('Hand Bag OEM');
-  t('Hockey Accessories');
-  t('Home Textile Fabrics');
-  t('Home Textile Products');
-  t('Intranet');
+  t('Freight forwarder area');
+  t('Global Logistics');
+  t('Global sourcing');
+  t('Import Documentation and Clearance');
+  t('Intranet Dragon team area');
   t('Log Out');
   t('Log in');
-  t('Mattress Components');
-  t('Mattress Pad');
-  t('Mattress Protector');
-  t('Mattress Toppers');
+  t('Material sourcing');
   t('Navigation');
-  t('Our Business');
-  t('Our People');
+  t('New product development');
+  t('Our Intranet Extranet Portal');
   t('Our Services');
-  t('Pillow ');
-  t('Pillow Cover');
-  t('Quilt');
+  t('Our Team');
+  t('Packaging and design solution');
+  t('Production monitoring');
+  t('Quality control');
+  t('Sample creation');
   t('Search');
-  t('Sport Accessories');
+  t('Supplier area');
+  t('Supplier compliance');
   t('Support');
+  t('Team collaboration and communication');
+  t('User Account');
   t('User account');
-  t('User menu');
   t('Who We Are');
 
   return $menu_links;
