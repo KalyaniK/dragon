@@ -51,6 +51,43 @@
               }
           });
       }
+      
+      function update_user () {
+          var mail;
+          $.ajax( Drupal.settings.dragon_moxtra.rest_api_end_point + "/me?access_token=" + options.access_token, {
+              type: 'GET',
+              contentType: 'application/json',
+              crossDomain: true,
+              success: function (data) {
+                  mail = data.data.email;
+                  console.log(data);
+              }
+          });
+          
+          if(mail = 'undefined'){
+            
+          $.ajax( Drupal.settings.dragon_moxtra.rest_api_end_point + "/me?access_token=" + options.access_token, {
+              type: 'POST',
+              data: JSON.stringify({email: mail}),
+              processData: false,
+              contentType: 'application/json',
+              crossDomain: true,
+              success: function (data) {
+                  console.log(data);
+              }
+          });
+          }
+          
+          $.ajax( Drupal.settings.dragon_moxtra.rest_api_end_point + "/me?access_token=" + options.access_token, {
+              type: 'GET',
+              contentType: 'application/json',
+              crossDomain: true,
+              success: function (data) {
+                  console.log(data);
+              }
+          });
+      }
+      update_user();
       init_binders();
       function start_timeline() {
           var options = {
@@ -66,6 +103,7 @@
                   "share": false
               } },
               video: true, // turn on camera
+			  invite_members: true, // invite members in the binder when start a meeting
               start_timeline: function(event) {
                   console.log("Timeline started session Id: " + event.session_id + " binder id: " + event.binder_id);
               },
