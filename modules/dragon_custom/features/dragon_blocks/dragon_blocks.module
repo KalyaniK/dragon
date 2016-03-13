@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Dragon Blocks feature.
  */
+
+include_once 'dragon_blocks.features.inc';

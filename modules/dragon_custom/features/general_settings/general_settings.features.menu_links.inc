@@ -79,7 +79,7 @@ function general_settings_menu_default_menu_links() {
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_contact-us:contact',
+    'parent_identifier' => 'user-menu_contact-us:contact-us',
   );
   // Exported menu link: user-menu_cargo-shipment:node/54.
   $menu_links['user-menu_cargo-shipment:node/54'] = array(
@@ -128,29 +128,6 @@ function general_settings_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
     'parent_identifier' => 'user-menu_global-logistics:node/39',
-  );
-  // Exported menu link: user-menu_contact-us:contact.
-  $menu_links['user-menu_contact-us:contact'] = array(
-    'menu_name' => 'user-menu',
-    'link_path' => 'contact',
-    'router_path' => 'contact',
-    'link_title' => 'Contact us',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'user-menu_contact-us:contact',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 1,
-    'expanded' => 1,
-    'weight' => -48,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
   );
   // Exported menu link: user-menu_custom-broker-area:node/47.
   $menu_links['user-menu_custom-broker-area:node/47'] = array(
@@ -789,7 +766,7 @@ function general_settings_menu_default_menu_links() {
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
-    'parent_identifier' => 'user-menu_contact-us:contact',
+    'parent_identifier' => 'user-menu_contact-us:contact-us',
   );
   // Exported menu link: user-menu_team-collaboration-and-communication:node/56.
   $menu_links['user-menu_team-collaboration-and-communication:node/56'] = array(
@@ -891,7 +868,6 @@ function general_settings_menu_default_menu_links() {
   t('Careers');
   t('Cargo shipment');
   t('Consolidation');
-  t('Contact us');
   t('Custom Clearance and Documentation');
   t('Custom broker area');
   t('Customer area');

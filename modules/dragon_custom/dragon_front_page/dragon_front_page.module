@@ -84,7 +84,7 @@ function dragon_front_page_preprocess_page(&$vars, $hook) {
     drupal_add_js(drupal_get_path('module', 'dragon_front_page') . '/js/dragon_front_page.js');
   }
   
-  if(in_array(arg(0), array('about-us', 'our-services'))) {
+  if(in_array(arg(0), array('about-us', 'our-services', 'contact-us'))) {
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page.css');
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page_other_pages.css');
     // add background image
@@ -93,7 +93,7 @@ function dragon_front_page_preprocess_page(&$vars, $hook) {
     $fid = $front_node->field_slider_images[$front_node->language][0]['fid'];
     $imgpath = file_load($fid)->uri;
     $bg_image = file_create_url($imgpath);
-    drupal_add_css(".dragon-panel-row.dragon-panel-row-top { background: url($bg_image) no-repeat fixed center center / 100% 100%; }",$option['type'] = 'inline');
+    drupal_add_css(".dragon-panel-row.dragon-panel-row-top { background: url($bg_image) no-repeat fixed center center / 100% 100%; min-height: 235px;} ", $option['type'] = 'inline');
   }
 }
 

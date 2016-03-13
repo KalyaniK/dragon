@@ -92,12 +92,19 @@ function dragon_moxtra_binder_create_form($form, &$form_state) {
   $form['accounts'] = array(
     '#title' => t('Users'),
     '#type' => 'select',
-    '#required' => TRUE,
     '#multiple' => 'multiple',
     '#options' => $user_options,
     '#size' => min(10, count($user_options)),
     '#description' => t('Select the users to join the binder. You will be included in the binder by default.'),
   );
+  
+  $form['emails'] = array(
+    '#title' => t('Addtional email addresses'),
+    '#type' => 'textfield',
+    '#description' => t('Put the email addresses for users haven\'t registered for our site. Use comma to separate.'),
+  );
+  
+  
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => 'Submit',
@@ -120,16 +127,52 @@ function dragon_moxtra_binder_create_form_submit($form, &$form_state) {
   module_load_include('inc', 'dragon_moxtra', 'dragon_moxtra.functions');
   $name = $form_state['values']['name'];
   $accounts = $form_state['values']['accounts'];
+  $mail_list = $form_state['values']['emails'];
+  
+  // Create the users
+  $mails = explode(',', $mail_list);
+  foreach ($mails as $mail) {
+    if(!user_load_by_mail($mail)){
+      dragon_moxtra_create_user_by_mail($mail);
+    }
+    $accounts[] = $mail;
+  }
+  
   $members = array();
   foreach ($accounts as $account) {
+    // Check if this users has been created in Moxtra
+    if(dragon_moxtra_get_user($account) == NULL) {
+      dragon_moxtra_get_access_token(false, user_load_by_mail($account));
+    }
     $members[] = array(
       'user' => array(
         'unique_id' => $account,
       ),
     );
   }
+  
   $response = dragon_moxtra_create_binder($name, $members);
 
   $form_state['redirect'] = 'chat';
 }
 
+
+function dragon_moxtra_create_user_by_mail($mail) {
+  // This will generate a random password, you could set your own here
+  $password = user_password(8);
+ 
+  // Set up the user fields
+  $fields = array(
+    'name' => $mail,
+    'mail' => $mail,
+    'pass' => $password,
+    'status' => 1,
+    'init' => 'email address',
+    'roles' => array(
+      DRUPAL_AUTHENTICATED_RID => 'authenticated user',
+    ),
+  );
+ 
+  //the first parameter is left blank so a new user is created
+  $account = user_save('', $fields);
+}

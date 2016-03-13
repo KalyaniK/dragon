@@ -1,18 +1,20 @@
 <?php
 module_load_include('inc', 'dragon_moxtra', 'dragon_moxtra.config');
 
-function dragon_moxtra_get_access_token($use_cache = TRUE) {
-  global $user;
+function dragon_moxtra_get_access_token($use_cache = TRUE, $user = NULL) {
+  if($user == null){
+    global $user;
+  }
   $cache_id = __FUNCTION__.':'.$user->uid;
   $cached_response = cache_get($cache_id);
   if($use_cache && $cached_response) return $cached_response->data->access_token;
 
   global $CLIENT_ID, $CLIENT_SECRET, $USER_INITIALIZE_GRANT_TYPE, $OAUTH_ENDPOINT_DOMAIN;
-  //Get current UTC timestamp in milliseconds
+  // Get current UTC timestamp in milliseconds
   date_default_timezone_set('UTC'); 
   $timestamp = time()*1000;
 
-  //Post data to setup/initialize user
+  // Post data to setup/initialize user
   $mail = $user->mail;
   $userdata = array(
     'client_id' => $CLIENT_ID,
@@ -36,7 +38,7 @@ function dragon_moxtra_get_access_token($use_cache = TRUE) {
     watchdog('dragon_moxtra', 'User setup failed for user: %uid', array('%uid' => $user->uid), WATCHDOG_ERROR);
     return;
   }
-  //Get Access Token on Successful Setup & Initialization of the User
+  // Get Access Token on Successful Setup & Initialization of the User
   $access_token = $response->access_token;
   cache_set($cache_id, $response, 'cache', $response->expires_in);
   return $access_token;
@@ -133,6 +135,18 @@ function dragon_moxtra_get_binders() {
   $access_token = dragon_moxtra_get_access_token();
   global $REST_API_END_POINT;
   $uri = $REST_API_END_POINT . '/me/binders?access_token='.$access_token;
+  $data = array();
+  $response = dragon_moxtra_api_get_json($uri, json_encode($data));
+  if ($response->http_code != 200 || isset($response->error_code))
+    return dragon_moxtra_api_request_error($response->http_code, $response);
+
+  return $response;
+}
+          
+function dragon_moxtra_get_user($user_id) {
+  $access_token = dragon_moxtra_get_access_token();
+  global $REST_API_END_POINT;
+  $uri = $REST_API_END_POINT . '/' . $user_id . '?access_token='.$access_token;
   $data = array();
   $response = dragon_moxtra_api_get_json($uri, json_encode($data));
   if ($response->http_code != 200 || isset($response->error_code))

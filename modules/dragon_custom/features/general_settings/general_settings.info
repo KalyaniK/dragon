@@ -14,7 +14,6 @@ features[menu_links][] = user-menu_business-intelligence:node/43
 features[menu_links][] = user-menu_careers:node/1
 features[menu_links][] = user-menu_cargo-shipment:node/54
 features[menu_links][] = user-menu_consolidation:node/55
-features[menu_links][] = user-menu_contact-us:contact
 features[menu_links][] = user-menu_custom-broker-area:node/47
 features[menu_links][] = user-menu_custom-clearance-and-documentation:node/40
 features[menu_links][] = user-menu_customer-area:node/46

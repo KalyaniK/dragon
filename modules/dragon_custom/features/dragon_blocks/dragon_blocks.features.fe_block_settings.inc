@@ -755,6 +755,43 @@ function dragon_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['panels_mini-contact_us_info'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'delta' => 'contact_us_info',
+    'i18n_block_language' => array(),
+    'module' => 'panels_mini',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'bootstrap_business' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap_business',
+        'weight' => 0,
+      ),
+      'bootstrap_dragon' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap_dragon',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+  );
+
   $export['panels_mini-dragon_footer'] = array(
     'cache' => -1,
     'css_class' => '',
