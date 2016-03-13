@@ -75,7 +75,7 @@ function general_settings_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -49,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
@@ -105,6 +105,29 @@ function general_settings_menu_default_menu_links() {
     'menu_links_customized' => 1,
     'parent_identifier' => 'user-menu_global-logistics:node/39',
   );
+  // Exported menu link: user-menu_chat:http://54.92.63.139/dragon-dev/chat.
+  $menu_links['user-menu_chat:http://54.92.63.139/dragon-dev/chat'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'http://54.92.63.139/dragon-dev/chat',
+    'router_path' => '',
+    'link_title' => 'Chat',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'user-menu_chat:http://54.92.63.139/dragon-dev/chat',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+  );
   // Exported menu link: user-menu_consolidation:node/55.
   $menu_links['user-menu_consolidation:node/55'] = array(
     'menu_name' => 'user-menu',
@@ -128,6 +151,29 @@ function general_settings_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
     'parent_identifier' => 'user-menu_global-logistics:node/39',
+  );
+  // Exported menu link: user-menu_contact-us:contact-us.
+  $menu_links['user-menu_contact-us:contact-us'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'contact-us',
+    'router_path' => 'contact-us',
+    'link_title' => 'Contact us',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'user-menu_contact-us:contact-us',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 1,
+    'expanded' => 1,
+    'weight' => -48,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
   );
   // Exported menu link: user-menu_custom-broker-area:node/47.
   $menu_links['user-menu_custom-broker-area:node/47'] = array(
@@ -388,6 +434,30 @@ function general_settings_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -47,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+    'parent_identifier' => 'user-menu_navigation:node/14',
+  );
+  // Exported menu link: user-menu_intranet:node/11.
+  $menu_links['user-menu_intranet:node/11'] = array(
+    'menu_name' => 'user-menu',
+    'link_path' => 'node/11',
+    'router_path' => 'node/%',
+    'link_title' => 'Intranet',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'user-menu_intranet:node/11',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
@@ -762,7 +832,7 @@ function general_settings_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -2,
+    'weight' => -50,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
@@ -810,7 +880,7 @@ function general_settings_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -49,
     'customized' => 1,
     'language' => 'und',
     'menu_links_customized' => 1,
@@ -867,7 +937,9 @@ function general_settings_menu_default_menu_links() {
   t('Business Intelligence');
   t('Careers');
   t('Cargo shipment');
+  t('Chat');
   t('Consolidation');
+  t('Contact us');
   t('Custom Clearance and Documentation');
   t('Custom broker area');
   t('Customer area');
@@ -878,6 +950,7 @@ function general_settings_menu_default_menu_links() {
   t('Global Logistics');
   t('Global sourcing');
   t('Import Documentation and Clearance');
+  t('Intranet');
   t('Intranet Dragon team area');
   t('Log Out');
   t('Log in');
