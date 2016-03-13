@@ -73,10 +73,11 @@ function user_related_config_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => 'Industry 1',
-        1 => 'Industry 2',
-        2 => 'Industry 3',
-        3 => 'Others',
+        0 => 'Designer',
+        1 => 'Distributor',
+        2 => 'Producer',
+        3 => 'Retailer',
+        4 => 'Trading Company',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
@@ -168,6 +169,44 @@ function user_related_config_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'location',
+  );
+
+  // Exported field_base: 'field_main_market'.
+  $field_bases['field_main_market'] = array(
+    'active' => 1,
+    'cardinality' => 4,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_main_market',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        1 => 'Africa',
+        2 => 'Asia (Russia)',
+        3 => 'Asia (China)',
+        4 => 'Asia (Others)',
+        5 => 'Australia',
+        6 => 'Europe (France)',
+        7 => 'Europe (UK)',
+        8 => 'Europe (Others)',
+        9 => 'North America (Canada)',
+        10 => 'North America (USA)',
+        11 => 'Russia',
+        12 => 'South America (Brazil)',
+        13 => 'South America (Others)',
+        14 => 'UK',
+      ),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_name'.

@@ -196,6 +196,40 @@ function user_related_config_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_main_market'.
+  $field_instances['user-user-field_main_market'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 9,
+      ),
+    ),
+    'entity_type' => 'user',
+    'exclude_cv' => 0,
+    'field_name' => 'field_main_market',
+    'label' => 'Main Market',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'exclude_cv' => FALSE,
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 15,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_name'.
   $field_instances['user-user-field_name'] = array(
     'bundle' => 'user',
@@ -344,7 +378,7 @@ function user_related_config_field_default_field_instances() {
     'entity_type' => 'user',
     'exclude_cv' => 0,
     'field_name' => 'field_years_in_registration',
-    'label' => 'Years in Registration',
+    'label' => 'Date of incorporation',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -421,15 +455,16 @@ function user_related_config_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Company');
+  t('Date of incorporation');
   t('Group membership');
   t('Image');
   t('Industry');
   t('Location');
+  t('Main Market');
   t('Name');
   t('Registered Capital');
   t('Request message');
   t('This is the text a user may send to the group administrators.');
-  t('Years in Registration');
 
   return $field_instances;
 }

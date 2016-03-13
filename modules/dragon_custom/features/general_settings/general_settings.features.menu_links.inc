@@ -434,7 +434,6 @@ function general_settings_menu_default_menu_links() {
     'customized' => 0,
     'language' => 'und',
     'menu_links_customized' => 0,
-    'parent_identifier' => 'user-menu_my-account:user',
   );
   // Exported menu link: user-menu_log-out:user/logout.
   $menu_links['user-menu_log-out:user/logout'] = array(
@@ -708,6 +707,7 @@ function general_settings_menu_default_menu_links() {
         'title' => '',
       ),
       'identifier' => 'user-menu_search:search',
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,

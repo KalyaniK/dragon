@@ -176,7 +176,7 @@ function dragon_views_views_default_views() {
     'image_style' => 'dragon_medium_slider_image',
     'image_link' => 'content',
   );
-  /* Field: Broken/missing handler */
+  /* Field: Entity translation: Title: translated */
   $handler->display->display_options['fields']['title_field_et']['id'] = 'title_field_et';
   $handler->display->display_options['fields']['title_field_et']['table'] = 'field_data_title_field';
   $handler->display->display_options['fields']['title_field_et']['field'] = 'title_field_et';

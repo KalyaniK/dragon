@@ -1222,6 +1222,49 @@ function dragon_project_related_config_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-project-field_quantity'.
+  $field_instances['node-project-field_quantity'] = array(
+    'bundle' => 'project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'exclude_cv' => 0,
+    'field_name' => 'field_quantity',
+    'label' => 'Quantity',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'exclude_cv' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 35,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Annual Quantity');
@@ -1252,6 +1295,7 @@ function dragon_project_related_config_field_default_field_instances() {
   t('Product packaging Details');
   t('Project Type');
   t('Project images');
+  t('Quantity');
 
   return $field_instances;
 }

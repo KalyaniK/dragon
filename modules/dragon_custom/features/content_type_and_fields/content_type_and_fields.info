@@ -35,6 +35,7 @@ features[field_instance][] = node-article-body
 features[field_instance][] = node-article-field_image
 features[field_instance][] = node-article-field_tags
 features[field_instance][] = node-article-field_taxonomy
+features[field_instance][] = node-article-title_field
 features[field_instance][] = node-group-body
 features[field_instance][] = node-group-group_group
 features[field_instance][] = node-page-body

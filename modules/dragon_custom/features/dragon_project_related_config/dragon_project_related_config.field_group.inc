@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function dragon_project_related_config_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -40,7 +40,7 @@ function dragon_project_related_config_field_group_info() {
       ),
     ),
   );
-  $export['group_order_information|node|project|default'] = $field_group;
+  $field_groups['group_order_information|node|project|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -68,7 +68,7 @@ function dragon_project_related_config_field_group_info() {
       ),
     ),
   );
-  $export['group_order_information|node|project|form'] = $field_group;
+  $field_groups['group_order_information|node|project|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -102,7 +102,7 @@ function dragon_project_related_config_field_group_info() {
       ),
     ),
   );
-  $export['group_packaging|node|project|default'] = $field_group;
+  $field_groups['group_packaging|node|project|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -135,7 +135,7 @@ function dragon_project_related_config_field_group_info() {
       ),
     ),
   );
-  $export['group_packaging|node|project|form'] = $field_group;
+  $field_groups['group_packaging|node|project|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -166,7 +166,7 @@ function dragon_project_related_config_field_group_info() {
       ),
     ),
   );
-  $export['group_project_pictures|node|project|default'] = $field_group;
+  $field_groups['group_project_pictures|node|project|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -194,7 +194,7 @@ function dragon_project_related_config_field_group_info() {
       'formatter' => 'collapsible',
     ),
   );
-  $export['group_project_pictures|node|project|form'] = $field_group;
+  $field_groups['group_project_pictures|node|project|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -225,7 +225,7 @@ function dragon_project_related_config_field_group_info() {
       ),
     ),
   );
-  $export['group_project_type|node|project|default'] = $field_group;
+  $field_groups['group_project_type|node|project|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -252,7 +252,7 @@ function dragon_project_related_config_field_group_info() {
       ),
     ),
   );
-  $export['group_project_type|node|project|form'] = $field_group;
+  $field_groups['group_project_type|node|project|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -283,7 +283,7 @@ function dragon_project_related_config_field_group_info() {
       ),
     ),
   );
-  $export['group_quality_information|node|project|default'] = $field_group;
+  $field_groups['group_quality_information|node|project|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -310,7 +310,7 @@ function dragon_project_related_config_field_group_info() {
       ),
     ),
   );
-  $export['group_quality_information|node|project|form'] = $field_group;
+  $field_groups['group_quality_information|node|project|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -347,7 +347,7 @@ function dragon_project_related_config_field_group_info() {
       ),
     ),
   );
-  $export['group_technical_details|node|project|default'] = $field_group;
+  $field_groups['group_technical_details|node|project|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -383,7 +383,16 @@ function dragon_project_related_config_field_group_info() {
       ),
     ),
   );
-  $export['group_technical_details|node|project|form'] = $field_group;
+  $field_groups['group_technical_details|node|project|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Order Information');
+  t('Packaging');
+  t('Project Pictures');
+  t('Project Type');
+  t('Quality Information');
+  t('Technical Details');
+
+  return $field_groups;
 }
