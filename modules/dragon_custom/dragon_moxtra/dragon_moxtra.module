@@ -29,6 +29,23 @@ function dragon_moxtra_permission() {
   );
 }
 
+function dragon_moxtra_cron() {
+  return;
+  // Try to find out all the messages for all the users
+  module_load_include('inc', 'dragon_moxtra', 'dragon_moxtra.functions');
+  $users = entity_load('user');
+  
+  foreach ($users as $uid => $user) {
+    if($user->mail != null){
+      watchdog('qad_test', 'mmm %data ms', array('%data' => print_r($user, TRUE)), WATCHDOG_ERROR);
+      $response = dragon_moxtra_get_user_timeline($user);
+      
+      watchdog('qad_test', 'mmmm %data ms', array('%data' => print_r($response, TRUE)), WATCHDOG_ERROR);
+      //break;
+    }
+  }
+}
+
 /**
  * Implements page callback for chat
  */
@@ -130,20 +147,20 @@ function dragon_moxtra_binder_create_form_submit($form, &$form_state) {
   $mail_list = $form_state['values']['emails'];
   
   // Create the users
-  $mails = explode(',', $mail_list);
-  foreach ($mails as $mail) {
-    if(!user_load_by_mail($mail)){
-      dragon_moxtra_create_user_by_mail($mail);
+  if($mail_list != null){
+    $mails = explode(',', $mail_list);
+    foreach ($mails as $mail) {
+      if(!user_load_by_mail($mail)){
+        dragon_moxtra_create_user_by_mail($mail);
+      }
+      $accounts[] = $mail;
     }
-    $accounts[] = $mail;
   }
   
   $members = array();
   foreach ($accounts as $account) {
     // Check if this users has been created in Moxtra
-    if(dragon_moxtra_get_user($account) == NULL) {
-      dragon_moxtra_get_access_token(false, user_load_by_mail($account));
-    }
+    dragon_moxtra_get_access_token(true, user_load_by_mail($account));
     $members[] = array(
       'user' => array(
         'unique_id' => $account,

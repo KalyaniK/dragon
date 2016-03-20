@@ -94,16 +94,19 @@
               iframe: true,
               tagid4iframe: "timeline_container",
               iframewidth: "100%",
-              iframeheight: "800px",                
+              iframeheight: "590px",                
               autostart_meet: true,
               autostart_note: true,
-              extension: { "show_dialogs": {
+              extension: { "show_dialogs": 
+                {
                   "meet_invite": false,
-                  "member_invite": false,
+                  "member_invite": true,
                   "share": false
-              } },
+                },
+                "auto_join_meet": false 
+              },
               video: true, // turn on camera
-			  invite_members: true, // invite members in the binder when start a meeting
+              invite_members: true, // invite members in the binder when start a meeting
               start_timeline: function(event) {
                   console.log("Timeline started session Id: " + event.session_id + " binder id: " + event.binder_id);
               },
@@ -122,6 +125,29 @@
               invite_member: function(event) {
                   console.log("Invite member into binder Id: " + event.binder_id);
               },
+              request_join_meet: function(event) {
+                  console.log("Meet started session key: " + event.session_key + " session id: " + event.session_id);
+                  var join_options = {
+                    session_key: event.session_key,
+                    iframe: false,
+                    tab: true,
+                    video: true,
+                    extension: { "show_dialogs": { "meet_invite": true } },
+                    start_meet: function(event) {
+                        console.log("session key: " + event.session_key + " session id: " + event.session_id);
+                    },
+                    error: function(event) {
+                        console.log("error code: " + event.error_code + " message: " + event.error_message);
+                    },
+                    end_meet: function(event) {
+                        console.log("Meet ended by host event");
+                    },
+                    exit_meet: function(event) {
+                        console.log("Meet exit event");
+                    }
+                };
+                Moxtra.joinMeet(join_options);
+              },
               start_meet: function(event) {
                   console.log("Meet started session key: " + event.session_key + " session id: " + event.session_id);
               },
@@ -132,7 +158,6 @@
                   console.log("Meet saved on binder: " + event.binder_id);
               },
               start_note: function(event) {
-                  console.log("session key: " + event.session_key + " session id: " + event.session_id);
               },
               save_note: function(event) {
                   console.log("Note saved on binder: " + event.destination_binder_id);
@@ -145,6 +170,7 @@
               }
           };            
           Moxtra.timeline(options);
+          
       }
     }
   };

@@ -138,23 +138,39 @@ function dragon_moxtra_get_binders() {
   $data = array();
   $response = dragon_moxtra_api_get_json($uri, json_encode($data));
   if ($response->http_code != 200 || isset($response->error_code))
-    return dragon_moxtra_api_request_error($response->http_code, $response);
+    return dragon_moxtra_api_request_error($response->http_code, $response, 'create binder');
 
   return $response;
 }
           
-function dragon_moxtra_get_user($user_id) {
-  $access_token = dragon_moxtra_get_access_token();
+function dragon_moxtra_get_user($access_token, $user = null) {
+  if ($user != null) {
+    $access_token = dragon_moxtra_get_access_token(true, $user);
+  }
+  
   global $REST_API_END_POINT;
-  $uri = $REST_API_END_POINT . '/' . $user_id . '?access_token='.$access_token;
+  $uri = $REST_API_END_POINT . '/me?access_token=' . $access_token;
   $data = array();
   $response = dragon_moxtra_api_get_json($uri, json_encode($data));
   if ($response->http_code != 200 || isset($response->error_code))
-    return dragon_moxtra_api_request_error($response->http_code, $response);
+    return dragon_moxtra_api_request_error($response->http_code, $response, 'get user info');
 
   return $response;
 }
 
-function dragon_moxtra_api_request_error($error_code, $response) {
-  watchdog('dragon_moxtra', 'moxtra api request %error response: %response', array('%error' => $error_code, '%response' => print_r($response, TRUE)));
+function dragon_moxtra_get_user_timeline($user) {
+  $access_token = dragon_moxtra_get_access_token(true, $user);
+  global $REST_API_END_POINT;
+  $uri = $REST_API_END_POINT . '/me/timeline?access_token=' . $access_token;
+  
+  $data = array();
+  $response = dragon_moxtra_api_get_json($uri, json_encode($data));
+  if ($response->http_code != 200 || isset($response->error_code))
+    return dragon_moxtra_api_request_error($response->http_code, $response, 'get user timeline');
+
+  return $response;
+}
+
+function dragon_moxtra_api_request_error($error_code, $response, $request = null) {
+  watchdog('dragon_moxtra', 'moxtra api request: %request, error code: %error, response: %response', array('%request' => $request, '%error' => $error_code, '%response' => print_r($response, TRUE)));
 }
