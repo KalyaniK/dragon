@@ -198,7 +198,7 @@ function dragon_panel_pages_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'nid' => '4',
+      'nid' => '67',
       'links' => 0,
       'leave_node_title' => 0,
       'identifier' => '',
@@ -400,7 +400,7 @@ function dragon_panel_pages_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'nid' => '3',
-      'links' => 1,
+      'links' => 0,
       'leave_node_title' => 0,
       'identifier' => '',
       'build_mode' => 'teaser',

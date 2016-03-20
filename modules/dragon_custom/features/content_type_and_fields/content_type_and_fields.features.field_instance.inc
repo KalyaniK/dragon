@@ -196,6 +196,55 @@ function content_type_and_fields_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-article-field_banner_image'.
+  $field_instances['node-article-field_banner_image'] = array(
+    'bundle' => 'article',
+    'deleted' => 0,
+    'description' => 'If this node is a sub menu page, you can set the banner image for it. Preferred resolution is 1920*540 pixel.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'exclude_cv' => 0,
+    'field_name' => 'field_banner_image',
+    'label' => 'Banner Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'exclude_cv' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-article-field_image'.
   $field_instances['node-article-field_image'] = array(
     'bundle' => 'article',
@@ -214,12 +263,8 @@ function content_type_and_fields_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => 'content',
-          'image_style' => 'medium',
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => -1,
       ),
     ),
@@ -737,11 +782,13 @@ function content_type_and_fields_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Banner Image');
   t('Body');
   t('Comment');
   t('Determine if this is an OG group.');
   t('Enter a comma-separated list of words to describe your content.');
   t('Group');
+  t('If this node is a sub menu page, you can set the banner image for it. Preferred resolution is 1920*540 pixel.');
   t('Image');
   t('Please upload image with the 16:9 resolution, e.g. 1280*720, 960*540, 640*360 or 480*270.');
   t('Please upload pictures with resolution at 1300 x 500  pixels

@@ -74,26 +74,28 @@ function dragon_front_page_callback() {
  */
 function dragon_front_page_preprocess_page(&$vars, $hook) {
   if(arg(0) == 'home') {
+    drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page.css');
+    drupal_add_js(drupal_get_path('module', 'dragon_front_page') . '/js/dragon_front_page.js');
     $front_nid = variable_get('dragon_front_page_nid');
     $front_node = node_load($front_nid);
     $fid = $front_node->field_slider_images[$front_node->language][0]['fid'];
     $imgpath = file_load($fid)->uri;
     $bg_image = file_create_url($imgpath);
-    drupal_add_css("#main-content { background: url($bg_image) no-repeat fixed center center / 100% 100%; }",$option['type'] = 'inline');
-    drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page.css');
-    drupal_add_js(drupal_get_path('module', 'dragon_front_page') . '/js/dragon_front_page.js');
+    drupal_add_css("#main-content { background: url($bg_image) no-repeat center center / 100% 100%; min-height: 500px;}",$option['type'] = 'inline');
   }
   
   if(in_array(arg(0), array('about-us', 'our-services', 'contact-us'))) {
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page.css');
     drupal_add_css(drupal_get_path('module', 'dragon_front_page') . '/css/dragon_front_page_other_pages.css');
     // add background image
-    $front_nid = variable_get('dragon_front_page_nid');
-    $front_node = node_load($front_nid);
-    $fid = $front_node->field_slider_images[$front_node->language][0]['fid'];
+    $alias = 'content/' . arg(0);
+    $path = drupal_lookup_path('source', $alias);
+    $banner_node = menu_get_object('node', 1, $path);
+    $default_fid = variable_get('dragon_default_banner_fid', 46);
+    $fid = !empty($banner_node->field_banner_image[LANGUAGE_NONE][0]['fid']) ? $banner_node->field_banner_image[LANGUAGE_NONE][0]['fid'] : $default_fid;
     $imgpath = file_load($fid)->uri;
     $bg_image = file_create_url($imgpath);
-    drupal_add_css(".dragon-panel-row.dragon-panel-row-top { background: url($bg_image) no-repeat fixed center center / 100% 100%; min-height: 235px;} ", $option['type'] = 'inline');
+    drupal_add_css(".dragon-panel-row.dragon-panel-row-top { background: url($bg_image) no-repeat center center / 100% 100%; min-height: 500px;} ", $option['type'] = 'inline');
   }
 }
 
@@ -126,3 +128,16 @@ function dragon_front_page_block_view($delta = '') {
   }
   return $block;
 }
+
+/**
+ * Implements hook_node_update().
+ *
+ * This hook saves the default banner image fid to variable
+ */
+function dragon_front_page_node_update($node) {
+  if ($node->nid == variable_get('dragon_front_page_nid')) {
+    $default_fid = $node->field_slider_images[$node->language][0]['fid'];
+    variable_set('dragon_default_banner_fid', $default_fid);
+  }
+}
+
