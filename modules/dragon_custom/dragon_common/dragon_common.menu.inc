@@ -113,6 +113,10 @@ watchdog('qad_test', '_dragon_common_generate_menu_item_link %data ms', array('%
     $external_flag = $popup;
   }
 
+  if (!isset($query)) {
+    $query = NULL;
+  }
+
   if (is_array($icon_class)) {
     $icon_class = implode(' ', $icon_class);
   }
@@ -121,7 +125,7 @@ watchdog('qad_test', '_dragon_common_generate_menu_item_link %data ms', array('%
     $btn_class = implode(' ', $btn_class);
   }
 
-  $output = dragon_common_gen_button($title, $attributes['href'], $icon_class, $btn_class, $external_flag);
+  $output = dragon_common_gen_button($title, $attributes['href'], $icon_class, $btn_class, $external_flag, $query, $attributes);
 
 watchdog('qad_test', '$output %data ms', array('%data' => print_r($output, TRUE)), WATCHDOG_ERROR);
   return $output;
