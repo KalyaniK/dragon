@@ -122,8 +122,10 @@ function theme_dragon_project_company_info($variables) {
   $company = $variables['node'];
   $company_label = t('Customer Company') . ':';
   $company_link = l($company->title, 'node/' . $company->nid);
+  $company_logo = field_view_field('node', $company, 'field_image');
+  $company_logo_markup = render($company_logo);
   $markup = "<div class=\"field field-name-field-project-company field-type-text-long field-label-inline clearfix\"><div class=\"field-label\">$company_label</div><div class=\"field-items\"><div class=\"field-item even\">$company_link</div></div></div>";
-  $markup .= "<div class=\"field field-name-field-project-company field-type-text-long field-label-inline clearfix\"><div class=\"field-label\">$company_label</div><div class=\"field-items\"><div class=\"field-item even\">$company_link</div></div></div>";
+  $markup .= $company_logo_markup;
   return $markup;
 }
 

@@ -338,3 +338,6 @@ font-size: 18px;
 width: 100%;
 }
 
+.node-project .field-name-field-image img {
+  max-width: 200px;
+}
