@@ -26,7 +26,7 @@ function dragon_project_dragon_menu($menu_id, $tokens) {
 
       $items['project_print'] = array(
         '#item_type' => QAD_MENU_NORMAL_ITEM,
-        '#title' => t('print'),
+        '#title' => t('Print'),
         '#icon_class' => array('glyphicon-print'),
         '#url' => 'print/@product_id',
         '#btn_class' => array('btn-info'),

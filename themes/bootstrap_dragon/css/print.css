@@ -7,3 +7,13 @@
 .print-site_name {
   margin-left: 120px;
 }
+
+.user-picture {
+  max-width: 100px;
+}
+
+.submitted {
+  font-size: 22px;
+  font-weight; bold;
+}
+
