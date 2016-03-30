@@ -30,18 +30,17 @@ function dragon_moxtra_permission() {
 }
 
 function dragon_moxtra_cron() {
-  return;
   // Try to find out all the messages for all the users
   module_load_include('inc', 'dragon_moxtra', 'dragon_moxtra.functions');
   $users = entity_load('user');
   
   foreach ($users as $uid => $user) {
     if($user->mail != null){
-      watchdog('qad_test', 'mmm %data ms', array('%data' => print_r($user, TRUE)), WATCHDOG_ERROR);
       $response = dragon_moxtra_get_user_timeline($user);
       
-      watchdog('qad_test', 'mmmm %data ms', array('%data' => print_r($response, TRUE)), WATCHDOG_ERROR);
-      //break;
+      if(isset($response->data["feeds"]) && count($response->data["feeds"]) > 0){
+        rules_invoke_component('rules_send_message_notification', $user->mail, $user->field_name["und"][0]["given"]);
+      }
     }
   }
 }
@@ -152,6 +151,7 @@ function dragon_moxtra_binder_create_form_submit($form, &$form_state) {
     foreach ($mails as $mail) {
       if(!user_load_by_mail($mail)){
         dragon_moxtra_create_user_by_mail($mail);
+        rules_invoke_component('rules_send_create_user_by_binder_notification', $mail);
       }
       $accounts[] = $mail;
     }
@@ -175,14 +175,11 @@ function dragon_moxtra_binder_create_form_submit($form, &$form_state) {
 
 
 function dragon_moxtra_create_user_by_mail($mail) {
-  // This will generate a random password, you could set your own here
-  $password = user_password(8);
- 
   // Set up the user fields
   $fields = array(
     'name' => $mail,
     'mail' => $mail,
-    'pass' => $password,
+    'pass' => "dragonasia",
     'status' => 1,
     'init' => 'email address',
     'roles' => array(
